@@ -1,0 +1,29 @@
+{
+  "cases" : [
+    {
+      "all_results_ms" : 90.794920921325684,
+      "cached_count" : 0,
+      "first_result_ms" : 90.794920921325684,
+      "progress_callbacks" : 0,
+      "result_count" : 9,
+      "scenario" : "words_cold"
+    },
+    {
+      "all_results_ms" : 54.695963859558105,
+      "cached_count" : 0,
+      "first_result_ms" : 54.695963859558105,
+      "progress_callbacks" : 0,
+      "result_count" : 9,
+      "scenario" : "mixed_new_sentence"
+    },
+    {
+      "all_results_ms" : 0.0400543212890625,
+      "cached_count" : 0,
+      "first_result_ms" : 0.0400543212890625,
+      "progress_callbacks" : 0,
+      "result_count" : 9,
+      "scenario" : "mixed_repeat"
+    }
+  ],
+  "status" : "passed"
+}

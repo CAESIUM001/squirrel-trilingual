@@ -1,0 +1,10 @@
+{
+  "status": "passed",
+  "assertions": 327,
+  "package_sha256": "21bf1326473e3844c67dd7c4419c353c55f3678bd3027292d33c31bb58d1f235",
+  "helper_sha256": "2b2cb33a18a9a82b1b8427fc2433ebf7e6bfbc983ae252797e867bfaf3a4b6e1",
+  "relocatable": false,
+  "signed_package": false,
+  "notarized": false,
+  "scope": "Package expansion and content/signature verification only; package not installed."
+}

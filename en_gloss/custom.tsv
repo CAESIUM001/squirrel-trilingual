@@ -1,0 +1,3 @@
+# Personal English glosses. UTF-8; separate columns with a real TAB.
+# 中文词<TAB>n. first translation<TAB>n. second translation
+# Entries here override the bundled dictionary after redeployment.

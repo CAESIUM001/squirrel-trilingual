@@ -1,0 +1,17 @@
+{
+  "assertions" : 9,
+  "candidate_count" : 9,
+  "cell_height_points" : 104,
+  "cell_width_points" : 220,
+  "full_translation_in_matching_cell" : true,
+  "models_installed" : true,
+  "screenshot" : "sentence-live-offscreen.png",
+  "source" : "今天下午我們一起去圖書館",
+  "stale_result_rejected" : true,
+  "status" : "passed",
+  "tested_at" : "2026-10-24T03:29:36Z",
+  "translated_candidate_index" : 0,
+  "translation" : "Let's go to the library together this afternoon.",
+  "translation_ms" : 141.32010936737061,
+  "validation_kind" : "Real Apple on-device translation and actual Squirrel Panel\/View\/Theme offscreen rendering; synthetic candidate input, not an actual host application input session."
+}

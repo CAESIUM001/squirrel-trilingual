@@ -1,0 +1,32 @@
+{
+  "cases": [
+    {
+      "all_results_ms": 3.3109188079833984,
+      "cached_count": 9,
+      "first_result_ms": 3.2579898834228516,
+      "progress_callbacks": 1,
+      "result_count": 9,
+      "scenario": "words_cold"
+    },
+    {
+      "all_results_ms": 129.2550563812256,
+      "cached_count": 8,
+      "first_result_ms": 8.679986000061035,
+      "progress_callbacks": 2,
+      "result_count": 9,
+      "scenario": "mixed_new_sentence"
+    },
+    {
+      "all_results_ms": 0.048995018005371094,
+      "cached_count": 9,
+      "first_result_ms": 0.0029802322387695312,
+      "progress_callbacks": 1,
+      "result_count": 9,
+      "scenario": "mixed_repeat"
+    }
+  ],
+  "status": "passed",
+  "scope": "Fixed examples, actual Apple model and shipped dictionary; excludes controller debounce and host-app rendering. Model service may already be warm.",
+  "source_sha256": "10b4e2ba91c4662b7d312828e1c86c6465f273092330c7b69994c6a1a2fc4a88",
+  "glossary_sha256": "27da5a13c1841eea403fdc0aab15d0e1ee6c5cbffd3302cfbcd9d9ad2d30f45f"
+}

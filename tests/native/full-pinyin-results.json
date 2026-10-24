@@ -1,0 +1,53 @@
+{
+  "status": "passed",
+  "assertions": 11,
+  "checks": [
+    {
+      "check": "fresh Rime deployment loads Lua",
+      "passed": true
+    },
+    {
+      "check": "full-pinyin schema loads",
+      "passed": true
+    },
+    {
+      "check": "nine candidates",
+      "passed": true
+    },
+    {
+      "check": "full-pinyin Beijing has English gloss",
+      "passed": true
+    },
+    {
+      "check": "Option+1 commits English",
+      "passed": true
+    },
+    {
+      "check": "normal full-pinyin Chinese commit",
+      "passed": true
+    },
+    {
+      "check": "complete sentence composes using full pinyin",
+      "passed": true
+    },
+    {
+      "check": "both Shift keys toggle Chinese/English",
+      "passed": true
+    },
+    {
+      "check": "horizontal candidates and stacked translations configured",
+      "passed": true
+    },
+    {
+      "check": "offline French glossary bundled",
+      "passed": true
+    },
+    {
+      "check": "French glossary matches the validated 5000-entry asset",
+      "passed": true
+    }
+  ],
+  "helper_sha256": "2b2cb33a18a9a82b1b8427fc2433ebf7e6bfbc983ae252797e867bfaf3a4b6e1",
+  "frontend_sha256": "525a063ac2827544fb69e05b48fd7941b0d1567baff393a484761a1aae483a39",
+  "scope": "isolated installer plus real Rime engine; no system registration or host UI"
+}

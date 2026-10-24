@@ -1,0 +1,11 @@
+{
+  "source": "https://github.com/rime/squirrel/tree/1.1.2",
+  "squirrel_commit": "876adebaf2f612951dcdca8a591de65401222b9a",
+  "librime_commit": "a251145d3aafa33871824a40bbec04c966bd8b56",
+  "sparkle_commit": "41847a58cdef7506b257591fcca6f9495df591d4",
+  "official_runtime_version": "1.1.2",
+  "runtime_sha256": {
+    "librime.1.dylib": "d79222e06e9e18b3303bbb86bd37c644467b2ea9f870bd91af672c6e2b3ec051",
+    "Sparkle": "d2931fd349e900d77ff3fd392e0900c6f2db3363dc7cb9e6ed30b9a3e0cb8771"
+  }
+}

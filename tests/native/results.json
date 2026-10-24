@@ -1,0 +1,1865 @@
+{
+  "tested_at_utc": "2026-10-24T04:13:57.580320+00:00",
+  "module_sha256": "6712d3bbd378803f81380edf89be90efd663ce47bac6152fbb2a55636dbfbca6",
+  "isolated_directory": "<temporary>/user",
+  "cases": [
+    {
+      "name": "display-and-normal-chinese",
+      "wall_ms": 362.243,
+      "events": [
+        {
+          "action": "initial",
+          "handled": 1,
+          "input": "",
+          "preedit": "",
+          "page_size": 0,
+          "page": 0,
+          "highlighted": 0,
+          "candidates": [],
+          "schema": "double_pinyin_sogou",
+          "ascii": false,
+          "elapsed_ms": 69.121
+        },
+        {
+          "action": "input:bzj;",
+          "handled": 1,
+          "input": "bzj;",
+          "preedit": "bei jing",
+          "page_size": 9,
+          "page": 0,
+          "highlighted": 0,
+          "candidates": [
+            {
+              "text": "北京",
+              "comment": "n. Beijing"
+            },
+            {
+              "text": "背景",
+              "comment": "n. background"
+            },
+            {
+              "text": "北境",
+              "comment": ""
+            },
+            {
+              "text": "倍镜",
+              "comment": ""
+            },
+            {
+              "text": "被",
+              "comment": "prep. by"
+            },
+            {
+              "text": "备",
+              "comment": "v. prepare"
+            },
+            {
+              "text": "北",
+              "comment": "n. north"
+            },
+            {
+              "text": "背",
+              "comment": "n. back"
+            },
+            {
+              "text": "呗",
+              "comment": "part. particle"
+            }
+          ],
+          "schema": "double_pinyin_sogou",
+          "ascii": false,
+          "elapsed_ms": 10.44
+        },
+        {
+          "action": "key:32:0",
+          "handled": 1,
+          "input": "",
+          "preedit": "",
+          "page_size": 0,
+          "page": 0,
+          "highlighted": 0,
+          "candidates": [],
+          "commit": "北京",
+          "schema": "double_pinyin_sogou",
+          "ascii": false,
+          "elapsed_ms": 0.096
+        }
+      ]
+    },
+    {
+      "name": "first-meaning",
+      "wall_ms": 71.358,
+      "events": [
+        {
+          "action": "initial",
+          "handled": 1,
+          "input": "",
+          "preedit": "",
+          "page_size": 0,
+          "page": 0,
+          "highlighted": 0,
+          "candidates": [],
+          "schema": "double_pinyin_sogou",
+          "ascii": false,
+          "elapsed_ms": 55.081
+        },
+        {
+          "action": "input:bzj;",
+          "handled": 1,
+          "input": "bzj;",
+          "preedit": "bei jing",
+          "page_size": 9,
+          "page": 0,
+          "highlighted": 0,
+          "candidates": [
+            {
+              "text": "北京",
+              "comment": "n. Beijing"
+            },
+            {
+              "text": "背景",
+              "comment": "n. background"
+            },
+            {
+              "text": "北境",
+              "comment": ""
+            },
+            {
+              "text": "倍镜",
+              "comment": ""
+            },
+            {
+              "text": "被",
+              "comment": "prep. by"
+            },
+            {
+              "text": "备",
+              "comment": "v. prepare"
+            },
+            {
+              "text": "北",
+              "comment": "n. north"
+            },
+            {
+              "text": "背",
+              "comment": "n. back"
+            },
+            {
+              "text": "呗",
+              "comment": "part. particle"
+            }
+          ],
+          "schema": "double_pinyin_sogou",
+          "ascii": false,
+          "elapsed_ms": 9.783
+        },
+        {
+          "action": "key:49:8",
+          "handled": 1,
+          "input": "",
+          "preedit": "",
+          "page_size": 0,
+          "page": 0,
+          "highlighted": 0,
+          "candidates": [],
+          "commit": "Beijing",
+          "schema": "double_pinyin_sogou",
+          "ascii": false,
+          "elapsed_ms": 0.018
+        }
+      ]
+    },
+    {
+      "name": "second-meaning",
+      "wall_ms": 63.775,
+      "events": [
+        {
+          "action": "initial",
+          "handled": 1,
+          "input": "",
+          "preedit": "",
+          "page_size": 0,
+          "page": 0,
+          "highlighted": 0,
+          "candidates": [],
+          "schema": "double_pinyin_sogou",
+          "ascii": false,
+          "elapsed_ms": 47.737
+        },
+        {
+          "action": "input:nihk",
+          "handled": 1,
+          "input": "nihk",
+          "preedit": "ni hao",
+          "page_size": 9,
+          "page": 0,
+          "highlighted": 0,
+          "candidates": [
+            {
+              "text": "你好",
+              "comment": "int. hello"
+            },
+            {
+              "text": "👋",
+              "comment": "int. hello"
+            },
+            {
+              "text": "拟好",
+              "comment": ""
+            },
+            {
+              "text": "你",
+              "comment": "pron. you"
+            },
+            {
+              "text": "尼",
+              "comment": "n. nun"
+            },
+            {
+              "text": "泥",
+              "comment": "n. mud"
+            },
+            {
+              "text": "逆",
+              "comment": "adj. reverse"
+            },
+            {
+              "text": "拟",
+              "comment": "v. plan"
+            },
+            {
+              "text": "腻",
+              "comment": "adj. greasy"
+            }
+          ],
+          "schema": "double_pinyin_sogou",
+          "ascii": false,
+          "elapsed_ms": 10.339
+        },
+        {
+          "action": "key:33:9",
+          "handled": 1,
+          "input": "",
+          "preedit": "",
+          "page_size": 0,
+          "page": 0,
+          "highlighted": 0,
+          "candidates": [],
+          "commit": "hi",
+          "schema": "double_pinyin_sogou",
+          "ascii": false,
+          "elapsed_ms": 0.017
+        }
+      ]
+    },
+    {
+      "name": "second-meaning-digit-keycode",
+      "wall_ms": 65.266,
+      "events": [
+        {
+          "action": "initial",
+          "handled": 1,
+          "input": "",
+          "preedit": "",
+          "page_size": 0,
+          "page": 0,
+          "highlighted": 0,
+          "candidates": [],
+          "schema": "double_pinyin_sogou",
+          "ascii": false,
+          "elapsed_ms": 49.72
+        },
+        {
+          "action": "input:nihk",
+          "handled": 1,
+          "input": "nihk",
+          "preedit": "ni hao",
+          "page_size": 9,
+          "page": 0,
+          "highlighted": 0,
+          "candidates": [
+            {
+              "text": "你好",
+              "comment": "int. hello"
+            },
+            {
+              "text": "👋",
+              "comment": "int. hello"
+            },
+            {
+              "text": "拟好",
+              "comment": ""
+            },
+            {
+              "text": "你",
+              "comment": "pron. you"
+            },
+            {
+              "text": "尼",
+              "comment": "n. nun"
+            },
+            {
+              "text": "泥",
+              "comment": "n. mud"
+            },
+            {
+              "text": "逆",
+              "comment": "adj. reverse"
+            },
+            {
+              "text": "拟",
+              "comment": "v. plan"
+            },
+            {
+              "text": "腻",
+              "comment": "adj. greasy"
+            }
+          ],
+          "schema": "double_pinyin_sogou",
+          "ascii": false,
+          "elapsed_ms": 9.949
+        },
+        {
+          "action": "key:49:9",
+          "handled": 1,
+          "input": "",
+          "preedit": "",
+          "page_size": 0,
+          "page": 0,
+          "highlighted": 0,
+          "candidates": [],
+          "commit": "hi",
+          "schema": "double_pinyin_sogou",
+          "ascii": false,
+          "elapsed_ms": 0.017
+        }
+      ]
+    },
+    {
+      "name": "second-page",
+      "wall_ms": 65.29,
+      "events": [
+        {
+          "action": "initial",
+          "handled": 1,
+          "input": "",
+          "preedit": "",
+          "page_size": 0,
+          "page": 0,
+          "highlighted": 0,
+          "candidates": [],
+          "schema": "double_pinyin_sogou",
+          "ascii": false,
+          "elapsed_ms": 48.444
+        },
+        {
+          "action": "input:bzj;",
+          "handled": 1,
+          "input": "bzj;",
+          "preedit": "bei jing",
+          "page_size": 9,
+          "page": 0,
+          "highlighted": 0,
+          "candidates": [
+            {
+              "text": "北京",
+              "comment": "n. Beijing"
+            },
+            {
+              "text": "背景",
+              "comment": "n. background"
+            },
+            {
+              "text": "北境",
+              "comment": ""
+            },
+            {
+              "text": "倍镜",
+              "comment": ""
+            },
+            {
+              "text": "被",
+              "comment": "prep. by"
+            },
+            {
+              "text": "备",
+              "comment": "v. prepare"
+            },
+            {
+              "text": "北",
+              "comment": "n. north"
+            },
+            {
+              "text": "背",
+              "comment": "n. back"
+            },
+            {
+              "text": "呗",
+              "comment": "part. particle"
+            }
+          ],
+          "schema": "double_pinyin_sogou",
+          "ascii": false,
+          "elapsed_ms": 9.915
+        },
+        {
+          "action": "page:forward",
+          "handled": 1,
+          "input": "bzj;",
+          "preedit": "beij;",
+          "page_size": 9,
+          "page": 1,
+          "highlighted": 0,
+          "candidates": [
+            {
+              "text": "杯",
+              "comment": "m. cup"
+            },
+            {
+              "text": "辈",
+              "comment": "n. generation"
+            },
+            {
+              "text": "悲",
+              "comment": "adj. sad"
+            },
+            {
+              "text": "贝",
+              "comment": "n. shell"
+            },
+            {
+              "text": "倍",
+              "comment": "m. times"
+            },
+            {
+              "text": "卑",
+              "comment": "adj. humble"
+            },
+            {
+              "text": "惫",
+              "comment": "adj. exhausted"
+            },
+            {
+              "text": "碑",
+              "comment": "n. monument"
+            },
+            {
+              "text": "狈",
+              "comment": "n. wolf"
+            }
+          ],
+          "schema": "double_pinyin_sogou",
+          "ascii": false,
+          "elapsed_ms": 0.279
+        },
+        {
+          "action": "key:49:8",
+          "handled": 1,
+          "input": "j;",
+          "preedit": "jing",
+          "page_size": 9,
+          "page": 0,
+          "highlighted": 0,
+          "candidates": [
+            {
+              "text": "经",
+              "comment": "v. pass through"
+            },
+            {
+              "text": "惊",
+              "comment": "v. startle"
+            },
+            {
+              "text": "竟",
+              "comment": "adv. unexpectedly"
+            },
+            {
+              "text": "静",
+              "comment": "adj. quiet"
+            },
+            {
+              "text": "精",
+              "comment": "adj. refined"
+            },
+            {
+              "text": "睛",
+              "comment": "n. eyeball"
+            },
+            {
+              "text": "警",
+              "comment": "n. police"
+            },
+            {
+              "text": "京",
+              "comment": "n. capital"
+            },
+            {
+              "text": "境",
+              "comment": "n. boundary"
+            }
+          ],
+          "commit": "cup",
+          "schema": "double_pinyin_sogou",
+          "ascii": false,
+          "elapsed_ms": 0.947
+        }
+      ]
+    },
+    {
+      "name": "partial-suffix",
+      "wall_ms": 68.652,
+      "events": [
+        {
+          "action": "initial",
+          "handled": 1,
+          "input": "",
+          "preedit": "",
+          "page_size": 0,
+          "page": 0,
+          "highlighted": 0,
+          "candidates": [],
+          "schema": "double_pinyin_sogou",
+          "ascii": false,
+          "elapsed_ms": 48.935
+        },
+        {
+          "action": "input:nihkbzj;",
+          "handled": 1,
+          "input": "nihkbzj;",
+          "preedit": "ni hao bei jing",
+          "page_size": 9,
+          "page": 0,
+          "highlighted": 0,
+          "candidates": [
+            {
+              "text": "你好北京",
+              "comment": ""
+            },
+            {
+              "text": "你好",
+              "comment": "int. hello"
+            },
+            {
+              "text": "👋",
+              "comment": "int. hello"
+            },
+            {
+              "text": "拟好",
+              "comment": ""
+            },
+            {
+              "text": "你",
+              "comment": "pron. you"
+            },
+            {
+              "text": "尼",
+              "comment": "n. nun"
+            },
+            {
+              "text": "泥",
+              "comment": "n. mud"
+            },
+            {
+              "text": "逆",
+              "comment": "adj. reverse"
+            },
+            {
+              "text": "拟",
+              "comment": "v. plan"
+            }
+          ],
+          "schema": "double_pinyin_sogou",
+          "ascii": false,
+          "elapsed_ms": 12.725
+        },
+        {
+          "action": "key:50:8",
+          "handled": 1,
+          "input": "bzj;",
+          "preedit": "bei jing",
+          "page_size": 9,
+          "page": 0,
+          "highlighted": 0,
+          "candidates": [
+            {
+              "text": "北京",
+              "comment": "n. Beijing"
+            },
+            {
+              "text": "背景",
+              "comment": "n. background"
+            },
+            {
+              "text": "北境",
+              "comment": ""
+            },
+            {
+              "text": "倍镜",
+              "comment": ""
+            },
+            {
+              "text": "被",
+              "comment": "prep. by"
+            },
+            {
+              "text": "备",
+              "comment": "v. prepare"
+            },
+            {
+              "text": "北",
+              "comment": "n. north"
+            },
+            {
+              "text": "背",
+              "comment": "n. back"
+            },
+            {
+              "text": "呗",
+              "comment": "part. particle"
+            }
+          ],
+          "commit": "hello",
+          "schema": "double_pinyin_sogou",
+          "ascii": false,
+          "elapsed_ms": 0.937
+        },
+        {
+          "action": "key:32:0",
+          "handled": 1,
+          "input": "",
+          "preedit": "",
+          "page_size": 0,
+          "page": 0,
+          "highlighted": 0,
+          "candidates": [],
+          "commit": "北京",
+          "schema": "double_pinyin_sogou",
+          "ascii": false,
+          "elapsed_ms": 0.095
+        }
+      ]
+    },
+    {
+      "name": "confirmed-prefix",
+      "wall_ms": 72.081,
+      "events": [
+        {
+          "action": "initial",
+          "handled": 1,
+          "input": "",
+          "preedit": "",
+          "page_size": 0,
+          "page": 0,
+          "highlighted": 0,
+          "candidates": [],
+          "schema": "double_pinyin_sogou",
+          "ascii": false,
+          "elapsed_ms": 52.723
+        },
+        {
+          "action": "input:nihkbzj;",
+          "handled": 1,
+          "input": "nihkbzj;",
+          "preedit": "ni hao bei jing",
+          "page_size": 9,
+          "page": 0,
+          "highlighted": 0,
+          "candidates": [
+            {
+              "text": "你好北京",
+              "comment": ""
+            },
+            {
+              "text": "你好",
+              "comment": "int. hello"
+            },
+            {
+              "text": "👋",
+              "comment": "int. hello"
+            },
+            {
+              "text": "拟好",
+              "comment": ""
+            },
+            {
+              "text": "你",
+              "comment": "pron. you"
+            },
+            {
+              "text": "尼",
+              "comment": "n. nun"
+            },
+            {
+              "text": "泥",
+              "comment": "n. mud"
+            },
+            {
+              "text": "逆",
+              "comment": "adj. reverse"
+            },
+            {
+              "text": "拟",
+              "comment": "v. plan"
+            }
+          ],
+          "schema": "double_pinyin_sogou",
+          "ascii": false,
+          "elapsed_ms": 12.688
+        },
+        {
+          "action": "key:50:0",
+          "handled": 1,
+          "input": "nihkbzj;",
+          "preedit": "你好bei jing",
+          "page_size": 9,
+          "page": 0,
+          "highlighted": 0,
+          "candidates": [
+            {
+              "text": "北京",
+              "comment": "n. Beijing"
+            },
+            {
+              "text": "背景",
+              "comment": "n. background"
+            },
+            {
+              "text": "北境",
+              "comment": ""
+            },
+            {
+              "text": "倍镜",
+              "comment": ""
+            },
+            {
+              "text": "被",
+              "comment": "prep. by"
+            },
+            {
+              "text": "备",
+              "comment": "v. prepare"
+            },
+            {
+              "text": "北",
+              "comment": "n. north"
+            },
+            {
+              "text": "背",
+              "comment": "n. back"
+            },
+            {
+              "text": "呗",
+              "comment": "part. particle"
+            }
+          ],
+          "schema": "double_pinyin_sogou",
+          "ascii": false,
+          "elapsed_ms": 0.897
+        },
+        {
+          "action": "key:49:8",
+          "handled": 1,
+          "input": "",
+          "preedit": "",
+          "page_size": 0,
+          "page": 0,
+          "highlighted": 0,
+          "candidates": [],
+          "commit": "你好Beijing",
+          "schema": "double_pinyin_sogou",
+          "ascii": false,
+          "elapsed_ms": 0.098
+        }
+      ]
+    },
+    {
+      "name": "caret-suffix",
+      "wall_ms": 68.641,
+      "events": [
+        {
+          "action": "initial",
+          "handled": 1,
+          "input": "",
+          "preedit": "",
+          "page_size": 0,
+          "page": 0,
+          "highlighted": 0,
+          "candidates": [],
+          "schema": "double_pinyin_sogou",
+          "ascii": false,
+          "elapsed_ms": 47.306
+        },
+        {
+          "action": "input:nihkbzj;",
+          "handled": 1,
+          "input": "nihkbzj;",
+          "preedit": "ni hao bei jing",
+          "page_size": 9,
+          "page": 0,
+          "highlighted": 0,
+          "candidates": [
+            {
+              "text": "你好北京",
+              "comment": ""
+            },
+            {
+              "text": "你好",
+              "comment": "int. hello"
+            },
+            {
+              "text": "👋",
+              "comment": "int. hello"
+            },
+            {
+              "text": "拟好",
+              "comment": ""
+            },
+            {
+              "text": "你",
+              "comment": "pron. you"
+            },
+            {
+              "text": "尼",
+              "comment": "n. nun"
+            },
+            {
+              "text": "泥",
+              "comment": "n. mud"
+            },
+            {
+              "text": "逆",
+              "comment": "adj. reverse"
+            },
+            {
+              "text": "拟",
+              "comment": "v. plan"
+            }
+          ],
+          "schema": "double_pinyin_sogou",
+          "ascii": false,
+          "elapsed_ms": 12.884
+        },
+        {
+          "action": "caret:4",
+          "handled": 1,
+          "input": "nihkbzj;",
+          "preedit": "ni haobzj;",
+          "page_size": 9,
+          "page": 0,
+          "highlighted": 0,
+          "candidates": [
+            {
+              "text": "你好",
+              "comment": "int. hello"
+            },
+            {
+              "text": "👋",
+              "comment": "int. hello"
+            },
+            {
+              "text": "拟好",
+              "comment": ""
+            },
+            {
+              "text": "你",
+              "comment": "pron. you"
+            },
+            {
+              "text": "尼",
+              "comment": "n. nun"
+            },
+            {
+              "text": "泥",
+              "comment": "n. mud"
+            },
+            {
+              "text": "逆",
+              "comment": "adj. reverse"
+            },
+            {
+              "text": "拟",
+              "comment": "v. plan"
+            },
+            {
+              "text": "腻",
+              "comment": "adj. greasy"
+            }
+          ],
+          "schema": "double_pinyin_sogou",
+          "ascii": false,
+          "elapsed_ms": 0.857
+        },
+        {
+          "action": "key:49:8",
+          "handled": 1,
+          "input": "bzj;",
+          "preedit": "bei jing",
+          "page_size": 9,
+          "page": 0,
+          "highlighted": 0,
+          "candidates": [
+            {
+              "text": "北京",
+              "comment": "n. Beijing"
+            },
+            {
+              "text": "背景",
+              "comment": "n. background"
+            },
+            {
+              "text": "北境",
+              "comment": ""
+            },
+            {
+              "text": "倍镜",
+              "comment": ""
+            },
+            {
+              "text": "被",
+              "comment": "prep. by"
+            },
+            {
+              "text": "备",
+              "comment": "v. prepare"
+            },
+            {
+              "text": "北",
+              "comment": "n. north"
+            },
+            {
+              "text": "背",
+              "comment": "n. back"
+            },
+            {
+              "text": "呗",
+              "comment": "part. particle"
+            }
+          ],
+          "commit": "hello",
+          "schema": "double_pinyin_sogou",
+          "ascii": false,
+          "elapsed_ms": 1.594
+        },
+        {
+          "action": "caret:4",
+          "handled": 1,
+          "input": "bzj;",
+          "preedit": "bei jing",
+          "page_size": 9,
+          "page": 0,
+          "highlighted": 0,
+          "candidates": [
+            {
+              "text": "北京",
+              "comment": "n. Beijing"
+            },
+            {
+              "text": "背景",
+              "comment": "n. background"
+            },
+            {
+              "text": "北境",
+              "comment": ""
+            },
+            {
+              "text": "倍镜",
+              "comment": ""
+            },
+            {
+              "text": "被",
+              "comment": "prep. by"
+            },
+            {
+              "text": "备",
+              "comment": "v. prepare"
+            },
+            {
+              "text": "北",
+              "comment": "n. north"
+            },
+            {
+              "text": "背",
+              "comment": "n. back"
+            },
+            {
+              "text": "呗",
+              "comment": "part. particle"
+            }
+          ],
+          "schema": "double_pinyin_sogou",
+          "ascii": false,
+          "elapsed_ms": 0.006
+        },
+        {
+          "action": "key:32:0",
+          "handled": 1,
+          "input": "",
+          "preedit": "",
+          "page_size": 0,
+          "page": 0,
+          "highlighted": 0,
+          "candidates": [],
+          "commit": "北京",
+          "schema": "double_pinyin_sogou",
+          "ascii": false,
+          "elapsed_ms": 0.094
+        }
+      ]
+    },
+    {
+      "name": "traditional",
+      "wall_ms": 89.846,
+      "events": [
+        {
+          "action": "initial",
+          "handled": 1,
+          "input": "",
+          "preedit": "",
+          "page_size": 0,
+          "page": 0,
+          "highlighted": 0,
+          "candidates": [],
+          "schema": "double_pinyin_sogou",
+          "ascii": false,
+          "elapsed_ms": 57.637
+        },
+        {
+          "action": "option:traditionalization:1",
+          "handled": 1,
+          "input": "",
+          "preedit": "",
+          "page_size": 0,
+          "page": 0,
+          "highlighted": 0,
+          "candidates": [],
+          "schema": "double_pinyin_sogou",
+          "ascii": false,
+          "elapsed_ms": 0.061
+        },
+        {
+          "action": "input:xtxi",
+          "handled": 1,
+          "input": "xtxi",
+          "preedit": "xue xi",
+          "page_size": 9,
+          "page": 0,
+          "highlighted": 0,
+          "candidates": [
+            {
+              "text": "學習",
+              "comment": "v. study"
+            },
+            {
+              "text": "學系",
+              "comment": "n. department"
+            },
+            {
+              "text": "血洗",
+              "comment": "v. massacre"
+            },
+            {
+              "text": "穴隙",
+              "comment": ""
+            },
+            {
+              "text": "學",
+              "comment": "v. learn"
+            },
+            {
+              "text": "血",
+              "comment": "n. blood"
+            },
+            {
+              "text": "🩸",
+              "comment": "n. blood"
+            },
+            {
+              "text": "雪",
+              "comment": "n. snow"
+            },
+            {
+              "text": "❄️",
+              "comment": "n. snow"
+            }
+          ],
+          "schema": "double_pinyin_sogou",
+          "ascii": false,
+          "elapsed_ms": 24.163
+        },
+        {
+          "action": "key:49:8",
+          "handled": 1,
+          "input": "",
+          "preedit": "",
+          "page_size": 0,
+          "page": 0,
+          "highlighted": 0,
+          "candidates": [],
+          "commit": "study",
+          "schema": "double_pinyin_sogou",
+          "ascii": false,
+          "elapsed_ms": 0.021
+        }
+      ]
+    },
+    {
+      "name": "toggle",
+      "wall_ms": 69.63,
+      "events": [
+        {
+          "action": "initial",
+          "handled": 1,
+          "input": "",
+          "preedit": "",
+          "page_size": 0,
+          "page": 0,
+          "highlighted": 0,
+          "candidates": [],
+          "schema": "double_pinyin_sogou",
+          "ascii": false,
+          "elapsed_ms": 50.645
+        },
+        {
+          "action": "input:bzj;",
+          "handled": 1,
+          "input": "bzj;",
+          "preedit": "bei jing",
+          "page_size": 9,
+          "page": 0,
+          "highlighted": 0,
+          "candidates": [
+            {
+              "text": "北京",
+              "comment": "n. Beijing"
+            },
+            {
+              "text": "背景",
+              "comment": "n. background"
+            },
+            {
+              "text": "北境",
+              "comment": ""
+            },
+            {
+              "text": "倍镜",
+              "comment": ""
+            },
+            {
+              "text": "被",
+              "comment": "prep. by"
+            },
+            {
+              "text": "备",
+              "comment": "v. prepare"
+            },
+            {
+              "text": "北",
+              "comment": "n. north"
+            },
+            {
+              "text": "背",
+              "comment": "n. back"
+            },
+            {
+              "text": "呗",
+              "comment": "part. particle"
+            }
+          ],
+          "schema": "double_pinyin_sogou",
+          "ascii": false,
+          "elapsed_ms": 10.106
+        },
+        {
+          "action": "key:69:5",
+          "handled": 1,
+          "input": "bzj;",
+          "preedit": "bei jing",
+          "page_size": 9,
+          "page": 0,
+          "highlighted": 0,
+          "candidates": [
+            {
+              "text": "北京",
+              "comment": ""
+            },
+            {
+              "text": "背景",
+              "comment": ""
+            },
+            {
+              "text": "北境",
+              "comment": ""
+            },
+            {
+              "text": "倍镜",
+              "comment": ""
+            },
+            {
+              "text": "被",
+              "comment": ""
+            },
+            {
+              "text": "备",
+              "comment": ""
+            },
+            {
+              "text": "北",
+              "comment": ""
+            },
+            {
+              "text": "背",
+              "comment": ""
+            },
+            {
+              "text": "呗",
+              "comment": ""
+            }
+          ],
+          "schema": "double_pinyin_sogou",
+          "ascii": false,
+          "elapsed_ms": 1.448
+        },
+        {
+          "action": "key:69:5",
+          "handled": 1,
+          "input": "bzj;",
+          "preedit": "bei jing",
+          "page_size": 9,
+          "page": 0,
+          "highlighted": 0,
+          "candidates": [
+            {
+              "text": "北京",
+              "comment": "n. Beijing"
+            },
+            {
+              "text": "背景",
+              "comment": "n. background"
+            },
+            {
+              "text": "北境",
+              "comment": ""
+            },
+            {
+              "text": "倍镜",
+              "comment": ""
+            },
+            {
+              "text": "被",
+              "comment": "prep. by"
+            },
+            {
+              "text": "备",
+              "comment": "v. prepare"
+            },
+            {
+              "text": "北",
+              "comment": "n. north"
+            },
+            {
+              "text": "背",
+              "comment": "n. back"
+            },
+            {
+              "text": "呗",
+              "comment": "part. particle"
+            }
+          ],
+          "schema": "double_pinyin_sogou",
+          "ascii": false,
+          "elapsed_ms": 1.48
+        }
+      ]
+    },
+    {
+      "name": "both-shift-keys",
+      "wall_ms": 54.092,
+      "events": [
+        {
+          "action": "initial",
+          "handled": 1,
+          "input": "",
+          "preedit": "",
+          "page_size": 0,
+          "page": 0,
+          "highlighted": 0,
+          "candidates": [],
+          "schema": "double_pinyin_sogou",
+          "ascii": false,
+          "elapsed_ms": 48.536
+        },
+        {
+          "action": "key:65505:1",
+          "handled": 0,
+          "input": "",
+          "preedit": "",
+          "page_size": 0,
+          "page": 0,
+          "highlighted": 0,
+          "candidates": [],
+          "schema": "double_pinyin_sogou",
+          "ascii": false,
+          "elapsed_ms": 0.011
+        },
+        {
+          "action": "key:65505:1073741824",
+          "handled": 0,
+          "input": "",
+          "preedit": "",
+          "page_size": 0,
+          "page": 0,
+          "highlighted": 0,
+          "candidates": [],
+          "schema": "double_pinyin_sogou",
+          "ascii": true,
+          "elapsed_ms": 0.046
+        },
+        {
+          "action": "key:65506:1",
+          "handled": 0,
+          "input": "",
+          "preedit": "",
+          "page_size": 0,
+          "page": 0,
+          "highlighted": 0,
+          "candidates": [],
+          "schema": "double_pinyin_sogou",
+          "ascii": true,
+          "elapsed_ms": 0.004
+        },
+        {
+          "action": "key:65506:1073741824",
+          "handled": 0,
+          "input": "",
+          "preedit": "",
+          "page_size": 0,
+          "page": 0,
+          "highlighted": 0,
+          "candidates": [],
+          "schema": "double_pinyin_sogou",
+          "ascii": false,
+          "elapsed_ms": 0.044
+        }
+      ]
+    },
+    {
+      "name": "missing-gloss-and-meaning",
+      "wall_ms": 63.64,
+      "events": [
+        {
+          "action": "initial",
+          "handled": 1,
+          "input": "",
+          "preedit": "",
+          "page_size": 0,
+          "page": 0,
+          "highlighted": 0,
+          "candidates": [],
+          "schema": "double_pinyin_sogou",
+          "ascii": false,
+          "elapsed_ms": 48.127
+        },
+        {
+          "action": "input:bzj;",
+          "handled": 1,
+          "input": "bzj;",
+          "preedit": "bei jing",
+          "page_size": 9,
+          "page": 0,
+          "highlighted": 0,
+          "candidates": [
+            {
+              "text": "北京",
+              "comment": "n. Beijing"
+            },
+            {
+              "text": "背景",
+              "comment": "n. background"
+            },
+            {
+              "text": "北境",
+              "comment": ""
+            },
+            {
+              "text": "倍镜",
+              "comment": ""
+            },
+            {
+              "text": "被",
+              "comment": "prep. by"
+            },
+            {
+              "text": "备",
+              "comment": "v. prepare"
+            },
+            {
+              "text": "北",
+              "comment": "n. north"
+            },
+            {
+              "text": "背",
+              "comment": "n. back"
+            },
+            {
+              "text": "呗",
+              "comment": "part. particle"
+            }
+          ],
+          "schema": "double_pinyin_sogou",
+          "ascii": false,
+          "elapsed_ms": 9.725
+        },
+        {
+          "action": "key:51:8",
+          "handled": 1,
+          "input": "bzj;",
+          "preedit": "bei jing",
+          "page_size": 9,
+          "page": 0,
+          "highlighted": 0,
+          "candidates": [
+            {
+              "text": "北京",
+              "comment": "n. Beijing"
+            },
+            {
+              "text": "背景",
+              "comment": "n. background"
+            },
+            {
+              "text": "北境",
+              "comment": ""
+            },
+            {
+              "text": "倍镜",
+              "comment": ""
+            },
+            {
+              "text": "被",
+              "comment": "prep. by"
+            },
+            {
+              "text": "备",
+              "comment": "v. prepare"
+            },
+            {
+              "text": "北",
+              "comment": "n. north"
+            },
+            {
+              "text": "背",
+              "comment": "n. back"
+            },
+            {
+              "text": "呗",
+              "comment": "part. particle"
+            }
+          ],
+          "schema": "double_pinyin_sogou",
+          "ascii": false,
+          "elapsed_ms": 0.02
+        },
+        {
+          "action": "key:33:9",
+          "handled": 1,
+          "input": "bzj;",
+          "preedit": "bei jing",
+          "page_size": 9,
+          "page": 0,
+          "highlighted": 0,
+          "candidates": [
+            {
+              "text": "北京",
+              "comment": "n. Beijing"
+            },
+            {
+              "text": "背景",
+              "comment": "n. background"
+            },
+            {
+              "text": "北境",
+              "comment": ""
+            },
+            {
+              "text": "倍镜",
+              "comment": ""
+            },
+            {
+              "text": "被",
+              "comment": "prep. by"
+            },
+            {
+              "text": "备",
+              "comment": "v. prepare"
+            },
+            {
+              "text": "北",
+              "comment": "n. north"
+            },
+            {
+              "text": "背",
+              "comment": "n. back"
+            },
+            {
+              "text": "呗",
+              "comment": "part. particle"
+            }
+          ],
+          "schema": "double_pinyin_sogou",
+          "ascii": false,
+          "elapsed_ms": 0.014
+        }
+      ]
+    },
+    {
+      "name": "release-no-op",
+      "wall_ms": 64.062,
+      "events": [
+        {
+          "action": "initial",
+          "handled": 1,
+          "input": "",
+          "preedit": "",
+          "page_size": 0,
+          "page": 0,
+          "highlighted": 0,
+          "candidates": [],
+          "schema": "double_pinyin_sogou",
+          "ascii": false,
+          "elapsed_ms": 48.176
+        },
+        {
+          "action": "input:bzj;",
+          "handled": 1,
+          "input": "bzj;",
+          "preedit": "bei jing",
+          "page_size": 9,
+          "page": 0,
+          "highlighted": 0,
+          "candidates": [
+            {
+              "text": "北京",
+              "comment": "n. Beijing"
+            },
+            {
+              "text": "背景",
+              "comment": "n. background"
+            },
+            {
+              "text": "北境",
+              "comment": ""
+            },
+            {
+              "text": "倍镜",
+              "comment": ""
+            },
+            {
+              "text": "被",
+              "comment": "prep. by"
+            },
+            {
+              "text": "备",
+              "comment": "v. prepare"
+            },
+            {
+              "text": "北",
+              "comment": "n. north"
+            },
+            {
+              "text": "背",
+              "comment": "n. back"
+            },
+            {
+              "text": "呗",
+              "comment": "part. particle"
+            }
+          ],
+          "schema": "double_pinyin_sogou",
+          "ascii": false,
+          "elapsed_ms": 10.234
+        },
+        {
+          "action": "key:49:1073741832",
+          "handled": 0,
+          "input": "bzj;",
+          "preedit": "bei jing",
+          "page_size": 9,
+          "page": 0,
+          "highlighted": 0,
+          "candidates": [
+            {
+              "text": "北京",
+              "comment": "n. Beijing"
+            },
+            {
+              "text": "背景",
+              "comment": "n. background"
+            },
+            {
+              "text": "北境",
+              "comment": ""
+            },
+            {
+              "text": "倍镜",
+              "comment": ""
+            },
+            {
+              "text": "被",
+              "comment": "prep. by"
+            },
+            {
+              "text": "备",
+              "comment": "v. prepare"
+            },
+            {
+              "text": "北",
+              "comment": "n. north"
+            },
+            {
+              "text": "背",
+              "comment": "n. back"
+            },
+            {
+              "text": "呗",
+              "comment": "part. particle"
+            }
+          ],
+          "schema": "double_pinyin_sogou",
+          "ascii": false,
+          "elapsed_ms": 0.01
+        }
+      ]
+    },
+    {
+      "name": "cold-and-basic-key-timing",
+      "wall_ms": 65.331,
+      "events": [
+        {
+          "action": "initial",
+          "handled": 1,
+          "input": "",
+          "preedit": "",
+          "page_size": 0,
+          "page": 0,
+          "highlighted": 0,
+          "candidates": [],
+          "schema": "double_pinyin_sogou",
+          "ascii": false,
+          "elapsed_ms": 48.975
+        },
+        {
+          "action": "key:98:0",
+          "handled": 1,
+          "input": "b",
+          "preedit": "b",
+          "page_size": 9,
+          "page": 0,
+          "highlighted": 0,
+          "candidates": [
+            {
+              "text": "把",
+              "comment": ""
+            },
+            {
+              "text": "被",
+              "comment": "prep. by"
+            },
+            {
+              "text": "不",
+              "comment": "adv. not"
+            },
+            {
+              "text": "🙅‍♂️",
+              "comment": "adv. not"
+            },
+            {
+              "text": "🙅‍♀️",
+              "comment": "adv. not"
+            },
+            {
+              "text": "本",
+              "comment": "n. book"
+            },
+            {
+              "text": "边",
+              "comment": "n. side"
+            },
+            {
+              "text": "吧",
+              "comment": ""
+            },
+            {
+              "text": "白",
+              "comment": "adj. white"
+            }
+          ],
+          "schema": "double_pinyin_sogou",
+          "ascii": false,
+          "elapsed_ms": 7.547
+        },
+        {
+          "action": "key:122:0",
+          "handled": 1,
+          "input": "bz",
+          "preedit": "bei",
+          "page_size": 9,
+          "page": 0,
+          "highlighted": 0,
+          "candidates": [
+            {
+              "text": "被",
+              "comment": "prep. by"
+            },
+            {
+              "text": "备",
+              "comment": "v. prepare"
+            },
+            {
+              "text": "北",
+              "comment": "n. north"
+            },
+            {
+              "text": "背",
+              "comment": "n. back"
+            },
+            {
+              "text": "呗",
+              "comment": "part. particle"
+            },
+            {
+              "text": "杯",
+              "comment": "m. cup"
+            },
+            {
+              "text": "辈",
+              "comment": "n. generation"
+            },
+            {
+              "text": "悲",
+              "comment": "adj. sad"
+            },
+            {
+              "text": "贝",
+              "comment": "n. shell"
+            }
+          ],
+          "schema": "double_pinyin_sogou",
+          "ascii": false,
+          "elapsed_ms": 1.021
+        },
+        {
+          "action": "key:106:0",
+          "handled": 1,
+          "input": "bzj",
+          "preedit": "bei j",
+          "page_size": 9,
+          "page": 0,
+          "highlighted": 0,
+          "candidates": [
+            {
+              "text": "北京",
+              "comment": "n. Beijing"
+            },
+            {
+              "text": "背景",
+              "comment": "n. background"
+            },
+            {
+              "text": "北极",
+              "comment": "n. Arctic"
+            },
+            {
+              "text": "北街",
+              "comment": "n. North Street"
+            },
+            {
+              "text": "倍加",
+              "comment": "v. redouble"
+            },
+            {
+              "text": "杯酒",
+              "comment": "n. cup of wine"
+            },
+            {
+              "text": "悲寂",
+              "comment": ""
+            },
+            {
+              "text": "北疆",
+              "comment": "n. northern frontier"
+            },
+            {
+              "text": "被禁",
+              "comment": "v. be banned"
+            }
+          ],
+          "schema": "double_pinyin_sogou",
+          "ascii": false,
+          "elapsed_ms": 1.108
+        },
+        {
+          "action": "key:59:0",
+          "handled": 1,
+          "input": "bzj;",
+          "preedit": "bei jing",
+          "page_size": 9,
+          "page": 0,
+          "highlighted": 0,
+          "candidates": [
+            {
+              "text": "北京",
+              "comment": "n. Beijing"
+            },
+            {
+              "text": "背景",
+              "comment": "n. background"
+            },
+            {
+              "text": "北境",
+              "comment": ""
+            },
+            {
+              "text": "倍镜",
+              "comment": ""
+            },
+            {
+              "text": "被",
+              "comment": "prep. by"
+            },
+            {
+              "text": "备",
+              "comment": "v. prepare"
+            },
+            {
+              "text": "北",
+              "comment": "n. north"
+            },
+            {
+              "text": "背",
+              "comment": "n. back"
+            },
+            {
+              "text": "呗",
+              "comment": "part. particle"
+            }
+          ],
+          "schema": "double_pinyin_sogou",
+          "ascii": false,
+          "elapsed_ms": 0.986
+        }
+      ]
+    }
+  ],
+  "assertions": 29,
+  "failures": [],
+  "timing_ms": {
+    "initialize_schema_and_dictionary": 48.975,
+    "keys_and_candidate_read": [
+      7.547,
+      1.021,
+      1.108,
+      0.986
+    ]
+  },
+  "status": "passed"
+}

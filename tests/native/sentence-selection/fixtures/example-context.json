@@ -1,0 +1,96 @@
+[
+  {
+    "action": "initial",
+    "handled": 1,
+    "input": "",
+    "preedit": "",
+    "commit_preview": "",
+    "sel_start": 0,
+    "sel_end": 0,
+    "length": 0,
+    "cursor": 0,
+    "raw_caret": 0,
+    "page_size": 0,
+    "page": 0,
+    "highlighted": 0,
+    "candidates": [],
+    "schema": "double_pinyin_sogou",
+    "ascii": false,
+    "elapsed_ms": 269.023
+  },
+  {
+    "action": "option:traditionalization:1",
+    "handled": 1,
+    "input": "",
+    "preedit": "",
+    "commit_preview": "",
+    "sel_start": 0,
+    "sel_end": 0,
+    "length": 0,
+    "cursor": 0,
+    "raw_caret": 0,
+    "page_size": 0,
+    "page": 0,
+    "highlighted": 0,
+    "candidates": [],
+    "schema": "double_pinyin_sogou",
+    "ascii": false,
+    "elapsed_ms": 0.048
+  },
+  {
+    "action": "input:jntmxwwuwomfyiqiqutuuugr",
+    "handled": 1,
+    "input": "jntmxwwuwomfyiqiqutuuugr",
+    "preedit": "jin tian xia wu wo men yi qi qu tu shu guan",
+    "commit_preview": "今天下午我們一起去圖書館",
+    "sel_start": 0,
+    "sel_end": 43,
+    "length": 43,
+    "cursor": 43,
+    "raw_caret": 24,
+    "page_size": 9,
+    "page": 0,
+    "highlighted": 0,
+    "candidates": [
+      {
+        "text": "今天下午我們一起去圖書館",
+        "comment": ""
+      },
+      {
+        "text": "今天下午",
+        "comment": "n. this afternoon"
+      },
+      {
+        "text": "盡天下",
+        "comment": ""
+      },
+      {
+        "text": "今天",
+        "comment": "n. today"
+      },
+      {
+        "text": "金田",
+        "comment": "n. Kaneda"
+      },
+      {
+        "text": "進",
+        "comment": "v. enter"
+      },
+      {
+        "text": "今",
+        "comment": "n. now"
+      },
+      {
+        "text": "金",
+        "comment": "n. gold"
+      },
+      {
+        "text": "緊",
+        "comment": "adj. tight"
+      }
+    ],
+    "schema": "double_pinyin_sogou",
+    "ascii": false,
+    "elapsed_ms": 901.382
+  }
+]

@@ -1,0 +1,167 @@
+{
+  "collected_on": "2026-10-24",
+  "purpose": "Redistribution notices for the unchanged official Squirrel 1.1.2 runtime libraries and plugins; not a claim that every linked dependency was rebuilt from these exact source commits.",
+  "official_runtime_version": "Squirrel 1.1.2",
+  "librime_dylib_current_version": "1.16.0",
+  "lua_version_observed_in_binary": "5.4.6",
+  "opencc_notice_check": "No top-level NOTICE or NOTICE.txt exists at the pinned OpenCC commit.",
+  "files": [
+    {
+      "component": "glog",
+      "repository": "https://github.com/google/glog",
+      "source_commit": "7b134a5c82c0c0b5698bb6bf7a835b230c5638e4",
+      "upstream_path": "COPYING",
+      "source_url": "https://raw.githubusercontent.com/google/glog/7b134a5c82c0c0b5698bb6bf7a835b230c5638e4/COPYING",
+      "file": "licenses/glog-COPYING",
+      "sha256": "136d48dea7a681413691f3db3098f6cf5ffaa3119d96d97bb83b8cff3ce38c4a",
+      "bytes": 1479,
+      "provenance_scope": "Dependency gitlink in vendored librime a251145d3aafa33871824a40bbec04c966bd8b56. This is a pinned source reference; the exact static-library commit inside the reused official binary is not independently attested."
+    },
+    {
+      "component": "leveldb",
+      "repository": "https://github.com/google/leveldb",
+      "source_commit": "99b3c03b3284f5886f9ef9a4ef703d57373e61be",
+      "upstream_path": "LICENSE",
+      "source_url": "https://raw.githubusercontent.com/google/leveldb/99b3c03b3284f5886f9ef9a4ef703d57373e61be/LICENSE",
+      "file": "licenses/leveldb-LICENSE",
+      "sha256": "ccc19f1da0798ed666609b65a5b44dd8b3abe6fc08b9c0592eb76e82e174db19",
+      "bytes": 1484,
+      "provenance_scope": "Dependency gitlink in vendored librime a251145d3aafa33871824a40bbec04c966bd8b56. This is a pinned source reference; the exact static-library commit inside the reused official binary is not independently attested."
+    },
+    {
+      "component": "marisa-trie",
+      "repository": "https://github.com/s-yata/marisa-trie",
+      "source_commit": "3e87d53b78e15f2f43783d5e376561a8c9722051",
+      "upstream_path": "COPYING.md",
+      "source_url": "https://raw.githubusercontent.com/s-yata/marisa-trie/3e87d53b78e15f2f43783d5e376561a8c9722051/COPYING.md",
+      "file": "licenses/marisa-trie-COPYING.md",
+      "sha256": "edf58dab34c3dc239ba4ba2d5d3d844d8c5b442aa4dd1149fac81b2d8c6cb8d1",
+      "bytes": 2275,
+      "provenance_scope": "Dependency gitlink in vendored librime a251145d3aafa33871824a40bbec04c966bd8b56. This is a pinned source reference; the exact static-library commit inside the reused official binary is not independently attested."
+    },
+    {
+      "component": "OpenCC",
+      "repository": "https://github.com/BYVoid/OpenCC",
+      "source_commit": "556ed22496d650bd0b13b6c163be9814637970ae",
+      "upstream_path": "LICENSE",
+      "source_url": "https://raw.githubusercontent.com/BYVoid/OpenCC/556ed22496d650bd0b13b6c163be9814637970ae/LICENSE",
+      "file": "licenses/OpenCC-LICENSE",
+      "sha256": "b534e465949558eec2597b04f5092b5e161236a68dfbfd04d547592ac3964308",
+      "bytes": 9165,
+      "provenance_scope": "Dependency gitlink in vendored librime a251145d3aafa33871824a40bbec04c966bd8b56. This is a pinned source reference; the exact static-library commit inside the reused official binary is not independently attested."
+    },
+    {
+      "component": "yaml-cpp",
+      "repository": "https://github.com/jbeder/yaml-cpp",
+      "source_commit": "2f86d13775d119edbb69af52e5f566fd65c6953b",
+      "upstream_path": "LICENSE",
+      "source_url": "https://raw.githubusercontent.com/jbeder/yaml-cpp/2f86d13775d119edbb69af52e5f566fd65c6953b/LICENSE",
+      "file": "licenses/yaml-cpp-LICENSE",
+      "sha256": "aa6fcc27be034e41e21dd832f9175bfe694a48491d9e14ff0fa278e19ad14f1b",
+      "bytes": 1061,
+      "provenance_scope": "Dependency gitlink in vendored librime a251145d3aafa33871824a40bbec04c966bd8b56. This is a pinned source reference; the exact static-library commit inside the reused official binary is not independently attested."
+    },
+    {
+      "component": "librime-lua",
+      "repository": "https://github.com/hchunhui/librime-lua",
+      "source_commit": "6da5d6cedb853380ed1b5b9b6979cb1a9c028353",
+      "upstream_path": "LICENSE",
+      "source_url": "https://raw.githubusercontent.com/hchunhui/librime-lua/6da5d6cedb853380ed1b5b9b6979cb1a9c028353/LICENSE",
+      "file": "licenses/librime-lua-LICENSE",
+      "sha256": "c6bd4f58b13ae9d45c5e53adddeea5049114a25862797c6c6f64920431eea249",
+      "bytes": 1520,
+      "provenance_scope": "Upstream licence snapshot resolved to this immutable commit on 2026-10-24; the precise commit of this plugin in the official Squirrel 1.1.2 runtime was not published in the local provenance. This does not assert binary/source identity.",
+      "source_ref": "master"
+    },
+    {
+      "component": "librime-octagram",
+      "repository": "https://github.com/lotem/librime-octagram",
+      "source_commit": "57d18b9f58e5284bd891d559f6bdd16cf60341e9",
+      "upstream_path": "LICENSE",
+      "source_url": "https://raw.githubusercontent.com/lotem/librime-octagram/57d18b9f58e5284bd891d559f6bdd16cf60341e9/LICENSE",
+      "file": "licenses/librime-octagram-LICENSE",
+      "sha256": "f67d27a6d2d586fcfed4b4c886a83747095396a39b6641e18e855086be2ec400",
+      "bytes": 1513,
+      "provenance_scope": "Upstream licence snapshot resolved to this immutable commit on 2026-10-24; the precise commit of this plugin in the official Squirrel 1.1.2 runtime was not published in the local provenance. This does not assert binary/source identity.",
+      "source_ref": "master"
+    },
+    {
+      "component": "librime-predict",
+      "repository": "https://github.com/rime/librime-predict",
+      "source_commit": "920bd41ebf6f9bf6855d14fbe80212e54e749791",
+      "upstream_path": "LICENSE",
+      "source_url": "https://raw.githubusercontent.com/rime/librime-predict/920bd41ebf6f9bf6855d14fbe80212e54e749791/LICENSE",
+      "file": "licenses/librime-predict-LICENSE",
+      "sha256": "9b1bbdf15a381884b47dfd9422e68f6382170b2841c476afc076f2d448c7a59f",
+      "bytes": 1502,
+      "provenance_scope": "Upstream licence snapshot resolved to this immutable commit on 2026-10-24; the precise commit of this plugin in the official Squirrel 1.1.2 runtime was not published in the local provenance. This does not assert binary/source identity.",
+      "source_ref": "master"
+    },
+    {
+      "component": "Lua-5.4.6",
+      "repository": "https://github.com/lua/lua",
+      "source_commit": "6443185167c77adcc8552a3fee7edab7895db1a9",
+      "upstream_path": "lua.h",
+      "source_url": "https://raw.githubusercontent.com/lua/lua/6443185167c77adcc8552a3fee7edab7895db1a9/lua.h",
+      "file": "licenses/Lua-5.4.6-lua.h",
+      "sha256": "245ec29da577aefefebdb728c32a7d7407e4ff43889e038d2ab6e6349f5153f0",
+      "bytes": 15949,
+      "provenance_scope": "Exact Lua version 5.4.6 and 1994-2023 copyright were read from the bundled librime-lua.dylib. The complete upstream lua.h is retained verbatim, including its MIT licence notice at the end.",
+      "source_ref": "v5.4.6"
+    },
+    {
+      "component": "Boost-1.89.0",
+      "repository": "https://github.com/boostorg/boost",
+      "source_commit": "ef7fea34711a189472893b88205b1dd3c275677b",
+      "upstream_path": "LICENSE_1_0.txt",
+      "source_url": "https://raw.githubusercontent.com/boostorg/boost/ef7fea34711a189472893b88205b1dd3c275677b/LICENSE_1_0.txt",
+      "file": "licenses/Boost-1.89.0-LICENSE_1_0.txt",
+      "sha256": "c9bff75738922193e67fa726fa225535870d2aa1059f91452c411736284ad566",
+      "bytes": 1338,
+      "provenance_scope": "Boost 1.89.0 is the version selected by the vendored librime macOS CI workflow. This is a pinned source reference, not an independently attested static-library build ID.",
+      "source_ref": "boost-1.89.0"
+    },
+    {
+      "component": "OpenCC embedded marisa-0.2.6",
+      "repository": "https://github.com/BYVoid/OpenCC",
+      "source_commit": "556ed22496d650bd0b13b6c163be9814637970ae",
+      "upstream_path": "deps/marisa-0.2.6/COPYING.md",
+      "source_url": "https://raw.githubusercontent.com/BYVoid/OpenCC/556ed22496d650bd0b13b6c163be9814637970ae/deps/marisa-0.2.6/COPYING.md",
+      "file": "licenses/OpenCC-marisa-0.2.6-COPYING.md",
+      "sha256": "c0e214362b4dcf118371b02c87321f64a4d8317112d732b6d768167a635f383a",
+      "bytes": 2284,
+      "provenance_scope": "Original licence of marisa-0.2.6 embedded in the pinned OpenCC source reference. The official binary static-library build ID is not independently attested."
+    },
+    {
+      "component": "utf8cpp",
+      "repository": "https://github.com/rime/librime",
+      "source_commit": "a251145d3aafa33871824a40bbec04c966bd8b56",
+      "upstream_path": "include/utf8.h",
+      "source_url": "https://raw.githubusercontent.com/rime/librime/a251145d3aafa33871824a40bbec04c966bd8b56/include/utf8.h",
+      "file": "licenses/utf8cpp-utf8.h",
+      "sha256": "90643c1044a58020af389dc8eb73099fc8327a12d0731a1101acb277e03e6a3b",
+      "bytes": 1521,
+      "provenance_scope": "Complete original header retained verbatim, including its copyright/licence block, from the local pinned librime source. No claim of an independently recovered static-library build ID."
+    },
+    {
+      "component": "X11 keysym definitions",
+      "repository": "https://github.com/rime/librime",
+      "source_commit": "a251145d3aafa33871824a40bbec04c966bd8b56",
+      "upstream_path": "include/X11/keysym.h",
+      "source_url": "https://raw.githubusercontent.com/rime/librime/a251145d3aafa33871824a40bbec04c966bd8b56/include/X11/keysym.h",
+      "file": "licenses/X11-keysym.h",
+      "sha256": "8b20fbcdfa52a6ce5bf8c0c1746e2e47fca02e2534561dde0e085893db2a57ca",
+      "bytes": 2755,
+      "provenance_scope": "Complete original header retained verbatim, including its copyright/licence block, from the local pinned librime source. No claim of an independently recovered static-library build ID."
+    }
+  ],
+  "licence_tree_review": {
+    "scope": "Checked full tree licence filenames for all three plugin snapshots and the pinned OpenCC tree.",
+    "additional_runtime_notice": "OpenCC embedded marisa-0.2.6 included.",
+    "not_distributed_build_only_components": [
+      "OpenCC deps/google-benchmark",
+      "OpenCC deps/googletest-1.15.0",
+      "OpenCC Python binding deps/pybind11-2.13.1"
+    ]
+  }
+}

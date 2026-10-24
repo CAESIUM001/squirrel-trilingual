@@ -1,0 +1,53 @@
+{
+  "asset": "glossary-fr.tsv",
+  "format": "UTF-8; simplified Chinese TAB French; one term per line; unique sorted keys",
+  "entry_count": 5000,
+  "sha256": "27da5a13c1841eea403fdc0aab15d0e1ee6c5cbffd3302cfbcd9d9ad2d30f45f",
+  "created_at": "2026-10-24",
+  "license": "GPL-3.0-or-later for project additions; upstream Rime Ice and Qingjian sources under GPLv3; see LICENSE.txt",
+  "sources": [
+    {
+      "name": "Rime Ice base Chinese dictionary",
+      "url": "https://github.com/iDvel/rime-ice/blob/main/cn_dicts/base.dict.yaml",
+      "upstream_version": "2026-09-20",
+      "sha256": "0418d5103d8e40c8fff4b686a873ad03e9836cd0419ecae0b7e1e2526312dba0"
+    },
+    {
+      "name": "Rime Ice 8105 Chinese character dictionary",
+      "url": "https://github.com/iDvel/rime-ice/blob/main/cn_dicts/8105.dict.yaml",
+      "upstream_version": "2026-08-16",
+      "sha256": "1f9a42b91dea6982baee2551981780271aeffd78876662b9c9f324e56b37b120"
+    },
+    {
+      "name": "Qingjian English glossary; Chinese-key membership only, no English definitions translated",
+      "url": "https://github.com/qingjian-team/qingjian/blob/10e86493d8f1e59a7483c8afdf910d84bd0908a0/assets/glossary/glossary-en.tsv",
+      "sha256": "7b9676979aa227bde7a2d541354a59b73a04f33acd36ef5d6c433ce789b81625"
+    }
+  ],
+  "selection": "Static preferred everyday terms that already occur in a source; top 300 single Han characters by weight; then 2-6 Han-character Rime Ice base terms by descending weight, lexical ties. Deduplicate and keep first 5000.",
+  "selection_input_sha256": "934122445d6e4f706a35d58400c0b1204135b91e007b579592fc68f5f7912d74",
+  "selection_counts": {
+    "preferred": 89,
+    "single_character_limit": 300,
+    "requested": 5000,
+    "accepted": 5000,
+    "rejected": 0
+  },
+  "translation": {
+    "engine": "Apple public Translation framework; installed on-device zh-Hans to fr model",
+    "model_version": "Not exposed by public API",
+    "macOS": "15.6.1",
+    "batch_size": 16,
+    "sample_64_seconds": 0.25,
+    "remaining_4936_seconds": 40.35,
+    "external_network": false,
+    "human_review": "Common-word spot checks only; machine translation may be ambiguous without context"
+  },
+  "privacy": "Built exclusively from the listed static source dictionaries. No learned vocabulary, input history, user database, or user sentence was read to create the asset.",
+  "generation_sources": {
+    "select_words.py": "67f27e59ca41670b9a0bd81a424f6aeaab0b780d5820dead09d9cfe2c0fbc86a",
+    "GeneratingTranslator.swift": "13902e0a9f132afa1a39920067fb852ba9787cc98741b1c8e69fa02bb306c749",
+    "README.md": "e77351c992cb4baf22a93279cc9cf2db7f62ac96dd0e756366b34be3b7b9522c",
+    "GenerateFrenchGlossary.swift": "52158aa1335a557ac8389f88b639acb3933fff0552f854e2ac3d051ebc5598a1"
+  }
+}

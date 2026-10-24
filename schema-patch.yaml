@@ -1,0 +1,12 @@
+# Insert these entries below patch: in double_pinyin_sogou.custom.yaml.
+patch:
+  "engine/processors/@before 0": lua_processor@*en_gloss*processor
+  "engine/filters/@next": lua_filter@*en_gloss*filter
+  "switches/@next":
+    name: english_gloss
+    reset: 1
+    states: ["译关", "英释"]
+  en_gloss:
+    max_comment_chars: 22
+    show_pos: true
+    show_second: false

@@ -1,0 +1,6 @@
+{
+  "status": "passed",
+  "assertions": 45,
+  "helper_sha256": "2b2cb33a18a9a82b1b8427fc2433ebf7e6bfbc983ae252797e867bfaf3a4b6e1",
+  "scope": "Disposable temporary homes; no input-source registration, GUI activation, user hooks, or privileged package installation."
+}

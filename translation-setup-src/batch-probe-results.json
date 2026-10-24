@@ -1,0 +1,34 @@
+{
+  "tested_on": "2026-10-24",
+  "availability_before_french_download": {
+    "zh-Hans_to_en": "installed",
+    "zh-Hans_to_fr": "supported"
+  },
+  "english_batch": {
+    "status": "translated",
+    "elapsed_ms": 107,
+    "translations": {
+      "今天下午我們一起去圖書館": "Let's go to the library together this afternoon.",
+      "你好": "Hello",
+      "学习": "Study"
+    }
+  },
+  "independent_instances": {
+    "status": "passed",
+    "english": "Let's go to the library to study together tomorrow afternoon.",
+    "french": {},
+    "check": "French request did not cancel English request"
+  },
+  "source_sha256": "13902e0a9f132afa1a39920067fb852ba9787cc98741b1c8e69fa02bb306c749",
+  "validation_scope": "Actual Apple on-device Translation API, fixed synthetic samples; no real input or automatic model download.",
+  "french_batch_after_download": {
+    "status": "translated",
+    "elapsed_ms": 1042,
+    "models_installed": true,
+    "translations": {
+      "今天下午我們一起去圖書館": "Allons ensemble à la bibliothèque cet après-midi.",
+      "你好": "Bonjour",
+      "学习": "Étude"
+    }
+  }
+}

@@ -1,0 +1,228 @@
+{
+  "description": "Single diagnostic run of the original Sogou Rime Ice schema without en_gloss; measured separately, not a benchmark.",
+  "librime_version": "1.16.0",
+  "timing_ms": {
+    "initialize_schema": 61.579,
+    "keys_and_candidate_read": [
+      11.971,
+      0.741,
+      2.464,
+      0.642
+    ]
+  },
+  "events": [
+    {
+      "action": "initial",
+      "handled": 1,
+      "input": "",
+      "preedit": "",
+      "page_size": 0,
+      "page": 0,
+      "highlighted": 0,
+      "candidates": [],
+      "schema": "double_pinyin_sogou",
+      "ascii": false,
+      "elapsed_ms": 61.579
+    },
+    {
+      "action": "key:98:0",
+      "handled": 1,
+      "input": "b",
+      "preedit": "b",
+      "page_size": 9,
+      "page": 0,
+      "highlighted": 0,
+      "candidates": [
+        {
+          "text": "把",
+          "comment": ""
+        },
+        {
+          "text": "被",
+          "comment": ""
+        },
+        {
+          "text": "不",
+          "comment": ""
+        },
+        {
+          "text": "🙅‍♂️",
+          "comment": ""
+        },
+        {
+          "text": "🙅‍♀️",
+          "comment": ""
+        },
+        {
+          "text": "本",
+          "comment": ""
+        },
+        {
+          "text": "边",
+          "comment": ""
+        },
+        {
+          "text": "吧",
+          "comment": ""
+        },
+        {
+          "text": "白",
+          "comment": ""
+        }
+      ],
+      "schema": "double_pinyin_sogou",
+      "ascii": false,
+      "elapsed_ms": 11.971
+    },
+    {
+      "action": "key:122:0",
+      "handled": 1,
+      "input": "bz",
+      "preedit": "bei",
+      "page_size": 9,
+      "page": 0,
+      "highlighted": 0,
+      "candidates": [
+        {
+          "text": "被",
+          "comment": ""
+        },
+        {
+          "text": "备",
+          "comment": ""
+        },
+        {
+          "text": "北",
+          "comment": ""
+        },
+        {
+          "text": "背",
+          "comment": ""
+        },
+        {
+          "text": "呗",
+          "comment": ""
+        },
+        {
+          "text": "杯",
+          "comment": ""
+        },
+        {
+          "text": "辈",
+          "comment": ""
+        },
+        {
+          "text": "悲",
+          "comment": ""
+        },
+        {
+          "text": "贝",
+          "comment": ""
+        }
+      ],
+      "schema": "double_pinyin_sogou",
+      "ascii": false,
+      "elapsed_ms": 0.741
+    },
+    {
+      "action": "key:106:0",
+      "handled": 1,
+      "input": "bzj",
+      "preedit": "bei j",
+      "page_size": 9,
+      "page": 0,
+      "highlighted": 0,
+      "candidates": [
+        {
+          "text": "北京",
+          "comment": ""
+        },
+        {
+          "text": "背景",
+          "comment": ""
+        },
+        {
+          "text": "北极",
+          "comment": ""
+        },
+        {
+          "text": "北街",
+          "comment": ""
+        },
+        {
+          "text": "倍加",
+          "comment": ""
+        },
+        {
+          "text": "杯酒",
+          "comment": ""
+        },
+        {
+          "text": "悲寂",
+          "comment": ""
+        },
+        {
+          "text": "北疆",
+          "comment": ""
+        },
+        {
+          "text": "被禁",
+          "comment": ""
+        }
+      ],
+      "schema": "double_pinyin_sogou",
+      "ascii": false,
+      "elapsed_ms": 2.464
+    },
+    {
+      "action": "key:59:0",
+      "handled": 1,
+      "input": "bzj;",
+      "preedit": "bei jing",
+      "page_size": 9,
+      "page": 0,
+      "highlighted": 0,
+      "candidates": [
+        {
+          "text": "北京",
+          "comment": ""
+        },
+        {
+          "text": "背景",
+          "comment": ""
+        },
+        {
+          "text": "北境",
+          "comment": ""
+        },
+        {
+          "text": "倍镜",
+          "comment": ""
+        },
+        {
+          "text": "被",
+          "comment": ""
+        },
+        {
+          "text": "备",
+          "comment": ""
+        },
+        {
+          "text": "北",
+          "comment": ""
+        },
+        {
+          "text": "背",
+          "comment": ""
+        },
+        {
+          "text": "呗",
+          "comment": ""
+        }
+      ],
+      "schema": "double_pinyin_sogou",
+      "ascii": false,
+      "elapsed_ms": 0.642
+    }
+  ]
+}

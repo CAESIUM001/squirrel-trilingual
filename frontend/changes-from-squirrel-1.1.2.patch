@@ -1,0 +1,6633 @@
+diff --git a/Squirrel.xcodeproj/project.pbxproj b/Squirrel.xcodeproj/project.pbxproj
+index becf3ce..2b24957 100644
+--- a/Squirrel.xcodeproj/project.pbxproj
++++ b/Squirrel.xcodeproj/project.pbxproj
+@@ -7,6 +7,11 @@
+ 	objects = {
+ 
+ /* Begin PBXBuildFile section */
++		E09A115B88197B229DE11ECC /* glossary-fr.README.md in Resources */ = {isa = PBXBuildFile; fileRef = E10A115B88197B229DE11ECC /* glossary-fr.README.md */; };
++		E07A115B88197B229DE11ECC /* glossary-fr.provenance.json in Resources */ = {isa = PBXBuildFile; fileRef = E08A115B88197B229DE11ECC /* glossary-fr.provenance.json */; };
++		E05A115B88197B229DE11ECC /* glossary-fr.tsv in Resources */ = {isa = PBXBuildFile; fileRef = E06A115B88197B229DE11ECC /* glossary-fr.tsv */; };
++		E03A115B88197B229DE11ECC /* SquirrelSentenceSelection.swift in Sources */ = {isa = PBXBuildFile; fileRef = E04A115B88197B229DE11ECC /* SquirrelSentenceSelection.swift */; };
++		E01A115B88197B229DE11ECC /* SquirrelSentenceTranslator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E02A115B88197B229DE11ECC /* SquirrelSentenceTranslator.swift */; };
+ 		2C6B9F9D2BCD086700E327DF /* librime-lua.dylib in Copy Rime plugins */ = {isa = PBXBuildFile; fileRef = 2C6B9F9A2BCD086700E327DF /* librime-lua.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+ 		2C6B9F9E2BCD086700E327DF /* librime-octagram.dylib in Copy Rime plugins */ = {isa = PBXBuildFile; fileRef = 2C6B9F9B2BCD086700E327DF /* librime-octagram.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+ 		2C6B9F9F2BCD086700E327DF /* librime-predict.dylib in Copy Rime plugins */ = {isa = PBXBuildFile; fileRef = 2C6B9F9C2BCD086700E327DF /* librime-predict.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+@@ -207,6 +212,11 @@
+ /* End PBXCopyFilesBuildPhase section */
+ 
+ /* Begin PBXFileReference section */
++		E10A115B88197B229DE11ECC /* glossary-fr.README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = resources/glossary-fr.README.md; sourceTree = "<group>"; };
++		E08A115B88197B229DE11ECC /* glossary-fr.provenance.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = resources/glossary-fr.provenance.json; sourceTree = "<group>"; };
++		E06A115B88197B229DE11ECC /* glossary-fr.tsv */ = {isa = PBXFileReference; lastKnownFileType = text; path = resources/glossary-fr.tsv; sourceTree = "<group>"; };
++		E04A115B88197B229DE11ECC /* SquirrelSentenceSelection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sources/SquirrelSentenceSelection.swift; sourceTree = "<group>"; };
++		E02A115B88197B229DE11ECC /* SquirrelSentenceTranslator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sources/SquirrelSentenceTranslator.swift; sourceTree = "<group>"; };
+ 		1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
+ 		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
+ 		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
+@@ -318,6 +328,8 @@
+ 			isa = PBXGroup;
+ 			children = (
+ 				B38E9B902BE9AE1E0036ABEF /* SquirrelApplicationDelegate.swift */,
++				E02A115B88197B229DE11ECC /* SquirrelSentenceTranslator.swift */,
++				E04A115B88197B229DE11ECC /* SquirrelSentenceSelection.swift */,
+ 				B38E9B942BEAFEFD0036ABEF /* SquirrelInputController.swift */,
+ 				B39771222BECEA150093A49B /* MacOSKeyCodes.swift */,
+ 				B397712C2BEEB39D0093A49B /* InputSource.swift */,
+@@ -382,6 +394,9 @@
+ 		29B97317FDCFA39411CA2CEA /* Resources */ = {
+ 			isa = PBXGroup;
+ 			children = (
++				E10A115B88197B229DE11ECC /* glossary-fr.README.md */,
++				E08A115B88197B229DE11ECC /* glossary-fr.provenance.json */,
++				E06A115B88197B229DE11ECC /* glossary-fr.tsv */,
+ 				B3216E5B2BF438F800E292D2 /* rime.pdf */,
+ 				44986A93184B421700B3278D /* LICENSE.txt */,
+ 				44986A94184B421700B3278D /* README.md */,
+@@ -562,6 +577,9 @@
+ 			isa = PBXResourcesBuildPhase;
+ 			buildActionMask = 2147483647;
+ 			files = (
++				E09A115B88197B229DE11ECC /* glossary-fr.README.md in Resources */,
++				E07A115B88197B229DE11ECC /* glossary-fr.provenance.json in Resources */,
++				E05A115B88197B229DE11ECC /* glossary-fr.tsv in Resources */,
+ 				446C01D71F767BD400A6C23E /* Assets.xcassets in Resources */,
+ 				B3EF08EA2F17125E00433A45 /* Rime.icon in Resources */,
+ 				B39771312BEEE4540093A49B /* InfoPlist.xcstrings in Resources */,
+@@ -587,6 +605,8 @@
+ 				B397712D2BEEB39D0093A49B /* InputSource.swift in Sources */,
+ 				B397712B2BEE4C160093A49B /* SquirrelPanel.swift in Sources */,
+ 				B38E9B912BE9AE1E0036ABEF /* SquirrelApplicationDelegate.swift in Sources */,
++				E01A115B88197B229DE11ECC /* SquirrelSentenceTranslator.swift in Sources */,
++				E03A115B88197B229DE11ECC /* SquirrelSentenceSelection.swift in Sources */,
+ 				B39771272BED9B250093A49B /* SquirrelTheme.swift in Sources */,
+ 				B35D2FE82BF00839009D156B /* BridgingFunctions.swift in Sources */,
+ 			);
+diff --git a/sources/InputSource.swift b/sources/InputSource.swift
+index a0c80ad..848664e 100644
+--- a/sources/InputSource.swift
++++ b/sources/InputSource.swift
+@@ -7,6 +7,7 @@
+ 
+ import Foundation
+ import InputMethodKit
++import CoreServices
+ 
+ final class SquirrelInstaller {
+   enum InputMode: String, CaseIterable {
+@@ -14,9 +15,9 @@ final class SquirrelInstaller {
+     case hans = "im.rime.inputmethod.Squirrel.Hans"
+     case hant = "im.rime.inputmethod.Squirrel.Hant"
+   }
+-  private lazy var inputSources: [String: TISInputSource] = {
++  // Registration can change the TIS list; always obtain fresh references.
++  private var inputSources: [String: TISInputSource] {
+     var inputSources = [String: TISInputSource]()
+-    var matchingSources = [InputMode: TISInputSource]()
+     let sourceList = TISCreateInputSourceList(nil, true).takeRetainedValue() as! [TISInputSource]
+     for inputSource in sourceList {
+       let sourceIDRef = TISGetInputSourceProperty(inputSource, kTISPropertyInputSourceID)
+@@ -25,7 +26,23 @@ final class SquirrelInstaller {
+       inputSources[sourceID] = inputSource
+     }
+     return inputSources
+-  }()
++  }
++
++  struct RegistrationResult: Codable {
++    let protocolVersion: Int
++    let success: Bool
++    let appPath: String
++    let launchServicesStatus: OSStatus
++    let textInputSourceStatus: OSStatus?
++    let modeRestoreStatuses: [String: OSStatus]
++    let selectionRestoreStatus: OSStatus?
++    let registeredModes: [String]
++    let enabledModesBefore: [String]
++    let expectedEnabledModes: [String]
++    let enabledModesAfter: [String]
++    let selectedSourceBefore: String?
++    let selectedSourceAfter: String?
++  }
+ 
+   func enabledModes() -> [InputMode] {
+     var enabledModes = Set<InputMode>()
+@@ -40,15 +57,63 @@ final class SquirrelInstaller {
+     return Array(enabledModes)
+   }
+ 
+-  func register() {
+-    let enabledInputModes = enabledModes()
+-    if !enabledInputModes.isEmpty {
+-      print("User already registered Squirrel method(s): \(enabledInputModes.map { $0.rawValue })")
+-      // Already registered.
+-      return
++  func register() -> RegistrationResult {
++    let enabledBefore = Set(enabledModes())
++    // Replacing the bundle can temporarily remove its old TIS records. An
++    // empty snapshot is recovery/fresh-install state, not a request to disable it.
++    let expectedEnabled: Set<InputMode> = enabledBefore.isEmpty ? [.primary] : enabledBefore
++    let selectedBefore = TISCopyCurrentKeyboardInputSource()?.takeRetainedValue()
++    let selectedIDBefore = sourceID(selectedBefore)
++    let appURL = SquirrelApp.appDir
++    // Refresh even when the mode is enabled: its LaunchServices executable
++    // mapping may have been displaced by a build with the same bundle ID.
++    let launchStatus = LSRegisterURL(appURL as CFURL, true)
++    let inputStatus: OSStatus? = launchStatus == noErr ? TISRegisterInputSource(appURL as CFURL) : nil
++    var restored = [String: OSStatus]()
++    var selectionStatus: OSStatus?
++    if launchStatus == noErr, inputStatus == noErr {
++      for _ in 0..<40 {
++        let modes = getInputSource(modes: InputMode.allCases)
++        for (mode, source) in modes {
++          guard let actualEnabled = getBool(for: source, key: kTISPropertyInputSourceIsEnabled) else { continue }
++          let wantedEnabled = expectedEnabled.contains(mode)
++          if wantedEnabled != actualEnabled, restored[mode.rawValue] != noErr {
++            restored[mode.rawValue] = wantedEnabled ? TISEnableInputSource(source) : TISDisableInputSource(source)
++          }
++        }
++        if modes.count == InputMode.allCases.count, Set(enabledModes()) == expectedEnabled { break }
++        RunLoop.current.run(until: Date().addingTimeInterval(0.05))
++      }
++      let selectedNow = TISCopyCurrentKeyboardInputSource()?.takeRetainedValue()
++      if sourceID(selectedNow) != selectedIDBefore, let selectedBefore {
++        selectionStatus = TISSelectInputSource(selectedBefore)
++        for _ in 0..<40 {
++          if sourceID(TISCopyCurrentKeyboardInputSource()?.takeRetainedValue()) == selectedIDBefore { break }
++          RunLoop.current.run(until: Date().addingTimeInterval(0.05))
++        }
++      }
+     }
+-    TISRegisterInputSource(SquirrelApp.appDir as CFURL)
+-    print("Registered input source from \(SquirrelApp.appDir)")
++    let registered = getInputSource(modes: InputMode.allCases).keys.map(\.rawValue).sorted()
++    let enabledAfter = Set(enabledModes())
++    let selectedIDAfter = sourceID(TISCopyCurrentKeyboardInputSource()?.takeRetainedValue())
++    let succeeded = launchStatus == noErr && inputStatus == noErr
++      && restored.values.allSatisfy { $0 == noErr }
++      && (selectionStatus == nil || selectionStatus == noErr)
++      && registered.count == InputMode.allCases.count
++      && enabledAfter == expectedEnabled && selectedIDAfter == selectedIDBefore
++    return RegistrationResult(protocolVersion: 1, success: succeeded, appPath: appURL.path,
++      launchServicesStatus: launchStatus, textInputSourceStatus: inputStatus,
++      modeRestoreStatuses: restored, selectionRestoreStatus: selectionStatus,
++      registeredModes: registered, enabledModesBefore: enabledBefore.map(\.rawValue).sorted(),
++      expectedEnabledModes: expectedEnabled.map(\.rawValue).sorted(),
++      enabledModesAfter: enabledAfter.map(\.rawValue).sorted(),
++      selectedSourceBefore: selectedIDBefore, selectedSourceAfter: selectedIDAfter)
++  }
++
++  private func sourceID(_ source: TISInputSource?) -> String? {
++    guard let source else { return nil }
++    let value = TISGetInputSourceProperty(source, kTISPropertyInputSourceID)
++    return unsafeBitCast(value, to: CFString?.self) as String?
+   }
+ 
+   func enable(modes: [InputMode] = []) {
+diff --git a/sources/Main.swift b/sources/Main.swift
+index dca533b..a950dcf 100644
+--- a/sources/Main.swift
++++ b/sources/Main.swift
+@@ -15,9 +15,7 @@ struct SquirrelApp {
+   } else {
+     try! FileManager.default.url(for: .libraryDirectory, in: .userDomainMask, appropriateFor: nil, create: false).appendingPathComponent("Rime", isDirectory: true)
+   }
+-  static let appDir = "/Library/Input Library/Squirrel.app".withCString { dir in
+-    URL(fileURLWithFileSystemRepresentation: dir, isDirectory: false, relativeTo: nil)
+-  }
++  static let appDir = Bundle.main.bundleURL.standardizedFileURL
+   static let logDir = FileManager.default.temporaryDirectory.appending(component: "rime.squirrel", directoryHint: .isDirectory)
+ 
+   // swiftlint:disable:next cyclomatic_complexity
+@@ -37,9 +35,17 @@ struct SquirrelApp {
+         case "--reload":
+           DistributedNotificationCenter.default().postNotificationName(.init("SquirrelReloadNotification"), object: nil)
+           return true
+-        case "--register-input-source", "--install":
+-          installer.register()
++        case "--sentence-setup":
++          DistributedNotificationCenter.default().postNotificationName(.init("SquirrelSentenceSetupNotification"), object: nil)
+           return true
++        case "--register-input-source", "--install":
++          let registration = installer.register()
++          let encoder = JSONEncoder()
++          encoder.outputFormatting = [.sortedKeys]
++          if let data = try? encoder.encode(registration), let json = String(data: data, encoding: .utf8) {
++            print(json)
++          }
++          exit(registration.success ? EXIT_SUCCESS : EXIT_FAILURE)
+         case "--enable-input-source":
+           if args.count > 2 {
+             let modes = args[2...].map { SquirrelInstaller.InputMode(rawValue: $0) }.compactMap { $0 }
+@@ -140,7 +146,7 @@ Perform actions:
+   --sync                     sync user data
+   --build                    build all schemas in current directory
+ Install Squirrel:
+-  --install, --register-input-source    register input source
++  --install, --register-input-source    refresh this app's LS/TIS registration; JSON result and exit status
+   --enable-input-source [source id...]  input source list optional
+   --disable-input-source [source id...] input source list optional
+   --select-input-source [source id]     input source optional
+diff --git a/sources/SquirrelApplicationDelegate.swift b/sources/SquirrelApplicationDelegate.swift
+index c603760..93ece4c 100644
+--- a/sources/SquirrelApplicationDelegate.swift
++++ b/sources/SquirrelApplicationDelegate.swift
+@@ -18,7 +18,9 @@ final class SquirrelApplicationDelegate: NSObject, NSApplicationDelegate, SPUSta
+   var config: SquirrelConfig?
+   var panel: SquirrelPanel?
+   var enableNotifications = false
+-  let updateController = SPUStandardUpdaterController(startingUpdater: true, updaterDelegate: nil, userDriverDelegate: nil)
++  // This local frontend adds candidate layout/translation features. An automatic
++  // upstream replacement would remove them; updates remain an explicit action.
++  let updateController = SPUStandardUpdaterController(startingUpdater: false, updaterDelegate: nil, userDriverDelegate: nil)
+   var supportsGentleScheduledUpdateReminders: Bool {
+     true
+   }
+@@ -225,6 +227,9 @@ final class SquirrelApplicationDelegate: NSObject, NSApplicationDelegate, SPUSta
+     let notifCenter = DistributedNotificationCenter.default()
+     notifCenter.addObserver(forName: .init("SquirrelReloadNotification"), object: nil, queue: nil, using: rimeNeedsReload)
+     notifCenter.addObserver(forName: .init("SquirrelSyncNotification"), object: nil, queue: nil, using: rimeNeedsSync)
++    notifCenter.addObserver(forName: .init("SquirrelSentenceSetupNotification"), object: nil, queue: .main) { _ in
++      MainActor.assumeIsolated { SquirrelSentenceTranslator.shared.prepareLanguages() }
++    }
+   }
+ 
+   func applicationShouldTerminate(_ sender: NSApplication) -> NSApplication.TerminateReply {
+diff --git a/sources/SquirrelInputController.swift b/sources/SquirrelInputController.swift
+index bad53d9..a056ff1 100644
+--- a/sources/SquirrelInputController.swift
++++ b/sources/SquirrelInputController.swift
+@@ -28,6 +28,15 @@ final class SquirrelInputController: IMKInputController {
+   private var chordTimer: Timer?
+   private var chordDuration: TimeInterval = 0
+   private var currentApp: String = ""
++  // Sentence translations are local, asynchronous, and scoped to this composition.
++  private var sentenceWork: DispatchWorkItem?
++  private var sentenceRequestID: UUID?
++  private var sentenceSelection = SquirrelSentenceSelection()
++  private var frenchWork: DispatchWorkItem?
++  private var frenchRequestID: UUID?
++  private var frenchSnapshot: SquirrelSentenceSnapshot?
++  private var frenchGeneration: UInt64 = 0
++  private var frenchTranslations: [String: String] = [:]
+ 
+   // swiftlint:disable:next cyclomatic_complexity
+   override func handle(_ event: NSEvent!, client sender: Any!) -> Bool {
+@@ -97,6 +106,12 @@ final class SquirrelInputController: IMKInputController {
+         break
+       }
+ 
++      if commitFrenchTranslation(for: event) || commitSentenceTranslation(for: event) {
++        handled = true
++        rimeUpdate()
++        break
++      }
++
+       let keyCode = event.keyCode
+       var keyChars = event.charactersIgnoringModifiers
+       let capitalModifiers = modifiers.isSubset(of: [.shift, .capsLock])
+@@ -168,6 +183,8 @@ final class SquirrelInputController: IMKInputController {
+   }
+ 
+   override func activateServer(_ sender: Any!) {
++    cancelSentencePreview()
++    cancelFrenchPreview()
+     self.client ?= sender as? IMKTextInput
+     // print("[DEBUG] activateServer:")
+     var keyboardLayout = NSApp.squirrelAppDelegate.config?.getString("keyboard_layout") ?? ""
+@@ -199,6 +216,8 @@ final class SquirrelInputController: IMKInputController {
+   }
+ 
+   override func hidePalettes() {
++    cancelSentencePreview()
++    cancelFrenchPreview()
+     NSApp.squirrelAppDelegate.panel?.hide()
+     super.hidePalettes()
+   }
+@@ -235,6 +254,8 @@ final class SquirrelInputController: IMKInputController {
+     logDir.target = self
+     let setting = NSMenuItem(title: NSLocalizedString("Settings...", comment: "Menu item"), action: #selector(openRimeFolder), keyEquivalent: "")
+     setting.target = self
++    let translation = NSMenuItem(title: "英文与法语翻译…", action: #selector(prepareSentenceTranslation), keyEquivalent: "")
++    translation.target = self
+     let wiki = NSMenuItem(title: NSLocalizedString("Rime Wiki...", comment: "Menu item"), action: #selector(openWiki), keyEquivalent: "")
+     wiki.target = self
+     let update = NSMenuItem(title: NSLocalizedString("Check for updates...", comment: "Menu item"), action: #selector(checkForUpdates), keyEquivalent: "")
+@@ -245,6 +266,7 @@ final class SquirrelInputController: IMKInputController {
+     menu.addItem(sync)
+     menu.addItem(logDir)
+     menu.addItem(setting)
++    menu.addItem(translation)
+     menu.addItem(wiki)
+     menu.addItem(update)
+ 
+@@ -267,6 +289,10 @@ final class SquirrelInputController: IMKInputController {
+     NSApp.squirrelAppDelegate.openRimeFolder()
+   }
+ 
++  @objc func prepareSentenceTranslation() {
++    MainActor.assumeIsolated { SquirrelSentenceTranslator.shared.prepareLanguages() }
++  }
++
+   @objc func checkForUpdates() {
+     NSApp.squirrelAppDelegate.checkForUpdates()
+   }
+@@ -537,7 +563,8 @@ private extension SquirrelInputController {
+       let selRange = NSRange(location: start.utf16Offset(in: preedit), length: preedit.utf16.distance(from: start, to: end))
+       showPanel(preedit: inlinePreedit ? "" : preedit, selRange: selRange, caretPos: caretPos.utf16Offset(in: preedit),
+                 candidates: candidates, comments: comments, labels: labels, highlighted: Int(ctx.menu.highlighted_candidate_index),
+-                page: page, lastPage: lastPage)
++                page: page, lastPage: lastPage,
++                sentenceSnapshot: makeSentenceSnapshot(from: ctx))
+       _ = rimeAPI.free_context(&ctx)
+     } else {
+       hidePalettes()
+@@ -577,7 +604,7 @@ private extension SquirrelInputController {
+   }
+ 
+   // swiftlint:disable:next function_parameter_count
+-  func showPanel(preedit: String, selRange: NSRange, caretPos: Int, candidates: [String], comments: [String], labels: [String], highlighted: Int, page: Int, lastPage: Bool) {
++  func showPanel(preedit: String, selRange: NSRange, caretPos: Int, candidates: [String], comments: [String], labels: [String], highlighted: Int, page: Int, lastPage: Bool, sentenceSnapshot: SquirrelSentenceSnapshot?) {
+     // print("[DEBUG] showPanelWithPreedit:...:")
+     guard let client = client else { return }
+     var inputPos = NSRect()
+@@ -587,6 +614,214 @@ private extension SquirrelInputController {
+       panel.inputController = self
+       panel.update(preedit: preedit, selRange: selRange, caretPos: caretPos, candidates: candidates, comments: comments, labels: labels,
+                    highlighted: highlighted, page: page, lastPage: lastPage, update: true)
++      requestSentencePreview(snapshot: sentenceSnapshot)
++      requestFrenchPreview(snapshot: sentenceSnapshot)
++    }
++  }
++
++  func cancelSentencePreview() {
++    sentenceSelection.invalidate()
++    sentenceWork?.cancel()
++    sentenceWork = nil
++    if let requestID = sentenceRequestID {
++      MainActor.assumeIsolated { SquirrelSentenceTranslator.shared.cancel(requestID) }
++    }
++    sentenceRequestID = nil
++  }
++
++  func requestSentencePreview(snapshot: SquirrelSentenceSnapshot?) {
++    guard rimeAPI.get_option(session, "english_gloss"), !rimeAPI.get_option(session, "ascii_mode"),
++          let snapshot else { cancelSentencePreview(); return }
++    // Modifier changes redraw the panel without changing composition. Preserve
++    // completed translations and pending work across Option-down / digit-down.
++    if sentenceSelection.snapshot == snapshot {
++      if let translation = sentenceSelection.translation(forCandidateNumber: snapshot.highlighted + 1, in: snapshot) {
++        NSApp.squirrelAppDelegate.panel?.setSentenceComment(translation, at: snapshot.highlighted,
++                                                           expectedCandidates: snapshot.candidates)
++      }
++      return
++    }
++    cancelSentencePreview()
++    sentenceSelection.begin(snapshot)
++    let highlighted = snapshot.highlighted
++    guard snapshot.candidates.indices.contains(highlighted), snapshot.comments.indices.contains(highlighted),
++          snapshot.comments[highlighted].trimmingCharacters(in: .whitespacesAndNewlines).isEmpty,
++          let request = sentenceSelection.request(at: highlighted) else { return }
++    let candidate = request.candidate
++    let hanCount = candidate.unicodeScalars.filter {
++      (0x3400...0x9FFF).contains($0.value) || (0x20000...0x323AF).contains($0.value)
++    }.count
++    guard hanCount >= 6, candidate.count <= 300 else { return }
++    let work = DispatchWorkItem { [weak self] in
++      guard let self, self.sentenceSelection.isCurrent(request),
++            let panel = NSApp.squirrelAppDelegate.panel, panel.inputController === self else { return }
++      MainActor.assumeIsolated {
++        self.sentenceRequestID = SquirrelSentenceTranslator.shared.request(candidate) { [weak self] translation in
++          guard let self, self.sentenceSelection.isCurrent(request),
++                let translation, !translation.isEmpty,
++                let panel = NSApp.squirrelAppDelegate.panel, panel.inputController === self else { return }
++          guard self.sentenceSelection.complete(request, translation: translation) else { return }
++          panel.setSentenceComment(translation, at: highlighted, expectedCandidates: snapshot.candidates)
++        }
++      }
++    }
++    sentenceWork = work
++    DispatchQueue.main.asyncAfter(deadline: .now() + 0.3, execute: work)
++  }
++
++  func cancelFrenchPreview() {
++    frenchGeneration &+= 1
++    frenchSnapshot = nil
++    frenchTranslations.removeAll()
++    frenchWork?.cancel()
++    frenchWork = nil
++    if let requestID = frenchRequestID {
++      MainActor.assumeIsolated { SquirrelSentenceTranslator.french.cancel(requestID) }
++    }
++    frenchRequestID = nil
++  }
++
++  func requestFrenchPreview(snapshot: SquirrelSentenceSnapshot?) {
++    guard rimeAPI.get_option(session, "english_gloss"), !rimeAPI.get_option(session, "ascii_mode"),
++          let snapshot else { cancelFrenchPreview(); return }
++    // A modifier-only redraw must retain both completed and pending French rows.
++    if frenchSnapshot?.hasSameCandidateContext(as: snapshot) == true {
++      frenchSnapshot = snapshot
++      if !frenchTranslations.isEmpty {
++        NSApp.squirrelAppDelegate.panel?.setFrenchComments(frenchTranslations,
++                                                          expectedCandidates: snapshot.candidates)
++      }
++      return
++    }
++    cancelFrenchPreview()
++    frenchSnapshot = snapshot
++    let generation = frenchGeneration
++    // French annotates each visible Chinese candidate, including short words.
++    // It never changes the candidate text or the existing English shortcuts.
++    var seen = Set<String>()
++    let visible = Array(snapshot.candidates.prefix(9))
++    let prioritized = visible.indices.contains(snapshot.highlighted)
++      ? [visible[snapshot.highlighted]] + visible : visible
++    let texts = prioritized.filter { candidate in
++      candidate.count <= 300 && candidate.unicodeScalars.contains {
++        (0x3400...0x9FFF).contains($0.value) || (0x20000...0x323AF).contains($0.value)
++      } && seen.insert(candidate).inserted
++    }
++    guard !texts.isEmpty else { return }
++    // Dictionary and memory-cache hits appear in the same redraw as Chinese;
++    // only candidates still requiring the model wait for the typing debounce.
++    frenchTranslations = MainActor.assumeIsolated {
++      SquirrelSentenceTranslator.french.cachedTranslations(for: texts)
++    }
++    NSApp.squirrelAppDelegate.panel?.setFrenchComments(frenchTranslations,
++                                                       expectedCandidates: snapshot.candidates)
++    guard texts.contains(where: { frenchTranslations[$0] == nil }) else { return }
++    let work = DispatchWorkItem { [weak self] in
++      guard let self, self.frenchGeneration == generation,
++            self.frenchSnapshot?.hasSameCandidateContext(as: snapshot) == true,
++            let panel = NSApp.squirrelAppDelegate.panel, panel.inputController === self else { return }
++      MainActor.assumeIsolated {
++        let apply: ([String: String]) -> Void = { [weak self] translations in
++          guard let self, self.frenchGeneration == generation,
++                self.frenchSnapshot?.hasSameCandidateContext(as: snapshot) == true,
++                let panel = NSApp.squirrelAppDelegate.panel, panel.inputController === self else { return }
++          self.frenchTranslations.merge(translations.filter {
++            texts.contains($0.key) && !$0.value.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty &&
++              $0.value.utf8.count <= 16384 && !$0.value.contains("\0")
++          }, uniquingKeysWith: { _, new in new })
++          panel.setFrenchComments(self.frenchTranslations, expectedCandidates: snapshot.candidates)
++        }
++        self.frenchRequestID = SquirrelSentenceTranslator.french.requestBatch(texts, progress: apply, completion: apply)
++      }
++    }
++    frenchWork = work
++    DispatchQueue.main.asyncAfter(deadline: .now() + 0.08, execute: work)
++  }
++
++  func commitFrenchTranslation(for event: NSEvent) -> Bool {
++    let modifiers = event.modifierFlags
++    guard let number = SquirrelSentenceSelection.frenchCandidateNumber(keyCode: event.keyCode,
++      option: modifiers.contains(.option), shift: modifiers.contains(.shift),
++      control: modifiers.contains(.control), command: modifiers.contains(.command),
++      isKeyDown: event.type == .keyDown),
++      rimeAPI.get_option(session, "english_gloss"), !rimeAPI.get_option(session, "ascii_mode"),
++      client != nil, NSApp.squirrelAppDelegate.panel?.inputController === self else { return false }
++    var context = RimeContext_stdbool.rimeStructInit()
++    guard rimeAPI.get_context(session, &context) else { return false }
++    let snapshot = makeSentenceSnapshot(from: context)
++    let hasMenu = context.menu.num_candidates > 0
++    _ = rimeAPI.free_context(&context)
++    guard hasMenu else { return false }
++    // Consume a missing/pending selection while a menu is open. In particular,
++    // Ctrl+digit must never select unrelated Chinese or escape to the host app.
++    guard let snapshot, frenchSnapshot?.hasSameCandidateContext(as: snapshot) == true,
++          snapshot.candidates.indices.contains(number - 1),
++          let translation = frenchTranslations[snapshot.candidates[number - 1]],
++          !translation.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty,
++          translation.utf8.count <= 16384, !translation.contains("\0") else { return true }
++
++    // Lua has the actual segment boundaries, unlike the public Rime context.
++    // Pass a one-shot, exact-context request to its existing safe commit path,
++    // which preserves selected Chinese prefixes and unconverted input suffixes.
++    let properties = ["fr_gloss_protocol": "1", "fr_gloss_input": snapshot.input,
++      "fr_gloss_caret": String(snapshot.inputCaret), "fr_gloss_page": String(snapshot.page),
++      "fr_gloss_number": String(number), "fr_gloss_candidate": snapshot.candidates[number - 1],
++      "fr_gloss_translation": translation]
++    for (key, value) in properties { rimeAPI.set_property(session, key, value) }
++    defer { for key in properties.keys { rimeAPI.set_property(session, key, "") } }
++    cancelSentencePreview()
++    cancelFrenchPreview()
++    clearChord()
++    _ = processKey(UInt32(48 + number), modifiers: kControlMask.rawValue)
++    return true
++  }
++
++  func makeSentenceSnapshot(from context: RimeContext_stdbool) -> SquirrelSentenceSnapshot? {
++    guard let client, let input = rimeAPI.get_input(session) else { return nil }
++    let count = Int(context.menu.num_candidates)
++    var candidates: [String] = []
++    var comments: [String] = []
++    for index in 0..<count {
++      candidates.append(context.menu.candidates[index].text.map { String(cString: $0) } ?? "")
++      comments.append(context.menu.candidates[index].comment.map { String(cString: $0) } ?? "")
+     }
++    return SquirrelSentenceSnapshot(session: UInt64(session), client: ObjectIdentifier(client), schema: schemaId,
++      input: String(cString: input), inputCaret: Int(rimeAPI.get_caret_pos(session)),
++      preedit: context.composition.preedit.map { String(cString: $0) } ?? "",
++      selectionStart: Int(context.composition.sel_start), selectionEnd: Int(context.composition.sel_end),
++      preeditCaret: Int(context.composition.cursor_pos),
++      commitPreview: context.commit_text_preview.map { String(cString: $0) } ?? "",
++      page: Int(context.menu.page_no), candidates: candidates, comments: comments,
++      highlighted: Int(context.menu.highlighted_candidate_index))
++  }
++
++  func commitSentenceTranslation(for event: NSEvent) -> Bool {
++    let modifiers = event.modifierFlags
++    guard let number = SquirrelSentenceSelection.candidateNumber(keyCode: event.keyCode,
++      option: modifiers.contains(.option), shift: modifiers.contains(.shift),
++      control: modifiers.contains(.control), command: modifiers.contains(.command),
++      isKeyDown: event.type == .keyDown),
++      rimeAPI.get_option(session, "english_gloss"), !rimeAPI.get_option(session, "ascii_mode"),
++      let client, NSApp.squirrelAppDelegate.panel?.inputController === self else { return false }
++    var context = RimeContext_stdbool.rimeStructInit()
++    guard rimeAPI.get_context(session, &context) else { return false }
++    let snapshot = makeSentenceSnapshot(from: context)
++    _ = rimeAPI.free_context(&context)
++    guard let snapshot,
++          let translation = sentenceSelection.translation(forCandidateNumber: number, in: snapshot) else { return false }
++
++    cancelSentencePreview()
++    clearChord()
++    // Do not select a Chinese candidate or commit an English Rime candidate:
++    // clearing the composition avoids learning the translation in the userdb.
++    rimeAPI.clear_composition(session)
++    // NSNotFound replaces only the current marked range, never the chat body.
++    client.setMarkedText(NSAttributedString(string: ""), selectionRange: NSRange(location: 0, length: 0),
++                         replacementRange: .empty)
++    preedit = ""
++    selRange = NSRange(location: 0, length: 0)
++    caretPos = 0
++    commit(string: translation)
++    return true
+   }
+ }
+diff --git a/sources/SquirrelPanel.swift b/sources/SquirrelPanel.swift
+index 6713166..3d2f2f1 100644
+--- a/sources/SquirrelPanel.swift
++++ b/sources/SquirrelPanel.swift
+@@ -24,6 +24,7 @@ final class SquirrelPanel: NSPanel {
+   private var caretPos: Int = 0
+   private var candidates: [String] = .init()
+   private var comments: [String] = .init()
++  private var frenchComments: [String] = .init()
+   private var labels: [String] = .init()
+   private var index: Int = 0
+   private var cursorIndex: Int = 0
+@@ -163,6 +164,7 @@ final class SquirrelPanel: NSPanel {
+       self.caretPos = caretPos
+       self.candidates = candidates
+       self.comments = comments
++      self.frenchComments = []
+       self.labels = labels
+       self.index = index
+       self.page = page
+@@ -212,6 +214,9 @@ final class SquirrelPanel: NSPanel {
+ 
+     // candidates
+     var candidateRanges = [NSRange]()
++    let stackedLines = theme.commentBelow && linear && !vertical
++      ? stackedCandidateLines(candidates: candidates, comments: comments, frenchComments: frenchComments, labels: labels, highlighted: index, theme: theme)
++      : []
+     for i in 0..<candidates.count {
+       let attrs = i == index ? theme.highlightedAttrs : theme.attrs
+       let labelAttrs = i == index ? theme.labelHighlightedAttrs : theme.labelAttrs
+@@ -276,6 +281,11 @@ final class SquirrelPanel: NSPanel {
+       }
+       line.addAttribute(.paragraphStyle, value: paragraphStyleCandidate, range: NSRange(location: 0, length: line.length))
+ 
++      if i < stackedLines.count {
++        line.setAttributedString(stackedLines[i])
++        line.addAttribute(.paragraphStyle, value: paragraphStyleCandidate, range: NSRange(location: 0, length: line.length))
++      }
++
+       candidateRanges.append(NSRange(location: text.length, length: line.length))
+       text.append(line)
+     }
+@@ -305,6 +315,32 @@ final class SquirrelPanel: NSPanel {
+     }
+   }
+ 
++  // Apply an asynchronous sentence result only to the candidate list that
++  // requested it. The caller additionally owns request cancellation/generation.
++  func setSentenceComment(_ text: String, at candidateIndex: Int, expectedCandidates: [String]) {
++    guard candidates == expectedCandidates, candidateIndex >= 0,
++          candidateIndex < candidates.count else { return }
++    while comments.count < candidates.count { comments.append("") }
++    comments[candidateIndex] = text
++    let storedCursorIndex = cursorIndex
++    update(preedit: preedit, selRange: selRange, caretPos: caretPos, candidates: candidates,
++           comments: comments, labels: labels, highlighted: index, page: page,
++           lastPage: lastPage, update: false)
++    cursorIndex = storedCursorIndex
++  }
++
++  // Translation results are keyed by the original candidate, so duplicate
++  // candidates share a result without changing their labels or click targets.
++  func setFrenchComments(_ translations: [String: String], expectedCandidates: [String]) {
++    guard candidates == expectedCandidates else { return }
++    frenchComments = candidates.map { translations[$0]?.trimmingCharacters(in: .whitespacesAndNewlines) ?? "" }
++    let storedCursorIndex = cursorIndex
++    update(preedit: preedit, selRange: selRange, caretPos: caretPos, candidates: candidates,
++           comments: comments, labels: labels, highlighted: index, page: page,
++           lastPage: lastPage, update: false)
++    cursorIndex = storedCursorIndex
++  }
++
+   func load(config: SquirrelConfig, forDarkMode isDark: Bool) {
+     if isDark {
+       view.darkTheme = SquirrelTheme()
+@@ -317,6 +353,127 @@ final class SquirrelPanel: NSPanel {
+ }
+ 
+ private extension SquirrelPanel {
++  // NSTextAttachment makes each multilingual item one indivisible layout unit.
++  // The surrounding native text layout still wraps rows, draws highlights,
++  // positions the panel at the caret, and exposes the same candidate ranges.
++  func stackedCandidateLines(candidates: [String], comments: [String], frenchComments: [String], labels: [String], highlighted: Int,
++                             theme: SquirrelTheme) -> [NSAttributedString] {
++    struct Cell {
++      let titleLabel: NSAttributedString
++      let titleBody: NSAttributedString
++      let commentLabel: NSAttributedString
++      let commentBody: NSAttributedString
++      let frenchLabel: NSAttributedString
++      let frenchBody: NSAttributedString
++      let bodyOffset: CGFloat
++      let width: CGFloat
++      let titleHeight: CGFloat
++      let commentHeight: CGFloat
++      let frenchHeight: CGFloat
++    }
++    let paragraph = NSMutableParagraphStyle()
++    paragraph.lineBreakMode = .byWordWrapping
++    paragraph.lineSpacing = 1
++    let cells = candidates.enumerated().map { i, candidate -> Cell in
++      var attrs = i == highlighted ? theme.highlightedAttrs : theme.attrs
++      var labelAttrs = i == highlighted ? theme.labelHighlightedAttrs : theme.labelAttrs
++      var commentAttrs = i == highlighted ? theme.commentHighlightedAttrs : theme.commentAttrs
++      // Row placement is explicit inside the cell; inline baseline offsets do
++      // not apply here. Keep translations smaller when the theme omits a size.
++      for key in [NSAttributedString.Key.baselineOffset] {
++        attrs.removeValue(forKey: key)
++        labelAttrs.removeValue(forKey: key)
++        commentAttrs.removeValue(forKey: key)
++      }
++      commentAttrs[.font] = theme.commentFont.withSize(min(theme.commentFont.pointSize, theme.font.pointSize * 0.78))
++      attrs[.paragraphStyle] = paragraph
++      labelAttrs[.paragraphStyle] = paragraph
++      commentAttrs[.paragraphStyle] = paragraph
++      let label: String
++      if labels.count > 1 && i < labels.count {
++        label = labels[i]
++      } else if labels.count == 1 && i < labels[0].count {
++        label = String(labels[0][labels[0].index(labels[0].startIndex, offsetBy: i)])
++      } else {
++        label = "\(i+1)"
++      }
++      let template = theme.candidateFormat.replacingOccurrences(of: "[comment]", with: "")
++        .components(separatedBy: .newlines).joined(separator: " ").trimmingCharacters(in: .whitespaces)
++      let title = NSMutableAttributedString(string: template, attributes: labelAttrs)
++      for range in title.string.ranges(of: /\[candidate\]/) {
++        title.addAttributes(attrs, range: convert(range: range, in: title.string))
++      }
++      title.mutableString.replaceOccurrences(of: "[label]", with: label, range: NSRange(location: 0, length: title.length))
++      title.mutableString.replaceOccurrences(of: "[candidate]", with: candidate, range: NSRange(location: 0, length: title.length))
++      // Use the configured label prefix verbatim on every row. Separate label
++      // and body columns align both starts at different font sizes and keep
++      // wrapped translations out of the label column.
++      let prefixTemplate = template.range(of: "[candidate]").map { String(template[..<$0.lowerBound]) } ?? ""
++      let prefix = prefixTemplate.contains("[label]")
++        ? prefixTemplate.replacingOccurrences(of: "[label]", with: label) : ""
++      let prefixLength = prefix.utf16.count
++      let titleLabel = title.attributedSubstring(from: NSRange(location: 0, length: prefixLength))
++      let titleBody = title.attributedSubstring(from: NSRange(location: prefixLength, length: title.length-prefixLength))
++      let commentText = i < comments.count ? comments[i] : ""
++      var commentLabelAttrs = labelAttrs
++      commentLabelAttrs[.font] = commentAttrs[.font]
++      let commentLabel = NSAttributedString(string: commentText.isEmpty ? "" : prefix, attributes: commentLabelAttrs)
++      let commentBody = NSAttributedString(string: commentText, attributes: commentAttrs)
++      let frenchText = i < frenchComments.count ? frenchComments[i] : ""
++      let frenchLabel = NSAttributedString(string: frenchText.isEmpty ? "" : prefix, attributes: commentLabelAttrs)
++      let frenchBody = NSAttributedString(string: frenchText, attributes: commentAttrs)
++      let bodyOffset = ceil(max(titleLabel.size().width, commentLabel.size().width, frenchLabel.size().width))
++      let naturalWidth = bodyOffset + max(titleBody.size().width, commentBody.size().width, frenchBody.size().width)
++      let width = ceil(min(theme.stackedCommentMaxWidth, max(1, naturalWidth)))
++      let constraint = NSSize(width: max(1, width-bodyOffset), height: .greatestFiniteMagnitude)
++      let options: NSString.DrawingOptions = [.usesLineFragmentOrigin, .usesFontLeading]
++      let titleHeight = ceil(max(titleLabel.size().height, titleBody.boundingRect(with: constraint, options: options).height))
++      let commentHeight = commentBody.length == 0 ? 0
++        : ceil(max(commentLabel.size().height, commentBody.boundingRect(with: constraint, options: options).height))
++      let frenchHeight = frenchBody.length == 0 ? 0
++        : ceil(max(frenchLabel.size().height, frenchBody.boundingRect(with: constraint, options: options).height))
++      return Cell(titleLabel: titleLabel, titleBody: titleBody, commentLabel: commentLabel, commentBody: commentBody,
++                  frenchLabel: frenchLabel, frenchBody: frenchBody, bodyOffset: bodyOffset, width: width,
++                  titleHeight: titleHeight, commentHeight: commentHeight, frenchHeight: frenchHeight)
++    }
++    // Equal cell heights align Chinese titles and their translations across the
++    // row, including candidates without a translation and wrapped long text.
++    let titleHeight = cells.map(\.titleHeight).max() ?? 0
++    let frenchHeight = cells.map(\.frenchHeight).max() ?? 0
++    // Preserve the English slot when only French is available. French always
++    // occupies the third row rather than moving up into the English row.
++    let translationFont = theme.commentFont.withSize(min(theme.commentFont.pointSize, theme.font.pointSize * 0.78))
++    let reservedEnglishHeight = frenchHeight > 0
++      ? ceil(NSAttributedString(string: "Ag", attributes: [.font: translationFont]).size().height) : 0
++    let commentHeight = max(cells.map(\.commentHeight).max() ?? 0, reservedEnglishHeight)
++    let englishGap: CGFloat = commentHeight > 0 ? 3 : 0
++    let frenchGap: CGFloat = frenchHeight > 0 ? 3 : 0
++    let englishY = frenchHeight + frenchGap
++    let titleY = englishY + commentHeight + englishGap
++    let height = titleHeight + titleY
++    return cells.map { cell in
++      let size = NSSize(width: cell.width, height: height)
++      let image = NSImage(size: size, flipped: false) { _ in
++        let options: NSString.DrawingOptions = [.usesLineFragmentOrigin, .usesFontLeading]
++        let bodyWidth = max(1, cell.width-cell.bodyOffset)
++        cell.titleLabel.draw(with: NSRect(x: 0, y: titleY, width: cell.bodyOffset, height: titleHeight), options: options)
++        cell.titleBody.draw(with: NSRect(x: cell.bodyOffset, y: titleY, width: bodyWidth, height: titleHeight), options: options)
++        cell.commentLabel.draw(with: NSRect(x: 0, y: englishY+commentHeight-cell.commentHeight, width: cell.bodyOffset, height: cell.commentHeight), options: options)
++        cell.commentBody.draw(with: NSRect(x: cell.bodyOffset, y: englishY+commentHeight-cell.commentHeight, width: bodyWidth, height: cell.commentHeight), options: options)
++        cell.frenchLabel.draw(with: NSRect(x: 0, y: frenchHeight-cell.frenchHeight, width: cell.bodyOffset, height: cell.frenchHeight), options: options)
++        cell.frenchBody.draw(with: NSRect(x: cell.bodyOffset, y: frenchHeight-cell.frenchHeight, width: bodyWidth, height: cell.frenchHeight), options: options)
++        return true
++      }
++      image.accessibilityDescription = cell.titleLabel.string + cell.titleBody.string
++        + (cell.commentBody.length > 0 ? ", " + cell.commentLabel.string + cell.commentBody.string : "")
++        + (cell.frenchBody.length > 0 ? ", " + cell.frenchLabel.string + cell.frenchBody.string : "")
++      let attachment = NSTextAttachment()
++      attachment.image = image
++      attachment.bounds = NSRect(origin: .zero, size: size)
++      return NSAttributedString(attachment: attachment)
++    }
++  }
++
+   func mousePosition() -> NSPoint {
+     var point = NSEvent.mouseLocation
+     point = self.convertPoint(fromScreen: point)
+diff --git a/sources/SquirrelTheme.swift b/sources/SquirrelTheme.swift
+index feacfcc..e20190c 100644
+--- a/sources/SquirrelTheme.swift
++++ b/sources/SquirrelTheme.swift
+@@ -66,6 +66,9 @@ final class SquirrelTheme {
+   private(set) var inlinePreedit = false
+   private(set) var inlineCandidate = false
+   private(set) var showPaging = false
++  // Local extension: each horizontal candidate is a two-line cell.
++  private(set) var commentBelow = false
++  private(set) var stackedCommentMaxWidth: CGFloat = 240
+ 
+   private var fonts = [NSFont]()
+   private var labelFonts = [NSFont]()
+@@ -200,6 +203,8 @@ final class SquirrelTheme {
+     mutualExclusive ?= config.getBool("style/mutual_exclusive")
+     memorizeSize ?= config.getBool("style/memorize_size")
+     showPaging ?= config.getBool("style/show_paging")
++    commentBelow ?= config.getString("style/comment_placement").map { $0 == "below" }
++    stackedCommentMaxWidth ?= config.getDouble("style/stacked_comment_max_width").map { min(480, max(80, $0)) }
+ 
+     statusMessageType ?= .init(rawValue: config.getString("style/status_message_type") ?? "")
+     candidateFormat ?= config.getString("style/candidate_format")
+@@ -254,6 +259,8 @@ final class SquirrelTheme {
+         translucency ?= config.getBool("\(prefix)/translucency")
+         mutualExclusive ?= config.getBool("\(prefix)/mutual_exclusive")
+         showPaging ?= config.getBool("\(prefix)/show_paging")
++        commentBelow ?= config.getString("\(prefix)/comment_placement").map { $0 == "below" }
++        stackedCommentMaxWidth ?= config.getDouble("\(prefix)/stacked_comment_max_width").map { min(480, max(80, $0)) }
+         candidateFormat ?= config.getString("\(prefix)/candidate_format")
+         fontName ?= config.getString("\(prefix)/font_face")
+         fontSize ?= config.getDouble("\(prefix)/font_point")
+diff --git a/sources/SquirrelView.swift b/sources/SquirrelView.swift
+index 39529b7..7e64173 100644
+--- a/sources/SquirrelView.swift
++++ b/sources/SquirrelView.swift
+@@ -321,6 +321,15 @@ final class SquirrelView: NSView {
+     if let path = shape.path, path.contains(clickPoint) {
+       var point = NSPoint(x: clickPoint.x - textView.textContainerInset.width - currentTheme.pagingOffset,
+                           y: clickPoint.y - textView.textContainerInset.height)
++      if currentTheme.commentBelow && currentTheme.linear && !currentTheme.vertical {
++        // The right half of a text attachment can map to the next character's
++        // insertion point. Select the whole cell explicitly, including English.
++        for (i, range) in candidateRanges.enumerated() {
++          if let textRange = convert(range: range), contentRect(range: textRange).contains(point) {
++            return (i, nil, nil)
++          }
++        }
++      }
+       let fragment = textLayoutManager.textLayoutFragment(for: point)
+       if let fragment = fragment {
+         point = NSPoint(x: point.x - fragment.layoutFragmentFrame.minX,
+diff --git a/sources/SquirrelSentenceTranslator.swift b/sources/SquirrelSentenceTranslator.swift
+new file mode 100644
+index 0000000..e655835
+--- /dev/null
++++ b/sources/SquirrelSentenceTranslator.swift
+@@ -0,0 +1,426 @@
++// Copyright (c) 2026 rime-english-gloss contributors
++// SPDX-License-Identifier: GPL-3.0-or-later
++// Uses only Apple's public, on-device Translation API. No input is logged or saved.
++
++import AppKit
++import Foundation
++import SwiftUI
++import Translation
++
++/// All entry points and completion handlers run on the main actor.
++/// Only the most recent request may finish; callers should still match their
++/// own composition generation before displaying a result.
++@MainActor
++final class SquirrelSentenceTranslator {
++  static let shared = SquirrelSentenceTranslator(targetLanguage: "en")
++  static let french = SquirrelSentenceTranslator(targetLanguage: "fr")
++  private static var settingsWindow: NSWindow?
++
++  private let targetLanguage: String
++  private var pendingID: UUID?
++  private var availabilityTask: Task<Void, Never>?
++  private var worker: AnyObject?
++  private var workerPanel: NSPanel?
++  private var cache: [String: String] = [:]
++  private var cacheOrder: [String] = []
++  private let cacheLimit = 1024
++  private let cacheByteLimit = 2 * 1024 * 1024
++  private var cacheBytes = 0
++  private lazy var glossary: [String: String] = {
++    guard targetLanguage == "fr", let url = Bundle.main.url(forResource: "glossary-fr", withExtension: "tsv"),
++          let data = try? Data(contentsOf: url), data.count <= 32 * 1024 * 1024,
++          let contents = String(data: data, encoding: .utf8) else { return [:] }
++    var entries: [String: String] = [:]
++    for line in contents.split(whereSeparator: \.isNewline) where !line.hasPrefix("#") {
++      let fields = line.split(separator: "\t", maxSplits: 1, omittingEmptySubsequences: false)
++      guard fields.count == 2, !fields[0].isEmpty, !fields[1].isEmpty,
++            fields[0].utf8.count <= 8192, fields[1].utf8.count <= 16384 else { continue }
++      entries[String(fields[0])] = String(fields[1])
++    }
++    return entries
++  }()
++
++  private init(targetLanguage: String) { self.targetLanguage = targetLanguage }
++
++  /// A missing language model returns nil without asking to download anything.
++  @discardableResult
++  func request(_ text: String, completion: @escaping (String?) -> Void) -> UUID {
++    requestBatch([text]) { completion($0[text]) }
++  }
++
++  /// Synchronous exact glossary and memory-cache lookup. Common French words
++  /// can be displayed in the same update as Chinese and English; no model starts.
++  func cachedTranslations(for texts: [String]) -> [String: String] {
++    var results: [String: String] = [:]
++    for text in texts.prefix(128) where !text.isEmpty && text.utf8.count <= 8192 {
++      if let value = cache[text] {
++        results[text] = value
++        touchCache(text)
++        continue
++      }
++      var value = glossary[text]
++      if value == nil, !glossary.isEmpty, text.count <= 128,
++         let simplified = text.applyingTransform(StringTransform("Traditional-Simplified"), reverse: false),
++         simplified != text {
++        value = glossary[simplified]
++      }
++      if let value {
++        results[text] = value
++        remember(value, for: text)
++      }
++    }
++    return results
++  }
++
++  /// At most 16 distinct, bounded inputs per request. Cached results arrive
++  /// immediately; missing results are published cumulatively as each finishes.
++  /// The caller's first missing item is translated before the remaining batch.
++  /// Each fixed-language instance has independent cancellation and cache state.
++  @discardableResult
++  func requestBatch(_ texts: [String], progress: (([String: String]) -> Void)? = nil,
++                    completion: @escaping ([String: String]) -> Void) -> UUID {
++    cancel(nil)
++    let identifier = UUID()
++    pendingID = identifier
++    var seen: Set<String> = []
++    var requested: [String] = []
++    var totalBytes = 0
++    for text in texts.prefix(128) {
++      let size = text.utf8.count
++      guard requested.count < 16, size <= 8192, totalBytes + size <= 32768,
++            !text.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty,
++            seen.insert(text).inserted else { continue }
++      requested.append(text)
++      totalBytes += size
++    }
++    let cached = cachedTranslations(for: requested)
++    if !cached.isEmpty { progress?(cached) }
++    // A synchronous progress callback may have started another composition.
++    guard pendingID == identifier else { return identifier }
++    let missing = requested.filter { cached[$0] == nil }
++    guard !missing.isEmpty else {
++      complete(identifier, requested: requested, results: cached, completion: completion)
++      return identifier
++    }
++    guard #available(macOS 15.0, *) else {
++      complete(identifier, requested: requested, results: cached, completion: completion)
++      return identifier
++    }
++    let target = targetLanguage
++    availabilityTask = Task { [weak self] in
++      // Check installed models once immediately before submitting a job. The
++      // automatic path never calls prepareTranslation or saves input to disk.
++      let status = await LanguageAvailability().status(
++        from: Locale.Language(identifier: "zh-Hans"),
++        to: Locale.Language(identifier: target))
++      guard let self, !Task.isCancelled, self.pendingID == identifier else { return }
++      guard status == .installed else {
++        self.complete(identifier, requested: requested, results: cached, completion: completion)
++        return
++      }
++      let worker = self.ensureWorker()
++      worker.submit(identifier: identifier, texts: missing, progress: { [weak self] results in
++        guard let self, self.pendingID == identifier else { return }
++        let accepted = self.accept(requested: requested,
++                                   results: cached.merging(results) { _, fresh in fresh })
++        progress?(accepted)
++      }) { [weak self] results in
++        self?.complete(identifier, requested: requested,
++                       results: cached.merging(results) { _, fresh in fresh }, completion: completion)
++      }
++    }
++    return identifier
++  }
++
++  /// nil cancels the current request. A stale identifier cannot cancel a newer one.
++  func cancel(_ identifier: UUID? = nil) {
++    if let identifier, identifier != pendingID { return }
++    pendingID = nil
++    availabilityTask?.cancel()
++    availabilityTask = nil
++    if #available(macOS 15.0, *) {
++      (worker as? SquirrelTranslationWorker)?.cancel()
++    }
++  }
++
++  func checkAvailability(completion: @escaping (Bool) -> Void) {
++    guard #available(macOS 15.0, *) else { completion(false); return }
++    Task {
++      let status = await LanguageAvailability().status(
++        from: Locale.Language(identifier: "zh-Hans"),
++        to: Locale.Language(identifier: targetLanguage))
++      completion(status == .installed)
++    }
++  }
++
++  /// Explicit user action only. Merely opening this window does not download.
++  func prepareLanguages() {
++    guard #available(macOS 15.0, *) else {
++      let alert = NSAlert()
++      alert.messageText = "本机英文和法语翻译需要 macOS 15 或更新版本"
++      alert.informativeText = "当前的离线词语释义仍可继续使用。"
++      alert.runModal()
++      return
++    }
++    if let settingsWindow = Self.settingsWindow {
++      settingsWindow.makeKeyAndOrderFront(nil)
++      NSApp.activate(ignoringOtherApps: true)
++      return
++    }
++    let window = NSWindow(contentRect: NSRect(x: 0, y: 0, width: 540, height: 540),
++                          styleMask: [.titled, .closable, .miniaturizable],
++                          backing: .buffered, defer: false)
++    window.title = "鼠须管 · 英文与法语"
++    window.isReleasedWhenClosed = false
++    window.contentView = NSHostingView(rootView: SquirrelTranslationSetupView())
++    window.center()
++    Self.settingsWindow = window
++    window.makeKeyAndOrderFront(nil)
++    NSApp.activate(ignoringOtherApps: true)
++  }
++
++  private func touchCache(_ text: String) {
++    if let index = cacheOrder.firstIndex(of: text) { cacheOrder.remove(at: index) }
++    cacheOrder.append(text)
++  }
++
++  private func remember(_ value: String, for text: String) {
++    if let old = cache[text] { cacheBytes -= text.utf8.count + old.utf8.count }
++    cache[text] = value
++    cacheBytes += text.utf8.count + value.utf8.count
++    touchCache(text)
++    while cacheOrder.count > cacheLimit || cacheBytes > cacheByteLimit {
++      let expired = cacheOrder.removeFirst()
++      if let value = cache.removeValue(forKey: expired) {
++        cacheBytes -= expired.utf8.count + value.utf8.count
++      }
++    }
++  }
++
++  private func accept(requested: [String], results: [String: String]) -> [String: String] {
++    var accepted: [String: String] = [:]
++    for text in requested {
++      guard let result = results[text], result.utf8.count <= 16384,
++            !result.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty else { continue }
++      remember(result, for: text)
++      accepted[text] = result
++    }
++    return accepted
++  }
++
++  private func complete(_ identifier: UUID, requested: [String], results: [String: String],
++                        completion: ([String: String]) -> Void) {
++    guard pendingID == identifier else { return }
++    pendingID = nil
++    completion(accept(requested: requested, results: results))
++  }
++
++  @available(macOS 15.0, *)
++  private func ensureWorker() -> SquirrelTranslationWorker {
++    if let worker = worker as? SquirrelTranslationWorker { return worker }
++    let model = SquirrelTranslationWorker(targetLanguage: targetLanguage)
++    // macOS 15 exposes sessions through a mounted SwiftUI translationTask.
++    // The tiny transparent nonactivating panel never takes keyboard focus.
++    let panel = NSPanel(contentRect: NSRect(x: -10000, y: -10000, width: 1, height: 1),
++                        styleMask: [.borderless, .nonactivatingPanel],
++                        backing: .buffered, defer: false)
++    panel.isFloatingPanel = false
++    panel.hidesOnDeactivate = false
++    panel.isOpaque = false
++    panel.backgroundColor = .clear
++    panel.alphaValue = 0
++    panel.ignoresMouseEvents = true
++    panel.collectionBehavior = [.canJoinAllSpaces, .stationary, .ignoresCycle]
++    panel.contentView = NSHostingView(rootView: SquirrelTranslationWorkerView(model: model))
++    panel.orderFront(nil)
++    worker = model
++    workerPanel = panel
++    return model
++  }
++}
++
++@available(macOS 15.0, *)
++@MainActor
++private final class SquirrelTranslationWorker: ObservableObject {
++  struct Job {
++    let identifier: UUID
++    let texts: [String]
++    let progress: ([String: String]) -> Void
++    let completion: ([String: String]) -> Void
++  }
++  @Published var configuration: TranslationSession.Configuration?
++  private var job: Job?
++  private let targetLanguage: String
++
++  init(targetLanguage: String) { self.targetLanguage = targetLanguage }
++
++  func submit(identifier: UUID, texts: [String], progress: @escaping ([String: String]) -> Void,
++              completion: @escaping ([String: String]) -> Void) {
++    job = Job(identifier: identifier, texts: texts, progress: progress, completion: completion)
++    if configuration == nil {
++      configuration = TranslationSession.Configuration(
++        source: Locale.Language(identifier: "zh-Hans"),
++        target: Locale.Language(identifier: targetLanguage))
++    } else {
++      configuration?.invalidate()
++    }
++  }
++
++  func cancel() {
++    job = nil
++    // Keep the version monotonically increasing: a nil->same configuration
++    // change within one display frame can otherwise be coalesced by SwiftUI,
++    // leaving the replacement request without a new translation task.
++    configuration?.invalidate()
++  }
++
++  func run(_ session: TranslationSession) async {
++    guard let active = job, let first = active.texts.first else { return }
++    var results: [String: String] = [:]
++    do {
++      // Finish the selected/first candidate before submitting the rest. A slow
++      // last candidate must not hold the useful first result behind a full batch.
++      let firstResponse = try await session.translate(first)
++      guard job?.identifier == active.identifier, !Task.isCancelled else { return }
++      if firstResponse.sourceText == first {
++        results[first] = firstResponse.targetText
++        active.progress(results)
++      }
++      guard job?.identifier == active.identifier, !Task.isCancelled else { return }
++      let remaining = Array(active.texts.dropFirst())
++      if !remaining.isEmpty {
++        let requests = remaining.enumerated().map { index, text in
++          TranslationSession.Request(sourceText: text, clientIdentifier: String(index))
++        }
++        // Apple's public asynchronous sequence yields individual completions.
++        // translations(from:) waits for the entire array and delays every row.
++        for try await response in session.translate(batch: requests) {
++          guard job?.identifier == active.identifier, !Task.isCancelled else { return }
++          guard let identifier = response.clientIdentifier, let index = Int(identifier),
++                remaining.indices.contains(index), response.sourceText == remaining[index] else { continue }
++          results[remaining[index]] = response.targetText
++          active.progress(results)
++        }
++      }
++      guard !Task.isCancelled else { return }
++      finish(active, results: results)
++    } catch {
++      guard !Task.isCancelled else { return }
++      // Successfully completed rows survive a later model error.
++      finish(active, results: results)
++    }
++  }
++
++  private func finish(_ active: Job, results: [String: String]) {
++    guard job?.identifier == active.identifier else { return }
++    job = nil
++    active.completion(results)
++  }
++}
++
++@available(macOS 15.0, *)
++private struct SquirrelTranslationWorkerView: View {
++  @ObservedObject var model: SquirrelTranslationWorker
++  var body: some View {
++    Color.clear.frame(width: 1, height: 1)
++      .translationTask(model.configuration) { session in
++        await model.run(session)
++      }
++  }
++}
++
++@available(macOS 15.0, *)
++private struct SquirrelTranslationSetupView: View {
++  var body: some View {
++    VStack(alignment: .leading, spacing: 18) {
++      Text("在中文下方显示英文和法语").font(.title2.weight(.semibold))
++      Text("使用 Apple 离线翻译。首次需下载对应语言包；词语和句子均在这台 Mac 上处理。")
++        .foregroundStyle(.secondary).fixedSize(horizontal: false, vertical: true)
++      SquirrelTranslationLanguageSetupRow(target: "en", name: "英文", pair: "中英")
++      SquirrelTranslationLanguageSetupRow(target: "fr", name: "法语", pair: "中法")
++      Text("未下载某种语言时，该语言暂不显示；已下载的语言仍可正常使用。")
++        .font(.callout).foregroundStyle(.secondary)
++        .fixedSize(horizontal: false, vertical: true)
++      Spacer(minLength: 0)
++    }
++    .padding(24).frame(width: 540, height: 540, alignment: .topLeading)
++  }
++}
++
++@available(macOS 15.0, *)
++private struct SquirrelTranslationLanguageSetupRow: View {
++  let target: String
++  let name: String
++  let pair: String
++  @State private var configuration: TranslationSession.Configuration?
++  @State private var installed = false
++  @State private var busy = false
++  @State private var status = "正在检查语言包…"
++  @State private var example = ""
++  private let sample = "明天下午我们一起去图书馆学习。"
++  private var translator: SquirrelSentenceTranslator {
++    target == "fr" ? .french : .shared
++  }
++
++  var body: some View {
++    GroupBox(label: Text(name).font(.headline)) {
++      VStack(alignment: .leading, spacing: 10) {
++        HStack {
++          Image(systemName: installed ? "checkmark.circle.fill" : "arrow.down.circle")
++            .foregroundStyle(installed ? Color.green : Color.secondary)
++          Text(status)
++        }
++        HStack {
++          Button("下载" + pair + "语言包") { beginPreparation() }
++            .disabled(installed || busy)
++          Button("示例试译") {
++            busy = true
++            example = "正在翻译示例…"
++            translator.request(sample) { result in
++              example = result ?? "示例翻译未完成，请重试。"
++              busy = false
++            }
++          }.disabled(!installed || busy)
++          Button("刷新") { Task { await refreshStatus() } }.disabled(busy)
++          if busy { ProgressView().controlSize(.small) }
++        }
++        Text(example.isEmpty ? sample : example)
++          .font(.callout).foregroundStyle(.secondary)
++          .fixedSize(horizontal: false, vertical: true)
++      }.padding(8).frame(maxWidth: .infinity, minHeight: 112, alignment: .topLeading)
++    }
++    .task { await refreshStatus() }
++    .translationTask(configuration) { session in
++      do {
++        try await session.prepareTranslation()
++        await refreshStatus()
++      } catch {
++        status = "下载尚未完成，可再次点击下载。"
++      }
++      busy = false
++    }
++  }
++
++  private func beginPreparation() {
++    busy = true
++    status = "请在系统提示中确认下载…"
++    if configuration == nil {
++      configuration = TranslationSession.Configuration(
++        source: Locale.Language(identifier: "zh-Hans"),
++        target: Locale.Language(identifier: target))
++    } else { configuration?.invalidate() }
++  }
++
++  private func refreshStatus() async {
++    let availability = await LanguageAvailability().status(
++      from: Locale.Language(identifier: "zh-Hans"),
++      to: Locale.Language(identifier: target))
++    installed = availability == .installed
++    switch availability {
++    case .installed: status = pair + "语言包已就绪"
++    case .supported: status = pair + "语言包尚未下载"
++    case .unsupported: status = "系统目前不支持这个语言组合"
++    @unknown default: status = "暂时无法确认语言包状态"
++    }
++  }
++}
+diff --git a/sources/SquirrelSentenceSelection.swift b/sources/SquirrelSentenceSelection.swift
+new file mode 100644
+index 0000000..bc623ab
+--- /dev/null
++++ b/sources/SquirrelSentenceSelection.swift
+@@ -0,0 +1,119 @@
++// SPDX-License-Identifier: GPL-3.0-or-later
++// Pure state and physical-key routing for completed sentence translations.
++
++import Foundation
++
++struct SquirrelSentenceSnapshot: Equatable {
++  let session: UInt64
++  let client: ObjectIdentifier
++  let schema: String
++  let input: String
++  let inputCaret: Int
++  let preedit: String
++  let selectionStart: Int
++  let selectionEnd: Int
++  let preeditCaret: Int
++  let commitPreview: String
++  let page: Int
++  let candidates: [String]
++  let comments: [String]
++  let highlighted: Int
++
++  /// French belongs to every candidate on the page. Moving the highlight only
++  /// changes commitPreview, so it must not restart the same translation work.
++  func hasSameCandidateContext(as other: Self) -> Bool {
++    session == other.session && client == other.client && schema == other.schema &&
++      input == other.input && inputCaret == other.inputCaret && preedit == other.preedit &&
++      selectionStart == other.selectionStart && selectionEnd == other.selectionEnd &&
++      preeditCaret == other.preeditCaret && page == other.page && candidates == other.candidates
++  }
++
++  /// The C API's commit preview includes an already-selected prefix and any
++  /// unconverted suffix. Requiring an exact match prevents dropping either.
++  func isWholeCandidate(at index: Int) -> Bool {
++    candidates.indices.contains(index) && !input.isEmpty && !preedit.isEmpty &&
++      inputCaret == input.utf8.count && selectionStart == 0 &&
++      selectionEnd == preedit.utf8.count && preeditCaret == preedit.utf8.count &&
++      candidates[index] == commitPreview
++  }
++}
++
++struct SquirrelSentenceSelection {
++  struct Request: Equatable {
++    let generation: UInt64
++    let snapshot: SquirrelSentenceSnapshot
++    let index: Int
++    let candidate: String
++  }
++
++  private(set) var snapshot: SquirrelSentenceSnapshot?
++  private(set) var generation: UInt64 = 0
++  private var translations: [Int: String] = [:]
++
++  mutating func invalidate() {
++    generation &+= 1
++    snapshot = nil
++    translations.removeAll(keepingCapacity: true)
++  }
++
++  mutating func begin(_ next: SquirrelSentenceSnapshot) {
++    guard snapshot != next else { return }
++    invalidate()
++    snapshot = next
++  }
++
++  func request(at index: Int) -> Request? {
++    guard let snapshot, snapshot.isWholeCandidate(at: index) else { return nil }
++    return Request(generation: generation, snapshot: snapshot, index: index,
++                   candidate: snapshot.candidates[index])
++  }
++
++  func isCurrent(_ request: Request) -> Bool {
++    generation == request.generation && snapshot == request.snapshot &&
++      request.snapshot.candidates.indices.contains(request.index) &&
++      request.snapshot.candidates[request.index] == request.candidate
++  }
++
++  @discardableResult
++  mutating func complete(_ request: Request, translation: String) -> Bool {
++    guard isCurrent(request), !translation.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty,
++          translation.utf8.count <= 16384 else { return false }
++    translations[request.index] = translation
++    return true
++  }
++
++  func translation(forCandidateNumber number: Int, in current: SquirrelSentenceSnapshot) -> String? {
++    guard (1...9).contains(number), snapshot == current,
++          current.isWholeCandidate(at: number - 1) else { return nil }
++    return translations[number - 1]
++  }
++
++  /// Use hardware digits rather than Option-modified characters such as ¡/™.
++  /// Shift+Option is intentionally left to the existing Lua second-meaning path.
++  static func candidateNumber(keyCode: UInt16, option: Bool, shift: Bool,
++                              control: Bool, command: Bool, isKeyDown: Bool) -> Int? {
++    guard isKeyDown, option, !shift, !control, !command else { return nil }
++    return physicalCandidateNumber(keyCode: keyCode)
++  }
++
++  static func frenchCandidateNumber(keyCode: UInt16, option: Bool, shift: Bool,
++                                    control: Bool, command: Bool, isKeyDown: Bool) -> Int? {
++    guard isKeyDown, control, !shift, !option, !command else { return nil }
++    return physicalCandidateNumber(keyCode: keyCode)
++  }
++
++  private static func physicalCandidateNumber(keyCode: UInt16) -> Int? {
++    switch keyCode {
++    case 18: return 1
++    case 19: return 2
++    case 20: return 3
++    case 21: return 4
++    case 23: return 5
++    case 22: return 6
++    case 26: return 7
++    case 28: return 8
++    case 25: return 9
++    default: return nil
++    }
++  }
++}
+diff --git a/scripts/build-local.py b/scripts/build-local.py
+new file mode 100644
+index 0000000..4e5a69b
+--- /dev/null
++++ b/scripts/build-local.py
+@@ -0,0 +1,115 @@
++#!/usr/bin/env python3
++"""Build a local Squirrel app using matching official runtime dependencies.
++
++SPDX-License-Identifier: GPL-3.0-or-later
++This script never installs, launches normally, or explicitly registers an input source.
++Xcode may automatically update LaunchServices for the generated bundle.
++"""
++import argparse
++import hashlib
++import json
++from pathlib import Path
++import plistlib
++import shutil
++import subprocess
++
++ROOT = Path(__file__).resolve().parents[1]
++
++
++def sha256(path):
++    return hashlib.sha256(path.read_bytes()).hexdigest()
++
++
++def prepare(app):
++    contents = app / "Contents"
++    info = plistlib.loads((contents / "Info.plist").read_bytes())
++    version = info.get("CFBundleShortVersionString", info.get("CFBundleVersion"))
++    if version != "1.1.2":
++        raise ValueError(f"Expected official Squirrel 1.1.2 runtime, found {version!r}")
++    for path in (ROOT / "librime/src/rime_api_stdbool.h", ROOT / "Sparkle/Sparkle/Sparkle.h"):
++        if not path.is_file():
++            raise ValueError("Run git submodule update --init --depth 1 Sparkle librime first")
++    framework = ROOT / "Frameworks/Sparkle.framework"
++    framework.parent.mkdir(exist_ok=True)
++    # This generated dependency copy contains symlinks; replace the workspace
++    # copy so repeating preparation is safe and cannot retain stale headers.
++    if framework.exists():
++        shutil.rmtree(framework)
++    shutil.copytree(contents / "Frameworks/Sparkle.framework", framework,
++                    symlinks=True, dirs_exist_ok=True)
++    headers = framework / "Versions/B/Headers"
++    headers.mkdir(exist_ok=True)
++    for source in (ROOT / "Sparkle/Sparkle").glob("*.h"):
++        shutil.copy2(source, headers / source.name)
++    modules = framework / "Versions/B/Modules"
++    modules.mkdir(exist_ok=True)
++    (modules / "module.modulemap").write_text(
++        'framework module Sparkle {\n  umbrella header "Sparkle.h"\n'
++        '  export *\n  module * { export * }\n}\n')
++    for name in ("Headers", "Modules"):
++        link = framework / name
++        if not link.exists():
++            link.symlink_to("Versions/Current/" + name)
++    shutil.copy2(contents / "Frameworks/librime.1.dylib", ROOT / "lib/librime.1.dylib")
++    shutil.copytree(contents / "Frameworks/rime-plugins", ROOT / "lib/rime-plugins", dirs_exist_ok=True)
++    for name in ("rime_deployer", "rime_dict_manager", "rime-install"):
++        shutil.copy2(contents / "MacOS" / name, ROOT / "bin" / name)
++    (ROOT / "data/plum").mkdir(exist_ok=True)
++    for source in (contents / "SharedSupport").iterdir():
++        if source.is_file() and source.name != "squirrel.yaml":
++            shutil.copy2(source, ROOT / "data/plum" / source.name)
++    shutil.copytree(contents / "SharedSupport/opencc", ROOT / "data/opencc", dirs_exist_ok=True)
++    provenance = {
++        "source": "https://github.com/rime/squirrel/tree/1.1.2",
++        "squirrel_commit": "876adebaf2f612951dcdca8a591de65401222b9a",
++        "librime_commit": "a251145d3aafa33871824a40bbec04c966bd8b56",
++        "sparkle_commit": "41847a58cdef7506b257591fcca6f9495df591d4",
++        "official_runtime_version": version,
++        "runtime_sha256": {
++            "librime.1.dylib": sha256(contents / "Frameworks/librime.1.dylib"),
++            "Sparkle": sha256(contents / "Frameworks/Sparkle.framework/Versions/B/Sparkle"),
++        },
++    }
++    (ROOT / "LOCAL-DEPENDENCIES.json").write_text(json.dumps(provenance, indent=2) + "\n")
++
++
++def main():
++    parser = argparse.ArgumentParser(description=__doc__)
++    parser.add_argument("--official-app", type=Path,
++                        default=Path.home() / "Library/Input Methods/Squirrel.app")
++    parser.add_argument("--configuration", choices=("Debug", "Release"), default="Release")
++    parser.add_argument("--prepare-only", action="store_true")
++    args = parser.parse_args()
++    prepare(args.official_app)
++    if args.prepare_only:
++        print("Prepared matching official libraries and headers.")
++        return
++    log = ROOT / ("build-local-" + args.configuration.lower() + ".log")
++    command = ["xcodebuild", "-project", "Squirrel.xcodeproj", "-scheme", "Squirrel",
++               "-configuration", args.configuration, "-derivedDataPath", "build",
++               "ARCHS=arm64", "ONLY_ACTIVE_ARCH=YES", "CODE_SIGNING_ALLOWED=NO",
++               "COMPILER_INDEX_STORE_ENABLE=NO", "build"]
++    with log.open("w") as output:
++        result = subprocess.run(command, cwd=ROOT, stdout=output, stderr=subprocess.STDOUT)
++    built = ROOT / "build/Build/Products" / args.configuration / "Squirrel.app"
++    if result.returncode:
++        lines = log.read_text(errors="replace").splitlines()
++        errors = [line for line in lines if "error:" in line]
++        print("\n".join(errors[-20:] or [line[:300] for line in lines[-12:]]))
++        raise SystemExit(f"Build failed; inspect {log}")
++    subprocess.run(["codesign", "--force", "--deep", "--sign", "-", str(built)], check=True)
++    subprocess.run(["codesign", "--force", "--sign", "-", "--entitlements",
++                    str(ROOT / "resources/Squirrel.entitlements"), str(built)], check=True)
++    subprocess.run(["codesign", "--verify", "--deep", "--strict", str(built)], check=True)
++    # --help returns before input server creation and does not touch user data.
++    subprocess.run([str(built / "Contents/MacOS/Squirrel"), "--help"], check=True,
++                   stdout=subprocess.DEVNULL)
++    print(f"Built and ad-hoc signed: {built}")
++    print(f"Build log: {log}")
++    print("Xcode may have refreshed LaunchServices for this build. After installation, "
++          "run the installed app's --register-input-source command; never unregister "
++          "a same-bundle-ID build with lsregister -u.")
++
++
++if __name__ == "__main__":
++    main()
+diff --git a/BUILD-LOCAL.md b/BUILD-LOCAL.md
+new file mode 100644
+index 0000000..abc65db
+--- /dev/null
++++ b/BUILD-LOCAL.md
+@@ -0,0 +1,22 @@
++# Local arm64 build
++
++The baseline is official Squirrel 1.1.2, commit `876adebaf2f612951dcdca8a591de65401222b9a`. Upstream GPL license is retained in `LICENSE.txt`. The `Sparkle` and `librime` submodules are pinned by upstream; their own licenses remain in their source directories.
++
++This builds the macOS frontend from source while reusing the matching official Squirrel 1.1.2 runtime libraries and bundled dictionaries. It does not rebuild librime or Sparkle. `LOCAL-DEPENDENCIES.json` records their provenance and binary checksums.
++
++Requirements: Apple Silicon, Xcode 26.2, Python 3, official Squirrel 1.1.2 installed in the user input-method directory (or pass `--official-app PATH`).
++
++```sh
++git submodule update --init --depth 1 Sparkle librime
++python3 scripts/build-local.py --configuration Release
++```
++
++The app is written to `build/Build/Products/Release/Squirrel.app`, ad-hoc signed, and checked with `codesign --verify --deep --strict`. Its `--help` command is run as a dynamic-link smoke test; this returns before creation of the input server. The script never copies into an input-method directory, explicitly registers a TIS input source, unregisters an app, or normally launches the app.
++
++Xcode 26.2 automatically registers its generated app with LaunchServices and ignores `REGISTER_WITH_LAUNCH_SERVICES=NO`. **Do not run `lsregister -u` on a build with the same bundle ID as the installed input method**: it can invalidate the installed app's mapping too. The build script leaves this automatic Xcode state alone. After placing the final app at its installed path, the installer must invoke that installed app's `--register-input-source` command before starting it.
++
++The custom registration command uses `Bundle.main.bundleURL`, forces `LSRegisterURL`, calls `TISRegisterInputSource`, and refreshes registration even if a Squirrel mode is already enabled. It preserves a nonempty enabled-mode set and the current input-source selection. An empty pre-registration snapshot can occur while replacing the bundle; that recovery/fresh-install state restores the default Hans mode instead of disabling newly registered sources. The command reports `expectedEnabledModes` plus actual API statuses as JSON and returns a meaningful process exit code. Bounded polling pumps the run loop to receive asynchronous TIS state changes. `tools/manage_frontend.py` independently validates the expected-mode policy and actual installed process path. Legacy rollback uses the same recovery policy through explicit actual-path LS/TIS calls because official Squirrel 1.1.2 has a broken hardcoded registration path.
++
++When running under a restricted filesystem sandbox, Xcode's resource compiler may require access to the normal macOS build services. A resource-compiler failure does not imply a Swift source error; inspect `build-local-release.log`.
++
++Layout demonstrations should run as a separate panel-only harness without `Main.swift` and without starting `IMKServer`. Do not launch the built app as an input method until the parent task has completed its testing and deployment preparation.
+diff --git a/LOCAL-DEPENDENCIES.json b/LOCAL-DEPENDENCIES.json
+new file mode 100644
+index 0000000..4ecf6e9
+--- /dev/null
++++ b/LOCAL-DEPENDENCIES.json
+@@ -0,0 +1,11 @@
++{
++  "source": "https://github.com/rime/squirrel/tree/1.1.2",
++  "squirrel_commit": "876adebaf2f612951dcdca8a591de65401222b9a",
++  "librime_commit": "a251145d3aafa33871824a40bbec04c966bd8b56",
++  "sparkle_commit": "41847a58cdef7506b257591fcca6f9495df591d4",
++  "official_runtime_version": "1.1.2",
++  "runtime_sha256": {
++    "librime.1.dylib": "d79222e06e9e18b3303bbb86bd37c644467b2ea9f870bd91af672c6e2b3ec051",
++    "Sparkle": "d2931fd349e900d77ff3fd392e0900c6f2db3363dc7cb9e6ed30b9a3e0cb8771"
++  }
++}
+diff --git a/resources/glossary-fr.tsv b/resources/glossary-fr.tsv
+new file mode 100644
+index 0000000..5f8d798
+--- /dev/null
++++ b/resources/glossary-fr.tsv
+@@ -0,0 +1,5000 @@
++一	Un
++一一	Un par un
++一下	Une fois
++一下子	Tout d'un coup
++一个	Un
++一个人	Seul
++一个是	L'un est
++一个月	Un mois
++一些	Quelques
++一人	Une personne
++一件	Une seule pièce
++一份	Une portion
++一众	Un groupe de
++一会儿	Un peu de temps
++一体	Un tout intégral
++一切	Tous
++一副	Une paire de
++一口	Chose réelle
++一句	Une phrase
++一句话	Une phrase
++一只	Un
++一台	Un
++一名	Une personne
++一周	Une semaine
++一场	Un jeu
++一块	Une seule pièce
++一堆	Un tas de
++一大	Un grand
++一天	Un jour
++一套	Un ensemble
++一定	Définitif
++一定会	Ça va certainement
++一定要	Assurez-vous de
++一审	Premier procès
++一家	Une famille
++一对	Une paire
++一层	Une couche
++一年	Un an
++一座	Un
++一张	Un morceau
++一律	Même
++一批	Un lot
++一把	Une poignée
++一方	Un côté
++一方面	D'une part
++一日	Un jour
++一旦	Temps très court
++一时	Une période de temps
++一是	L'un est
++一本	Une seule pièce
++一条	Un morceau de
++一样	Même
++一根	Un
++一次	Une fois
++一次性	Ancien
++一款	Un
++一步	Une étape
++一段	Un paragraphe
++一段时间	Une période de temps
++一流	Le même genre
++一点	Un peu
++一片	Un morceau
++一生	Toute sa vie
++一直	Toujours
++一直在	Tout le temps
++一看	Jetez un coup d'œil
++一眼	En un coup d'œil
++一种	Un type
++一笑	Sourire
++一等奖	Premier prix
++一篇	Un article
++一系列	Une série de
++一级	Première classe
++一线	Première ligne
++一组	Un groupe
++一群	Un groupe de
++一股	Un flux de
++一致	Identique
++一般	Même
++一般的	Ordinaire
++一行	Un groupe voyageant ensemble
++一起	Ensemble
++一路	Tout le voyage
++一身	Corps entier
++一辆	Un
++一边	Un côté
++一边吃	En mangeant
++一遍	Un tour
++一道	Ensemble
++一部	Un
++一部分	Une partie
++一阵	Une explosion de
++一面	Un côté
++一项	Un article
++一颗	Un
++万	Dix mille
++万亩	Dix mille mu
++万人	Dix mille personnes
++万元	Dix mille yuans
++万吨	Dix mille tonnes
++万美元	Dix mille dollars
++丈夫	Homme
++三	Trois
++三个	Trois
++三个代表	Trois Représente
++三人	Trois personnes
++三十	Trente
++三国群英传	Légende des Trois Royaumes
++三大	Trois majeurs
++三年	Trois ans
++三星	Samsung
++三是	Le troisième est
++三次	3 fois
++三种	Trois types
++三级	Niveau trois
++上	Jusqu'à
++上一页	Page précédente
++上下	Tout le monde
++上传	Télécharger
++上升	Se déplacer vers le haut
++上午	Matin
++上半年	Première moitié de l'année
++上去	Monter
++上市	Aller sur le marché
++上市公司	Société cotée
++上帝	Dieu
++上报	Signaler à
++上有	Il y a
++上来	Commencer
++上次	La dernière fois
++上海	Shanghai
++上海市	Shanghai
++上涨	Lever
++上班	Aller au travail
++上的	Sur
++上看	Regarde
++上级	Niveau supérieur
++上网	Aller en ligne
++上课	Assister à un cours
++上述	Susmentionné
++上门	Visite
++上面	Endroit plus élevé
++下	Position ou rang bas
++下一页	Page suivante
++下了	En panne
++下列	Suivant
++下午	Après-midi
++下午好	Bonjour
++下去	Descente
++下属	Subalterne
++下来	Descente
++下次	La prochaine fois
++下的	En panne
++下跌	Laisser tomber
++下载	Télécharger
++下载地址	Adresse de téléchargement
++下载次数	Nombre de téléchargements
++下降	Automne
++下面	Ci-dessous
++不	Non
++不一样	Différent
++不与	Pas avec
++不久	Bientôt
++不仅	Pas le seul
++不会	Non
++不但	Non seulement
++不再	Plus maintenant
++不准	Non autorisé
++不出	Ne sortez pas
++不到	Pas assez
++不去	N'y va pas
++不受	Non soumis à
++不变	Être inchangé
++不可	Ne peut pas
++不可以	Non
++不可能	Impossible
++不合格	Non qualifié
++不同	Différence
++不同的	Différent
++不含	Non inclus
++不在	Être dehors
++不多	Pas beaucoup
++不够	Être insuffisant
++不大	Pas grand
++不太	Pas beaucoup
++不好	Ce n'est pas bon
++不如	Ça ne vaut pas…
++不妨	Pourrait aussi bien
++不宜	Ne pas être approprié
++不客气	Je t'en prie
++不对	Incorrect
++不少	Pas mal
++不应	Ne devrait pas
++不得	Ne pas être autorisé
++不得不	Je n'ai pas d'autre choix que de
++不必	Pas nécessairement
++不想	Ne vous attendez pas
++不想干	Je ne veux pas le faire
++不愿	Forcé
++不懂	Ne le comprends pas
++不承担	Ne supporte pas
++不敢	Ne pas oser
++不断	Ne pas s'arrêter
++不断地	Constamment
++不断提高	Continuez à vous améliorer
++不易	Pas facile
++不是	Non
++不满	De ressentiment
++不然	Pas si
++不用	Non
++不知	Je ne sais pas
++不知道	Aucune idée
++不禁	Je ne peux pas m'empêcher de faire
++不符合	Non conforme à
++不管	Indépendamment de
++不能	Ne peut pas
++不良	Mauvais
++不行	Non
++不要	Non
++不见	Ne pas voir
++不论	Indépendamment de
++不详	Inconnu
++不超过	Pas plus de
++不足	Insuffisant
++不过	Cependant
++不锈钢	Acier inoxydable
++不错	À droite
++不限	Illimité
++不需要	Pas besoin
++不高	Pas haut
++与	Donner
++与中国	Et la Chine
++与其	Plutôt que
++与发展	Et développement
++与本站	Et ce site
++与此同时	En même temps
++与管理	Et la gestion
++专业	Domaine d'étude spécial
++专业化	Spécialisation
++专利	Brevet
++专区	Préfecture
++专家	Expert
++专用	Être utilisé dans un but spécial
++专科	Sujet spécialisé
++专门	En particulier
++专项	Article spécial
++专题	Sujet spécial
++世	Génération
++世界	Monde
++世界上	Dans le monde
++世界杯	Coupe du Monde
++世纪	Siècle
++业主	Propriétaire
++业内	À l'intérieur de l'entreprise
++业务	Affaires
++业界	Cercles d'affaires
++业绩	Réalisation exceptionnelle
++东	Est
++东北	Nord-est
++东方	Est
++东莞	Dong Guan
++东西	Choses
++东路	Route de l'Est
++丢失	Perdre
++两	Deux
++两个	Deux
++两个人	Deux personnes
++两人	Deux personnes
++两位	Deux personnes
++两侧	Les deux côtés
++两国	Deux pays
++两大	Deux majeurs
++两天	Deux jours
++两年	Deux ans
++两次	Deux fois
++两种	Deux types
++两者	Les deux
++严格	Strict
++严格的	Strict
++严禁	Interdire strictement
++严重	Sérieux
++严重的	Sérieux
++个	Moi
++个人	Individuel
++个体	Individuel
++个别	Individuel
++个性	Individualité
++个性化	Personnalisation
++个月	Mois
++中	Centre
++中介	Être un intermédiaire
++中共	Parti communiste chinois
++中医	Médecine traditionnelle chinoise
++中午	Midi
++中华	Chine
++中华民族	Nation chinoise
++中国	Chine
++中国人	Chinois
++中国共产党	Parti communiste chinois
++中央	Centre
++中学	Collège
++中小企业	Petites et moyennes entreprises
++中小学	Écoles primaires et secondaires
++中山	Zhongshan
++中心	Centre
++中文	Chinois
++中断	Arrêter
++中有	Il y a
++中期	Période moyenne
++中药	Médecine traditionnelle chinoise
++中间	Le milieu
++丰富	Abondant
++临床	Assister à un lit de maladie pour fournir des services médicaux
++临时	Au dernier moment
++为	Pour
++为一体	Comme un
++为什么	Pourquoi ?
++为他	Pour lui
++为企业	Pour l'entreprise
++为何	Pourquoi
++为你	Pour toi
++为其	Pour son
++为准	Est la norme
++为您	Pour toi
++为我	Pour moi
++为此	Pour cette fin
++为自己	Pour moi-même
++主人	Hôte
++主体	Corps principal
++主力	Force principale
++主办	Hôte
++主动	De sa propre initiative
++主导	De premier plan
++主席	Président
++主张	Avocat
++主持	Présider
++主持人	Hôte
++主机	Moteur principal
++主板	Carte mère
++主流	Flux du tronc
++主演	Jouer le rôle de premier plan
++主管	Être responsable de
++主管部门	Département compétent
++主编	Rédacteur en chef
++主要	Principal
++主要内容	Le contenu principal
++主要是	Essentiellement
++主要有	Principalement avoir
++主角	La partie principale
++主页	Page d'accueil
++主题	Sujet
++举办	Tenir
++举报	Signaler une infraction
++举行	Tenir
++乃至	Même
++义务	Devoir
++之	Accéder à
++之一	L'un des
++之下	Sous
++之中	Au milieu
++之内	À l'intérieur
++之前	Avant
++之后	Le lendemain
++之外	D'ailleurs
++之所以	La raison est
++之类	Les simes
++之路	La route
++之间	Entre
++乐趣	Plaisir
++乙方	Partie B
++也	Aussi
++也不	Aucun des deux
++也不会	Ni l'un ni l'autre
++也不能	Il ne peut pas non plus
++也会	Peut aussi
++也只	Aussi seulement
++也可	Ça va
++也可以	Ça va
++也在	Aussi dans
++也好	C'est bon
++也将	Sera également
++也就	Juste
++也就是	C'est-à-dire
++也就是说	C'est-à-dire
++也很	C'est aussi très
++也是	Aussi
++也有	Il y a aussi
++也没	Aucun des deux
++也没有	Aucun des deux
++也能	Peut aussi
++也要	Je veux aussi
++也许	Peut-être
++也都	Aussi
++习惯	S'habituer à
++乡村	Village
++乡镇	Villages et villes
++书法	Calligraphie
++书的	Livre
++书籍	Livres
++书面	Écrit
++买了	Acheté
++买卖	Acheter et vendre
++买家	Acheteur
++了	Finir
++了吧	N'est-ce pas ?
++了解	Comprendre
++了解到	Comprendre
++予以	Donner
++争取	Se battre pour
++争议	Conflit
++事	Chose
++事业	Entreprise
++事业单位	Institution indépendante à but non lucratif
++事件	Incident
++事先	À l'avance
++事务	Travail
++事实	Fait
++事实上	En fait
++事情	Affaire
++事故	Accident
++事物	Chose
++事项	Matière
++二	Deux
++二人	Deux personnes
++二十	Vingt
++二年	Deux ans
++二手	D'occasion
++二手车	Voitures d'occasion
++二是	Le second est
++于	À
++于是	Si
++亏损	Perdre de l'argent
++云	Nuage
++云南	Province du Yunnan
++互动	Interaction
++互相	Mutuellement
++互联	Raccordement (en réseau)
++互联网	Internet
++五	Cinq
++五个	Cinq
++五个亿	500 millions
++五年	Cinq ans
++亚洲	Asie
++些	Quelques
++交付	Payer
++交往	Contact
++交换	Échange
++交易	Commerce
++交流	Échange
++交纳	Payer
++交给	Remettre-le
++交通	Trafic
++产业	Propriété
++产业化	Industrialiser
++产品	Produit
++产品质量	Qualité du produit
++产地	Lieu de production
++产权	Droits de propriété
++产生	Produire
++产生了	Généré
++产量	Sortie
++享受	Apprécier
++享有	Apprécier
++亲	Fermer
++亲爱的	Chéri
++亲自	Personnellement
++人	Personne
++人与	Les gens et
++人事	Affaires humaines
++人事部	Service du personnel
++人人	Tout le monde
++人们	Personnes
++人体	Corps humain
++人力资源	Ressources humaines
++人口	Population humaine
++人员	Personnel
++人在	Les gens sont dans
++人均	Par habitant
++人士	Figure publique
++人家	Ménage
++人工	Fabriqué par l'homme
++人才	Personne talentueuse
++人数	Nombre de personnes
++人是	Les gens sont
++人格	Personnalité
++人次	Temps de personne
++人民	Le peuple
++人民币	Renminbi
++人民政府	Gouvernement du peuple
++人民法院	Cour du peuple
++人气	Popularité
++人物	Chiffre
++人生	Vie
++人类	Humanité
++人群	Foule
++人说	Les gens disent
++人间	Le monde
++什么	Quelque chose
++什么时候	Quand
++什么是	C'est quoi…
++什么样的	Quel genre de
++仅为	Seulement pour
++仅仅	Simplement
++仅仅是	C'est juste
++仅供参考	Pour référence seulement
++今	Maintenant
++今后	Jours à venir
++今天	Aujourd'hui
++今年	Cette année
++介绍	Présenter
++介绍了	Introduit
++仍然	Encore
++从	Suivre
++从业人员	Praticiens
++从中	De parmi
++从事	Entreprendre
++从此	Désormais
++从而	Ainsi
++仓库	Entrepôt
++仔细	Prudent
++他	Il
++他不	Il ne fait pas
++他也	Il a aussi
++他人	Autres
++他们	Eux
++他们的	Les leurs
++他在	Il est dans
++他对	Il est
++他就	Il vient de
++他是	Il est
++他的	Son
++他说	Il dit
++他还	Il a aussi
++付出	Payer
++付款	Payer
++代替	Remplacer par
++代理	Agir pour
++代理商	Agent
++代码	Code
++代表	Représenter
++令人	Faire des gens
++以	Au moyen de
++以上	Au-dessus de
++以上学历	Au-dessus des qualifications académiques
++以下简称	Ci-après dénommé
++以为	Penser
++以便	Pour que
++以免	De peur de
++以内	Dans un espace ou un temps
++以前	Temps plus tôt
++以及	Ainsi que
++以后	Par la suite
++以外的	Autre que
++以往	Le passé
++以来	Période de temps qui s'ensuit
++以此	Avec ce
++仪器	Instrument
++仪式	Cérémonie
++仪表	Apparence
++价值	Valeur
++价值观	Valeurs
++价格	Prix
++任	Ren
++任何	N'importe quel
++任何人	Quelqu'un
++任务	Tâche
++任意	Sans raison
++份额	Partager
++仿佛	Apparemment
++企业	Entreprise
++企业家	Entrepreneur
++企业文化	Culture d'entreprise
++企业管理	Gestion d'entreprise
++休息	Se reposer
++休闲	Soyez à l'aise
++众人	Tout le monde
++众多	Nombreux
++优先	Avoir la priorité
++优势	Avantage
++优化	Optimiser
++优惠	Préférentiel
++优惠价	Prix préférentiel
++优点	Avantage
++优秀	Exceptionnel
++优质	Qualité supérieure
++优雅	Élégant
++会	Se réunir
++会上	Lors de la réunion
++会使	Fera
++会同	Être en conjonction avec
++会员	Membre
++会员价	Prix de l'adhésion
++会在	Sera dans
++会有	Il y aura
++会的	Je le ferai
++会被	Sera
++会计	Comptabilité
++会让	Fera
++会议	Réunion
++传奇	Légende
++传媒	Des médias
++传感器	Détecteur
++传播	Propagation
++传来	Passé
++传真	Télécopie
++传统	Tradition
++传说	Légende
++传输	Transmettre
++传递	Livrer
++伤害	Blessé
++估计	Calculer
++似	Être comme
++似乎	Comme si
++似的	Être comme
++但	Seul
++但不	Mais pas
++但也	Mais aussi
++但却	Mais
++但在	Mais dans
++但我	Mais je
++但是	Mais
++但由于	Mais à cause de
++但这	Mais ce
++位	Place
++位于	Être situé
++位置	Place
++低于	Inférieur à
++住	Vivre
++住在	Vivre à
++住宅	Résidence
++住宿	Reste pour la nuit
++住房	Logement
++体会	Apprendre de l'expérience
++体内	Interne
++体制	Système
++体力	Force physique
++体现	Incarner
++体现了	Incarné
++体积	En vrac
++体系	Système
++体育	Sports
++体重	Poids
++体验	Expérience
++何	Qui
++佚名	Anonyme
++佛教	Bouddhisme
++作	Atelier
++作业	Devoirs
++作为	Conduite
++作为一个	En tant que
++作品	Travaux
++作家	Écrivain
++作战	Menez une bataille
++作文	Composition
++作用	Effet
++作者	Auteur
++作风	Style
++你	Tu
++你不	Tu ne fais pas
++你也	Vous aussi
++你们	Vous
++你会	Tu peux
++你可	Vous pouvez
++你可以	Vous pouvez
++你啊	Vous
++你回	Vous répondez
++你在	Tu es
++你好	Bonjour
++你好啊	Bonjour
++你对	Tu as raison
++你就	Tu viens de
++你想	Tu y penses
++你是	Tu l'es
++你有	Tu en as
++你的	Le tien
++你看	Regarde.
++你能	Tu peux
++你要	Tu veux
++你说	Dis-moi
++你还	Vous aussi
++使	Envoyer
++使人	Faire des gens
++使其	Faites-le
++使得	Être utilisable
++使我	Fais-moi
++使用	Utiliser
++使用着	En utilisant
++使用者	Utilisateur
++例如	Prenons l'exemple
++例子	Exemple
++供应	Approvisionnement
++供应商	Fournisseur
++供电	Fournir de l'électricité
++依托	Se rensuyer sur
++依据	Sur la base de
++依旧	Rester le même
++依法	Suivre des règles fixes
++依然	Soyez le même qu'avant
++依照	Suivre
++依赖	Être dépendant de
++依靠	Se rensuyer sur
++侵害	Empiéter et endommager
++侵权行为	Infraction
++侵犯	Violer
++便	Approprié
++便于	Être pratique pour
++便利	Pratique
++便宜	Pratique
++便是	C'est-à-dire
++促使	Forte envie
++促进	Coup de fouet
++促销	Promouvoir les ventes
++俄罗斯	Russie
++保健	Maintenir la santé
++保养	Prendre soin de sa santé
++保存	Préserver
++保密	Garder le secret
++保护	Protéger
++保持	Maintenir
++保留	Retenir
++保证	Garantie
++保险	Assurance
++保险公司	Compagnie d'assurances
++保障	Garantie
++信	Vrai
++信仰	Foi
++信任	Confiance
++信号	Signal
++信心	Confiance
++信息	Informations
++信息内容	Contenu informationnel
++信息化	Informationiser
++信息技术	Informatique
++信息披露	Divulgation d'informations
++信息服务	Service de renseignements
++信息网	Réseau d'information
++信用	Fiabilité
++信誉	Prestige
++信访	Se plaindre par lettre ou visites
++修复	Réparation
++修改	Modifier
++修正	Réviser
++修订	Réviser
++俱乐部	Club
++倒是	C'est
++候	S'enquérir après
++候选	Candidat
++借助	Avoir l'aide de
++借鉴	Tirez des leçons de
++倡导	Mettre en œuvre
++债券	Caution
++债务	Dette
++债权	Droit du créancier
++值得	Ça vaut le coup
++倾向	Incliner vers
++假如	Si
++做	Faire
++做了	A fait
++做事	Faire avancer les choses
++做出	Faire
++做到	Fais-le
++做好	Fais-le bien
++做法	Méthode de travail
++做的	Fais-le
++停止	Arrêter
++停留	Arrêtez-vous
++健全	Son
++健康	Sain
++健身	Restez en forme
++偶尔	De temps en temps
++储存	Réserves
++像	Être comme
++像是	Comme
++像素	Pixel
++僵尸	Zombi
++儿	Enfant
++儿子	Fils
++儿童	Enfant
++允许	Autoriser
++元素	Élément
++兄弟	Frère
++充分	Abondant
++充分利用	Utiliser pleinement
++充分发挥	Donnez plein jeu à
++充满	Être débordant de
++充满了	Plein de
++先	Premier
++先后	Ordre de priorité
++先生	Monsieur
++先进	Avancé
++先进的	Avancé
++光	Lumière
++光学	Optique
++光明	Lumière
++光盘	Disque compact
++光驱	Lecteur optique
++克服	Surmonter
++免费	Être gratuit
++免费版	Version gratuite
++党员	Membre du parti
++党的	De la fête
++党组织	Organisation du parti
++入	Entrer
++入住	Emménager dans
++全	Complet
++全世界	Le monde entier
++全体	Entier
++全力	Toute la force d'un
++全区	Tout le district
++全县	Tout le comté
++全国	Tout le pays
++全国各地	Dans tout le pays
++全局	Situation générale
++全年	Toute l'année
++全文	Texte intégral
++全新	Tout neuf
++全方位	Toutes les directions
++全是	Tous sont
++全球	Monde entier
++全球化	Mondialisation
++全省	Toute la province
++全社会	Toute la société
++全程	Tout le voyage
++全身	Corps entier
++全部	Total
++全面	Dans l'ensemble
++公	Public
++公主	Princesse
++公交车	Bus
++公众	Le public
++公共	Public
++公务员	Fonctionnaire
++公司	Société
++公司名称	Raison sociale
++公司地址	Adresse de l'entreprise
++公司董事会	Conseil d'administration de la société
++公告	Donner un avis public
++公园	Parc
++公安	Sécurité publique
++公安局	Bureau de la sécurité publique
++公安机关	Organes de sécurité publique
++公寓	Appartement
++公布	Annoncer
++公平	Juste
++公开	Public
++公斤	Kilogramme
++公正	Juste
++公民	Citoyen
++公示	Faire connaître le public et demander des opinions
++公路	Route
++公里	Kilomètre
++共产党员	Membre du Parti communiste
++共享	Partager
++共同	Général
++共有	Général
++关	Fermer
++关于	À peu près
++关心	Soins pour
++关注	Faites attention
++关系	Relation
++关键	Boulon de porte
++关键字	Mots-clés
++关键词	Mot clé
++关闭	Fermer
++兴奋	Excité
++兴趣	Intérêt
++兵	Armes
++其	Cette
++其中	Parmi
++其他	Autre
++其他的	Autres
++其余	Le reste
++其实	En fait
++其次	Prochain
++具体	Béton
++具备	Avoir
++具有	Posséder
++典型	Exemple
++养殖	Cultiver
++内	Intérieur
++内在	Inhérent
++内地	À l'intérieur des terres
++内外	À l'intérieur et à l'extérieur
++内存	Stockage interne
++内容	Contenu
++内心	Cœur
++内涵	Intention
++内置	Intégré
++内蒙古	Mongolie intérieure
++内部	À l'intérieur
++再	Deux fois
++再加上	En plus de
++再新	Nouveau
++再次	Encore une fois
++再见	Au revoir
++再说	Passer à plus tard
++写作	Écrire
++写字楼	Imeuble de bureaux
++写的	Écrit
++军事	Affaires militaires
++军队	Forces armées
++农业	Agriculture
++农产品	Produits de la ferme
++农户	Ménage agricole
++农村	Campagne
++农民	Agriculteur
++农民工	Travailleur immigré
++农民房	Maison de l'agriculteur
++农药	Pesticide
++冠军	Champion
++冬天	Hiver
++冬季	Hiver
++冲击	Livre
++冲突	Conflit
++决定	Décider
++决心	Être déterminé
++决策	Prendre une décision stratégique
++决议	Résolution
++冷静	Calme et tranquille
++准备	Préparer
++准确	Précis
++准确性	Précision
++减少	Réduire
++减肥	Perdre du poids
++减轻	Éclaircir
++几	Plusieurs
++几个	Plusieurs
++几乎	Presque
++几天	Quelques jours
++几年	Quelques années
++几次	Plusieurs fois
++几种	Plusieurs types
++凡是	N'importe quel
++凭借	Se rensuyer sur
++凭证	Preuve
++出	Sors
++出于	Hors de
++出具	Produire
++出去	Sors !
++出发	Départ
++出口	Sortie
++出台	Entrez dans la scène
++出售	Vendre
++出处	Source
++出席	Assister à
++出来	S'en sortir
++出版	Publier
++出版社	Maison d'édition
++出现	Apparaître
++出现了	Apparu
++出现在	Apparaît dans
++出生	Être né
++出租	Louer
++出租车	Taxi
++出色	Exceptionnel
++出资	Fonds
++函数	Fonction
++分	Diviser
++分为	Divisé en
++分享	Partager
++分公司	Agence
++分别	Partie
++分别为	Respectivement sont
++分割	S'apper
++分区	Subdivision
++分子	Numérateur
++分布	Être distribué
++分开	Partie
++分散	Détourner
++分数	Marque
++分析	Analyser
++分离	Séparé
++分类	Classer
++分辨率	Résolution
++分配	Distribuer
++分钟	Minute
++切实	Pratique
++刊登	Publier
++划分	Diviser
++列入	Inclus dans
++列表	Liste
++则是	Est
++刚	Raide
++刚刚	Juste
++刚才	L'instant avant
++创业	Nouvel terrain
++创作	Créer
++创办	Installer
++创建	Installer
++创意	Initier une idée
++创新	Briser un terrain frais
++创造	Apporter
++创造了	Créer
++初中	Collège
++初始化	Initialiser
++初期	Stade précoce
++初级	Primaire
++删除	Supprimer
++判决	Prononcer
++判断	Jugement
++利于	Être bénéfique pour
++利息	Intérêt
++利润	Profit
++利用	Utiliser
++利益	Intérêt
++别	Ne pas
++别人	Quelqu'un d'autre
++别墅	Villa
++别的	Autre
++到	Arriver
++到位	Être en place
++到底	Jusqu'à la fin
++到来	Arriver
++到的	Arrivé
++到达	Arriver
++制作	Fabrication
++制动	Appliquez les freins
++制品	Marchandises
++制定	Formuler
++制定的	Formulé
++制度	Réglementation
++制约	Restreindre
++制订	Entraînez-vous
++制订的	Formulé
++制造	Fabrication
++制造业	Industrie manufacturière
++刺激	Stimuler
++前	Aller de l'avant
++前后	Période autour de
++前往	Accéder à
++前提	Prémisse
++前提下	Sous la prémisse
++前景	Premier plan
++前期	Étape antérieure
++前来	Venir
++前款	Le paragraphe précédent
++前进	Avance
++前面	Avant
++剧情	L'intrigue d'une pièce de théâtre ou d'un opéra
++剩余	Être laissé
++副主任	Directeur adjoint
++力	Force physique
++力争	Faire tout ce que l'on peut pour faire quelque chose
++力度	Force
++力量	Force physique
++办事	Gérer les affaires
++办事处	Bureau
++办公	Traiter avec les affaires officielles
++办公室	Bureau
++办学	Diriger une école
++办法	Chemin
++办理	Poignée
++功夫	Habileté
++功效	Efficacité
++功率	Puissance
++功能	Fonction
++加	Mettez une chose sur l'autre
++加上	Ajouter
++加入	Ajouter
++加入时间	Temps de rejoindre
++加大	Augmentation
++加密	Chiffrer
++加工	Processus
++加强	Renforcer
++加快	Accélérer
++加拿大	Canada
++加油	Allez !
++加盟	Devenez membre
++加载	Charge
++加速	Accélérer
++动	Bouger
++动作	Action
++动力	Impulsion
++动员	Mobiliser
++动态	Tendances
++动漫	Animation
++动物	Animal
++动画	Anime
++助理	Assistant
++努力	Persévère
++劳动	Travail
++劳动保障	Sécurité du travail
++劳动力	Capacité de travail physique
++劳动合同	Contrat de travail
++劳动者	Ouvrier du bâtiment
++勇气	Courage
++包含	Contenir
++包子	Pain farci à la vapeur
++包括	Inclure
++包装	Paquet
++化妆品	Cosmétiques
++化学	Chimie
++化工	Industrie chimique
++北京	Pékin
++北京市	Ville de Pékin
++北方	Nord
++北路	Route du Nord
++区内	Dans le district
++区分	Différencier
++区别	Différencier
++区域	Région
++医学	Médecine
++医生	Médecin
++医疗	Donner un traitement médical
++医疗保险	Assurance-maladie
++医疗机构	Établissement médical
++医药	Médecine
++医院	Hôpital
++匿名	Être anonyme
++十	Dix
++十一五	Onze cinq
++十五	Quinze
++十分	Très
++十大	Les dix premiers au hit-parade
++十年	Dix ans
++千万	Dix millions
++升级	Monte d'un grade
++半天	Demi-journée
++半年	Une demi-année
++协会	Association
++协助	Aider
++协商	Consulter
++协议	Négocier
++协调	Harmonieuse
++单一	Célibataire
++单位	Unité
++单击	Cliquer
++单独	Par lui-même
++单纯	Simple
++南方	Au sud
++南路	Route Sud
++博士	Médecin
++博客	Blog
++博物馆	Musée
++占有	Occuper
++占用	Occuper et utiliser
++卫星	Satellite
++卫生	Hygiénique
++印刷	Imprimer
++印度	Inde
++印花税	Droit de timbre
++印象	Impression
++危害	Mettre quelque chose en danger
++危机	Crise
++危险	Dangereux
++即使	Même si ou bien
++即可	Ça va
++即将	En un rien de temps
++却	Se retirer
++却不	Mais pas
++却又	Mais aussi
++厂商	Fabricant
++厂家	Usine
++厂房	Bâtiment de l'usine
++历史	Histoire
++历史上	Historiquement
++历史的	Historique
++压力	Pression
++压缩	Compresse
++厘米	Centimètre
++原	De base
++原件	Original
++原价	Prix d'origine
++原作者	L'auteur original
++原则	Principe
++原创	Donner naissance à
++原告	Plaignant
++原因	Raison
++原因之一	Une des raisons
++原因是	La raison est
++原始	Original
++原帖	Post original
++原料	Matières premières
++原本	À l'origine
++原材料	Matières premières
++原来	Original
++原理	Principe
++厦门	Xiamen
++厦门市	Ville de Xiamen
++厨房	Cuisine
++去	Partir
++去做	Fais-le
++去年	L'an dernier
++去看	Aller voir
++县城	Chef-lieu de comté
++县级以上	Au-dessus du niveau du comté
++参与	Prendre part à
++参加	Rejoindre
++参加了	Participé
++参展	Prendre part à une exposition
++参数	Paramètre
++参照	Consulter et suivre
++参考	Se référer à
++参观	Visite
++参赛	Participer à un concours
++又	Encore
++又不	Et pas
++又是	Encore
++又有	Il y a aussi
++又要	Et encore
++及	Rattraper
++及其他	Et d'autres
++及时	Dans le temps
++友情	Amitié
++友情链接	Liens d'amitié
++友谊	Amitié
++双手	Les deux mains
++双方	Les deux côtés
++反	Retourner
++反复	À plusieurs reprises
++反对	S'opposer à
++反应	Réagir
++反映	Réfléchir
++反正	Réglez à droite
++反而	Inversement
++反馈	Remarques
++发	Lancement
++发出	Envoyer
++发动	Lancement
++发动机	Moteur
++发展	Se développer
++发布	Problème
++发布人	Émetteur
++发布日期	Date de sortie
++发布时间	Heure de sortie
++发布者	Éditeur
++发帖	Courrier
++发挥	Mettre en jeu
++发放	Subvention
++发明	Inventer
++发现	Découvrir
++发现了	Découvert
++发现了个	Trouvé un
++发生	Se produire
++发生了	C'est arrivé
++发生的	C'est arrivé
++发票	Facture
++发给	Envoyer à
++发育	Grandir
++发行	Faire circuler
++发表	Problème
++发表于	Publié dans
++发表时间	Heure de publication
++发表评论	Laisser un commentaire
++发言	Faire un discours
++发货	Expédition des marchandises
++发起	Mettre en œuvre
++发达国家	Pays développé
++发送	Transmission par radio
++取决于	Dépend de
++取得	Gain
++取得了	Atteint
++取消	Annuler
++受	Recevoir
++受理	Accepter et assister à
++变	Changement
++变动	Changement
++变化	Changement
++变得	Devenir
++变成	Devenir
++变成了	Est devenu
++变更	Changement
++变量	Variable
++变革	Transformer
++口	Bouche
++口气	Ton
++古代	Antiquité
++另一	Un autre
++另一个	Un autre
++另一方面	D'un autre côté
++另一种	Un autre
++另外	En plus
++另有	Il y a un autre
++只	Célibataire
++只为	Seulement pour
++只会	Peut seulement
++只好	Je dois
++只想	Je veux juste
++只愿	Je souhaite seulement
++只是	Seul
++只有	Seul
++只能	Peut seulement
++只要	Tant que
++只见	Seulement voir
++只需	Juste besoin
++叫	Crier
++叫作	Ça s'appelle
++召开	Se réunir
++可以	Passable
++可以把	Mettre quelque chose en conserve
++可以用	Peut être utilisé
++可以说	On peut le dire
++可以通过	Peut passer
++可在	Peut être dans
++可怜	Pitoyable
++可惜	Regrettable
++可持续发展	Développement durable
++可是	Mais
++可爱	Charmant
++可用	Disponible
++可能	Possible
++可能会	Peut-être
++可能性	Possibilité
++可能是	C'est peut-être
++可见	Vous pouvez donc voir que...
++可达	Peut atteindre
++可选	Sélectionnable
++可靠	Fiable
++台湾	Taiwan
++司机	Chauffeur
++吃	Manger
++吃了	Manger
++吃的	Nourriture
++吃饭	Manger
++各个	Chacun
++各位	Tout le monde
++各单位	Toutes les unités
++各国	Pays
++各地	Différents endroits
++各大	Majeur
++各方	Toutes les parties
++各种	Toutes sortes de
++各类	Toutes sortes de
++各级	Tous les niveaux
++各自	Chacun
++各自的	Leurs respectifs
++各部门	Départements
++各项	Divers articles
++各项工作	Toutes sortes de travaux
++合作	Coopérer
++合作伙伴	Partenaires
++合同	Contrat
++合同样本	Exemple de contrat
++合并	Fusionner
++合成	Être composé de
++合格	Qualifié
++合法	Juridique
++合法性	Légalité
++合法权益	Droits et intérêts légitimes
++合理	Raisonnable
++合理的	Raisonnable
++合租	Loyer partagé
++合肥	Hefei
++合适	Approprié
++吉林	Province de Jilin
++同	Être semblable
++同事	Collègue
++同学	Camarade de classe
++同学们	Camarades de classe
++同意	Être d'accord
++同时	Même temps
++同时也	En même temps
++同期	Même période
++同样	Même
++同步	Synchroniser
++同比增长	Croissance d'une année sur l'autre
++同类	Similaire
++同行	S'engager dans le même commerce
++名	Nom
++名为	Le nom est
++名义	Nom
++名单	Liste des noms
++名字	Nom
++名牌	Marque célèbre
++名称	Nom
++后	Impératrice
++后将	Plus tard général
++后期	Étape ultérieure
++后来	À tout à l'heure
++后果	Conséquence
++后由	Plus tard par
++后者	Ce dernier
++后面	En arrière
++向	Visage
++向上	Faites votre chemin vers le haut
++向前	Avant
++吗	Quoi
++否则	Sinon
++吧	Fissure
++含有	Contient
++含量	Contenu
++听	Écouter
++听到	Entendre
++听说	Écouter et parler
++启动	Démarrer
++吸引	Attirer
++呈现	Apparaître
++告知	Informer
++告诉	Dire
++告诉你	Te dire
++告诉我	Dis-moi
++员工	Personnel
++周一	Lundi
++周围	Autour de
++周岁	Une année complète de vie
++周期	Cycle
++周末	Week-end
++周边	Zone environnante
++味道	Goût
++呵呵	Rire bruyamment
++呼吸	Respirer
++命	Commande
++命令	Commande
++命运	Sort
++命题	Se poser une question
++和	Et
++和他	Avec lui
++和你	Avec toi
++和平	Paix
++和我	Avec moi
++和谐	Harmonieuse
++咖啡	Café
++咨询	Consulter
++咨询电话	Hotline
++咬在	Mordre dedans
++咱们	Nous
++品牌	Marque déposée
++品种	Variété
++品质	Caractère
++哈哈	Haha
++哈尔滨	Harbin
++响应	Réponse
++哥	Frère aîné
++哥哥	Frère aîné
++哦	Oh!
++哪个	Lequel
++哪些	Lequel
++哪里	Où
++哲学	Philosophie
++售价	Prix
++售后服务	Service après-vente
++唯一	Seul
++唯一的	Le seul
++商业	Commerce
++商业银行	Banque commerciale
++商人	Affaires
++商务	Affaires commerciales
++商品	Marchandises
++商品名称	Nom de la marchandise
++商品房	Logement commercial
++商场	Marché
++商城	Centre commercial
++商家	Marchand
++商店	Magasin
++商机	Opportunité d'affaires
++商标	Marque
++商铺	Magasin
++啊	Ah!
++啤酒	Bière
++啦	LA
++善于	Être bon à
++喜欢	Comme
++喜爱	Comme
++喝水	De l'eau
++嗯	Oui, oui
++嘿嘿	Ha ha
++器材	Équipement
++四	Quatre
++四个	Quatre
++四周	Tous les côtés
++四大	Quatre majeurs
++四川	Sichuan
++四川省	Province du Sichuan
++四是	Quatre est
++回	Tourner
++回到	Retour à
++回去	Rentre
++回复	Réponse
++回头	Tourner
++回家	Rentrons
++回应	Répondre
++回忆	Souvenirs
++回报	Rapport de retour
++回收	Récupérer
++回来	Retour
++回答	Répondre
++回避	Échapper à
++因	Suivre
++因为	Parce que
++因为他	À cause de lui
++因为我	À cause de moi
++因此	Par conséquent
++因素	Élément
++因而	Avec le résultat que...
++团体	Organisation
++团结	Unir
++团购	Achat groupé
++团队	Équipe
++困难	Difficulté
++围绕	Encercler
++固定	Fixé
++固定资产	Immobilisations
++国	Pays
++国产	Domestique
++国产软件	Logiciel domestique
++国内	Domestique
++国内外	Au pays et à l'étranger
++国务院	Conseil d'État
++国外	À l'étranger
++国家	Pays
++国家安全	Sécurité nationale
++国家法律	Droit national
++国家级	Au niveau de l'État
++国有	Être appartenant à l'État
++国有企业	Entreprise publique
++国民经济	Économie nationale
++国语	Langue nationale
++国际	International
++国际化	Internationaliser
++图书	Livres
++图书馆	Bibliothèque
++图像	Image
++图形	Graphique
++图标	Icône
++图案	Motif
++图片	Image
++土地	Terre
++土壤	Sol
++土豆	Pomme de terre
++在	À
++在一起	Ensemble
++在中国	En Chine
++在于	Allongez-vous dans
++在他	Dans son
++在你	En toi
++在其	Dans son
++在内	Être inclus
++在北京	À Pékin
++在国内	En Chine
++在家	Être dans
++在对	À droite
++在我	Dans mon
++在我国	Dans notre pays
++在此	Ici
++在线	Être en ligne
++在线时间	Temps en ligne
++在网上	En ligne
++在自己	En moi-même
++在这	Ici
++在这个	Dans ce
++在这里	Ici
++在这里的	Ici
++在那里	Là-bas
++地	Terre
++地上	Sur le terrain
++地下	Métro
++地产	Immobilier
++地位	Position
++地区	Zone
++地图	Carte
++地址	Adresse
++地域	Région
++地处	Emplacement
++地方	Administration locale
++地板	Planche
++地点	Site
++地球	Terre
++地理	Géographie
++地铁	Métro
++地震	Tremblement de terre
++地面	Surface de la Terre
++场	Niveau de l'espace ouvert
++场合	Occasion
++场地	Site
++场所	Arène
++场景	Scène
++均为	Tous sont
++均匀	Même
++均可	Les deux sont disponibles.
++均有	Tous ont
++坐在	Asseyez-vous
++坚决	Entreprise
++坚持	Persister dans
++垃圾	Ordures
++型号	Modèle
++城	Mur
++城乡	Ville et campagne
++城区	Ville propre
++城市	Ville
++城市的	De la ville
++城镇	Villes et villages
++域名	Nom de domaine
++培养	Cultiver
++培育	Cultiver
++培训	Train
++培训班	Cours de formation
++基于	En raison de
++基因	Gène
++基地	Base
++基层	Racines de base
++基本	Base
++基本上	Fondamentalement
++基础	Fondations
++基础上	Sur la base de
++基础设施	Infrastructure
++基金	Fonds
++塑料	Plastique
++塑造	Moisissure
++填写	Remplir
++境内	Zone à l'intérieur d'une frontière
++境外	Zone en dehors d'une frontière
++境界	Limite
++增值税	Impôt sur la valeur ajoutée
++增加	Augmentation
++增加了	Augmenté
++增多	Augmentation
++增大	Agrandir
++增强	Renforcer
++增长	Augmentation
++士	Célibataire
++士兵	Soldat
++声	Son
++声明	Déclarer
++声音	Son
++处	Résider
++处于	Être
++处分	Prendre des mesures disciplinaires
++处理	Poignée
++处理的	Manipulé
++处罚	Punir
++处置	Poignée
++备案	Mettre en mémoire
++备注	Remarques
++复习	Réviser
++复制	Duplicata
++复印件	Photocopie
++复杂	Complexe
++夏天	Été
++外	Extérieur
++外国	Pays étranger
++外地	Autres endroits
++外观	Apparence extérieure
++外语	Langue étrangère
++外贸	Commerce extérieur
++外资	Investissement étranger
++外部	À l'extérieur
++外面	Extérieur
++多	Beaucoup
++多个	Multiple
++多么	Comment
++多了	Trop
++多人	Beaucoup de gens
++多元	Pluraliste
++多元化	Devenir pluraliste
++多功能	Polyvalent
++多名	Plus d'un
++多媒体	Multimédia
++多家	Plus d'un
++多少	Montant
++多年	De nombreuses années
++多年来	Au fil des ans
++多数	Majorité
++多次	Plusieurs fois
++多的	Beaucoup
++多种	Divers
++大	Grand
++大专	Établissements d'enseignement supérieur
++大事	Question d'une grande importance
++大于	Plus grand que
++大人	Adulte
++大众	(Grand) public
++大会	Session plénière
++大哥	Grand frère
++大地	Terre
++大型	À grande échelle
++大多	La plupart du temps
++大多数	Grande majorité
++大大	Très
++大学	Université
++大学生	Étudiant universitaire
++大家	Tout le monde
++大家都	Tout le monde
++大小	Taille
++大师	Grand maître
++大幅	Radicalement
++大概	Probablement
++大的	Grand
++大约	Environ
++大脑	Cerveau
++大致	Général
++大街	Rue principale
++大赛	Concours majeur
++大连	Dalian
++大道	Route principale
++大部分	Majorité
++大酒店	Grand Hôtel
++大量	Beaucoup
++大门	Porte principale
++大陆	Continent
++天	Ciel
++天下	Le monde
++天使	Ange
++天地	Univers
++天堂	Paradis
++天天	Tous les jours
++天气	Temps
++天津	Tianjin
++天津市	Ville de Tianjin
++天然	Naturel
++天空	Ciel
++太	Le plus grand
++太多	Trop
++太大	Trop grand
++太太	Épouse d'un fonctionnaire ou d'un officier
++太阳	Soleil
++夫人	Femme
++夫妻	Mari et femme
++失	Perdre
++失去	Perdre
++失去了	Perdu
++失误	Faire une erreur
++失败	Être vaincu
++头	Tête
++头发	Cheveux
++头衔	Titre
++奇怪	Bizarre
++奉献	Offrez-vous
++奖励	Récompense
++奖金	Prime
++奥运	Jeux Olympiques
++奥迪	Audi
++女	Femme
++女人	Femme
++女士	Dame
++女子	Femme
++女孩	Fille
++女孩子	Fille
++女性	Sexe féminin
++女生	Fille
++她	Elle
++她在	Elle est dans
++她就	Elle vient de
++她是	Elle est
++她的	Le sien
++她说	Elle a dit
++好	Bien
++好了	Bien
++好像	Être comme
++好友	De bons amis
++好啊	Bien sûr.
++好处	Accommodant
++好多	Beaucoup
++好的	Bon
++好评	Haute opinion
++好评度	Bonnes critiques
++如	Se conformer à
++如下	Comme suit
++如今	De nos jours
++如何	Comment
++如同	Être comme
++如图	Comme le montre l'image
++如有	S'il y a
++如果	Si
++如果不	Sinon
++如果有	S'il y a
++如果没有	Sinon
++如此	Tel
++妇女	Femme
++妈妈	Maman
++妹妹	Jeune sœur
++妻子	Femme et enfants
++始	Début
++始终	Processus complet
++姐姐	Sœur aînée
++姑娘	Tante
++姓名	Nom et prénom
++委员	Membre du comité
++委员会	Comité
++委托	Confier
++威望	Prestige
++威胁	Menacer
++婚姻	Mariage
++婚礼	Mariage
++婴儿	Enfant en bas âge
++媒体	Moyen
++嫌弃	Épaule froide
++子	Fils
++子女	Enfants
++字体	Police (de caractères)
++字符	Caractère
++字符串	Chaîne
++字节	Octet
++存储	Réserves
++存在	Exister
++存在着	Exister
++存放	Magasin
++存款	Dépôt
++季节	Saison
++孤独	Solitaire
++学	Étude
++学习	Étude
++学会	Apprendre
++学位	Diplôme universitaire
++学历	Parcours académique
++学员	Étudiant
++学术	Apprentissage
++学校	École
++学生	Étudiant
++学科	Branche d'apprentissage
++学者	Érudit
++学费	Frais de scolarité
++学院	Collège
++孩	Enfant
++孩子	Enfant
++孩子们	Enfants
++宁波	Ningbo
++它	Ça
++它的	Son
++宇宙	Univers
++守法	Être respectueux de la loi
++安全	Sans danger
++安全性	Sécurité
++安全生产	Production sûre
++安全的	Sans danger
++安徽	Province d'Anhui
++安徽省	Province d'Anhui
++安排	Organiser
++安置	Mettre dans un endroit approprié
++安装	Réparer
++安静	Tranquille
++完	Entier
++完全	Complet
++完善	Parfait
++完成	Accomplir
++完成了	Terminé
++完整	Complet
++完毕	Complet
++完美	Parfait
++宏观调控	Contrôle macro
++宗教	Religion
++官员	Officiel
++官方	Gouvernement
++定	Calme
++定义	Définition
++定价	Fixer un prix
++定位	Position
++定位器	Localisateur
++定期	Fixer une heure
++宝宝	Bébé
++实	Plein
++实习	Pratiquer
++实体	Substance
++实例	Exemple vivant
++实力	Force
++实在	Réel
++实在是	C'est vraiment
++实施	Mis en œuvre
++实时	En temps réel
++实物	Objet matériel
++实现	Réaliser
++实现了	Atteint
++实行	Mettre en pratique
++实践	Mettre en pratique
++实际	Réalité
++实际上	En fait
++实际情况	Faits
++实验	Test
++实验室	Laboratoire
++宠物	Animal de compagnie
++审批	Examiner et approuver
++审查	Examiner
++审核	Vérifier
++审计	Audit
++审议	Revue
++客人	Visiteur
++客户	Client
++客户服务	Service à la clientèle
++客户端	Client
++客服	Service à la clientèle
++客观	Objectif
++宣传	Faire de la publicité pour
++宣布	Annoncer
++室内	Intérieur
++宪法	Constitution
++害怕	Peur
++家	Maison
++家中	À la maison
++家乡	Ville natale
++家人	Membre de la famille
++家具	Mobilier
++家园	Patrie
++家庭	Famille
++家族	Clan
++家电	Appareils ménagers
++家里	Famille
++家长	Chef de famille
++容易	Facile
++容量	Capacité
++宽带	Haut débit
++宽度	Largeur
++宾馆	Hôtel
++宿舍	Résidence universitaire
++寂寞	Solitaire
++密码	Code secret
++富有	Riche
++对	À droite
++对不起	Désolé
++对中国	En Chine
++对于	En ce qui concerne
++对他	Pour lui
++对价	Considération
++对你	À toi
++对其	À cela
++对外	Externe
++对应	Match
++对待	Traiter
++对我	À moi
++对手	Adversaire
++对方	Autre partie
++对此	À cet égard
++对比	Contraste
++对着	En face
++对自己的	Pour vous-même
++对话	Dialogue
++对象	Objet
++对这	Oui, ce
++对面	Avant
++寻找	Cherchez-vous
++寻求	Chercher
++导向	Mener à
++导游	Effectuer une visite touristique
++导演	Direct
++导致	Mener à
++导航	Pilote
++将	Apporter
++将于	Sera dans
++将会	Volonté
++将其	Faites-le
++将军	Vérifier
++将在	Sera dans
++将对	Aura raison
++将是	Ce sera
++将有	Il y aura
++将来	Avenir
++将被	Sera
++尊重	Tenir en haute estime
++小	Petit
++小于	Moins que
++小区	Lotissement
++小型	À petite échelle
++小姐	Jeune femme
++小学	École primaire
++小孩	Enfant
++小小	Petit
++小心	Prends soin de toi
++小时	Heure
++小时内	Dans l'heure
++小游戏	Petit jeu
++小的	Petit
++小组	Petit groupe
++小说	Roman
++小麦	Blé
++少	Petit
++少做	Faire moins
++少女	Jeune fille
++少年	Adolescents
++少数	Peu
++尚未	Pas encore
++尝试	Essayer
++尤其	En particulier
++就	Approche
++就不	Alors ne le fais pas
++就业	Trouver un emploi
++就会	Volonté
++就像	Tout comme
++就可	C'est juste
++就可以	C'est bon.
++就可以了	Tout va bien
++就在	Juste dans
++就开始	Puis commence
++就把	Juste
++就是	Exactement
++就是在	C'est dans
++就是要	C'est juste
++就有	Il y a
++就没有	Il n'y en a pas.
++就算	Même Si
++就能	Mettre quelque chose en conserve
++就被	Ce sera
++就要	Sur le point de
++就这样	C'est tout.
++尴尬	Maladroit
++尺寸	Dimension
++尽快	Dès que possible
++尽管	Sans hésiter
++尽量	Au mieux de ses capacités
++尾页	La dernière page
++局部	Partie
++局长	Directeur
++局面	Situation
++层次	Arrangement d'idées
++层面	Portée d'un certain niveau
++居住	Vivre
++居民	Résident
++居然	À l'improviste
++屎	Merde
++屏幕	Écran
++展会	Exposition
++展位	Stand d'exposition
++展开	Étalez-vous
++展现	Se dérouler devant les yeux
++展示	Affichage
++展览	Exposition
++展览会	Exposition
++属于	Appartient à
++属性	Attribut
++山	Montagne
++山东	Province du Shandong
++山东省	Province du Shandong
++山西	Province du Shanxi
++岁月	Années
++岗位	Courrier
++工	Ouvrier
++工业	Industrie
++工人	Ouvrier
++工作	Travail
++工作中	Au travail
++工作人员	Personnel de travail
++工作地点	Lieu de travail
++工作经验	Stage
++工作者	Ouvrier
++工具	Outil
++工厂	Usine
++工商	Industrie et commerce
++工程	Ingénierie
++工程师	Ingénieur
++工艺	Technologie
++工资	Salaire
++左右	Côtés gauche et droit
++左右的	Gauche et droite
++巧克力	Chocolat
++巨大	Énorme
++巨大的	Massif
++巩固	Consolider
++差不多	À peu près le même
++差别	Différence
++差异	Différence
++差距	Écart
++已	Arrêter
++已在	Déjà dans
++已成为	Est devenu
++已是	C'est déjà
++已有	Déjà
++已经	Déjà
++已经成为	C'est devenu
++已经是	C'est déjà
++已经被	Ça a été
++已被	A été
++市区	Ville propre
++市场	Marché
++市场上	Sur le marché
++市场价	Prix du marché
++市场价格	Taux du marché
++市场经济	Économie de marché
++市场营销	Marketing
++市政府	Gouvernement municipal
++市民	Résidents de la ville
++市盈率	Ratio prix-bénéfice
++布局	Arrangement général
++布置	Organiser
++帅哥	Beau mec
++师	Division
++师生	Enseignants et étudiants
++希望	Espoir
++帖子	Courrier
++带	Ceinture
++带动	Conduire
++带宽	Bande passante
++带有	Avoir
++带来	Apporter
++带来了	Apporté
++带着	Avec
++带领	Plomb
++帮助	Aide
++帮忙	Aide
++常	Ordre public
++常常	Souvent
++常用	Couramment utilisé
++常见	Être commun
++常见的	Général
++常规	Pratique courante
++干	Bouclier
++干净	Propre
++干扰	Déranger
++干燥	Sec
++干部	Cadre
++平	Niveau
++平台	Terrasse
++平均	Moyenne
++平安	Sain et sauf
++平方公里	S'il kilomètre carré
++平方米	Mètre carré
++平时	Temps normaux
++平等	Égal
++平米	Mètre carré
++平衡	Équilibré
++平面	Avion
++年	Année
++年中	Milieu de l'année
++年代	Âge
++年内	Pendant l'année
++年初	Début de l'année
++年前	Avant le tournant de l'année
++年后	Après la fête du printemps
++年底	Fin d'année
++年度	Année
++年来	Ces dernières années
++年轻	Jeune
++年轻人	Jeune
++年间	Une certaine période de temps
++年龄	Âge
++并	Bing
++并不	Pas du tout
++并不是	Pas du tout
++并且	Et
++并在	Et dans
++并处	En parallèle
++并对	Et à
++并将	Et va
++并有	Et avoir
++并未	Pas du tout
++并没有	Non
++并非	En fait, ne pas être
++幸福	Bonheur
++幸福的	Heureux
++幻想	Illusion
++幼儿	Enfant en bas âge
++幼儿园	Jardin d'enfants
++广东	Province du Guangdong
++广东省	Province du Guangdong
++广告	Publicité
++广场	Carré
++广大	Vaste
++广州	Guangzhou
++广州市	Ville de Guangzhou
++广播	Émission
++广泛	Vaste
++广泛的	Vaste
++广西	Guangxi
++广阔	Vaste
++床上	Sur le lit
++序号	Numéro de série
++库存	Stock
++应	Devrait faire
++应在	Devrait être dans
++应对	Réponse
++应当	Devrait
++应当在	Devrait être dans
++应急	Faire face à une urgence
++应有	Dû
++应用	Appliquer
++应用于	Appliqué à
++应用程序	Application
++应聘	Postulez pour un poste annoncé
++应该	Devrait
++应该是	Devrait être
++店铺	Magasin
++延伸	Prolonger
++延长	Prolonger
++建成	Terminé
++建材	Matériaux de construction
++建立	Installer
++建立了	Établi
++建筑	Construire
++建筑物	Bâtiment
++建筑面积	Espace (au sol)
++建议	Proposer
++建设	Construire
++建设工程	Projet de construction
++建设部	Ministère de la Construction
++建设项目	Projets de construction
++建造	Construire
++开	Ouvert
++开业	Ouvert pour les affaires
++开关	Interrupteur
++开发	Se développer
++开发区	Zone de développement
++开发商	Révélateur
++开启	Ouvert
++开始	Commencer
++开始了	Ça a commencé.
++开展	Lancement
++开展了	Effectué
++开心	Heureux
++开拓	Ouvrir
++开放	Venez en fleurs
++开设	Ouvert
++开车	Conduire
++开通	Soyez ouvert à la circulation
++异常	Inhabituel
++引入	Conduire dans
++引发	Détente
++引导	Plomb
++引擎	Moteur
++引用	Citation
++引起	Donner naissance à
++引进	Présenter
++弟子	Suiveur
++张	Dessiner
++弹性	Élasticité
++强	Fort
++强制	Force
++强化	Renforcer
++强大	Puissant
++强奸	Viol
++强度	Intensité
++强烈	Fort
++强调	Stress
++当	Soyez égal
++当中	Milieu
++当事	La question
++当事人	Fête
++当他	Quand il
++当代	L'âge actuel
++当作	Prends-le comme
++当你	Quand vous
++当初	Début
++当前	Être confronté à
++当前位置	Position actuelle
++当地	Région
++当天	Le même jour
++当年	Ces jours-là
++当我	Quand je
++当日	Cette fois-là
++当时	Cette fois-là
++当然	Certainement
++录入	Clé
++录取	Admettre
++录音	Ruban adhésif
++形势	Terrain
++形式	Forme
++形式的	Formel
++形态	Forme
++形成	Prendre forme
++形成了	Formé
++形状	Forme
++形象	Image
++彩色	Couleur
++影像	Portrait
++影响	Affecter
++影响力	Influence : La psychologie de la persuasion
++影片	Film
++影视	Cinéma et télévision
++彻底	Complet
++彼此	L'un l'autre
++往往	Souvent
++征收	Prélever
++待遇	Traitement
++很	Très
++很多	Beaucoup
++很多人	Beaucoup de gens
++很大	Très grand
++很大啊	C'est très grand
++很好	Très bien
++很容易	Très facile
++很少	Rarement
++很强	Très fort
++很快	Bientôt
++很有	Très
++很难	Très difficile
++很高	Très élevé
++律师	Avocat
++律师事务所	Cabinet d'avocats
++得	Obtenir
++得了	Être suffisant
++得出	Arriver à
++得分	Score
++得分儿	Score
++得到	Obtenir
++得到了	Compris
++得很	Très
++得知	Faire connaissance
++循环	Faire circuler
++微信	WeChat
++微笑	Sourire
++微软	Microsoft
++德国	Allemagne
++心	Cœur
++心中	Dans le cœur
++心态	Psychologie
++心情	État d'esprit
++心灵	Cœur
++心脏	Cœur
++心里	Poitrine
++必然	Inévitable
++必要	Nécessaire
++必要的	Nécessaire
++必须	Moût
++志愿	Aspiration
++志愿者	Bénévole
++忘记	Oublier
++快	Rapide
++快乐	Heureux
++快捷	Agile
++快递	Livraison express
++快速	Rapide
++快速发展	Développement rapide
++忽然	Tout à coup
++怀疑	Doute
++态度	Manière
++怎	Pourquoi
++怎么	Comment
++怎么办	Et maintenant ?
++怎么样	Pourquoi pas
++怎样	Comment
++思	Penser
++思想	Pensée
++思维	Pensée
++思考	Considérer
++思路	Fil de la pensée
++性	Nature
++性别	Sexe
++性感	Sexy
++性格	Caractère
++性能	Capacité naturelle
++性质	Nature
++总	Mettre ensemble
++总之	En bref
++总体	Total
++总公司	Siège social
++总数	Total
++总是	Toujours
++总经理	Directeur général
++总结	Résumer
++总统	Président
++总裁	Président de l'entreprise
++总计	Montant à
++总部	Quartier général
++总量	Capacité totale
++总额	Montant total
++恋爱	Être amoureux
++恐怕	Peur
++恐怖	Terrifiant
++恐惧	Apeuré
++恢复	Curriculum vitae
++患者	Patient
++您可以	Vous pouvez
++您好	Bonjour
++您对	Tu es
++您所	Votre
++您是	Tu es
++您现在	Vous êtes maintenant
++您的	Ton
++您的位置	Votre emplacement
++您还没有	Tu n'as pas
++情人	Amant
++情况	Circonstances
++情况下	Dans les circonstances
++情形	Circonstances
++情感	Émotion
++情绪	Humeur
++情节	Intrigue
++惊	Timide
++惊喜	Surpris
++惊讶	Surpris
++想	Penser
++想到	Pense à
++想想	Réfléchis-y
++想法	Pensez à un moyen
++想要	Je veux
++想象	Imagination
++想起	Se souvenir
++意	Désir
++意义	Sens
++意义的	Significatif
++意向	Intention
++意味着	Signifier
++意外	Inattendu
++意大利	Italie
++意志	Volonté
++意思	Sens
++意见	Idée
++意识	Conscience
++意识到	Réaliser
++感	Bouger
++感到	Sentir
++感动	Être ému
++感受	Expérience
++感受到	Sentir
++感情	Sentiment
++感染	Infecter
++感觉	Sentiment
++感觉到	Sentir
++感谢	Remercier
++愿意	Soyez disposé
++愿望	Désir
++慢慢	Lentement
++懂得	Comprendre
++成	Accomplir
++成为	Devenir
++成为了	Est devenu
++成交	Conclure un accord
++成人	Grandir
++成分	Élément
++成功	Succès
++成功的	Réussi
++成员	Membre
++成就	Réalisation
++成效	Effet
++成本	Coût
++成果	Fruition
++成熟	Mûr
++成立	Fondre
++成立了	Établi
++成立于	Établi à
++成绩	Réalisation
++成都	Chengdu
++成长	Mûr
++我	Je
++我不	Non je ne
++我不知道	Je ne sais pas
++我也	Moi aussi
++我们	Nous
++我们不	Nous ne
++我们也	Nous aussi
++我们可以	On peut
++我们将	Nous allons
++我们就	Nous venons de
++我们是	Nous sommes
++我们要	Nous voulons
++我会	Je peux
++我公司	Mon entreprise
++我又	Moi aussi
++我和	Moi et
++我喜欢	J'adore
++我国	Notre pays
++我在	Je suis là
++我家	Ma maison
++我对	Je suis
++我就	Je le ferai
++我已经	J'ai déjà
++我市	Notre ville
++我很	Je suis très
++我想	Je pense
++我把	J'ai mis
++我是	C'est moi
++我有	J'ai
++我校	Notre école
++我没有	Non je ne
++我爱	J'adore
++我现在	Maintenant je
++我的	Mine
++我省	Notre province
++我看	Je vois
++我真	Je suis vraiment
++我知道	Je sais
++我自己	Moi-même
++我要	Je veux
++我觉得	Je pense
++我认为	Je crois
++我说	Écoute
++我还	Moi aussi
++我都	Je suis tout
++我院	Notre hôpital
++戒指	Anneau
++或	Quelqu'un
++或其他	Ou autre
++或是	Ou
++或者	Peut-être
++或者其他	Ou autre chose
++或者是	Ou
++或许	Peut-être
++战争	Guerre
++战士	Soldat
++战斗	Bataille
++战略	Stratégie
++户外	En plein air
++房产	Propriété
++房价	Prix de la maison
++房地产	Biens immobiliers
++房子	Maison
++房屋	Maison
++房间	Chambre
++所	Place
++所以	Si
++所以我	Alors je
++所在	Place
++所在地	Site
++所属	Subalterne
++所得	Revenu
++所有	Tous
++所有权	Possession
++所说	Dit
++所谓	Ce que l'on appelle
++所需	Obligatoire
++手	Main
++手中	Dans la main
++手册	Manuel
++手动	Manuel
++手工	Travail manuel
++手指	Doigt
++手术	Chirurgie
++手机	Portable
++手段	Moyen
++手法	Technique
++手续	Procédure
++手里	Dans la main
++才	Capacité
++才会	Seulement alors
++才可以	Ce n'est qu'alors que
++才是	C'est
++才有	Seulement alors
++才能	Capacité
++打	Frapper
++打击	Grève
++打印	Impression
++打印机	Imprimante
++打开	Ouvert
++打电话	Téléphone
++打算	Plan
++打造	Faire
++扣除	Déduire
++执业	Pratiquer la profession
++执法	Administrer la justice
++执法人员	Personnel des forces de l'ordre
++执行	Mener à bien
++执行时间	Temps d'exécution
++扩大	Développer
++扩展	Développer
++扩张	Développer
++扫描	Scanner
++扭矩	Moment de torsion
++扶持	Soutien
++扶贫	Aider les pauvres
++批准	Ratifier
++批发	Acheter en gros
++批评	Critiquer
++找	Cherchez
++找不到	Ne peut pas trouver
++找出	Découvrez
++找到	Fondre
++找到了	Fondre
++承办	Entreprendre
++承包	S'engager dans un contrat
++承受	Ours
++承担	Ours
++承担责任	Prendre ses responsabilités
++承接	Tenez un récipient pour y verser du liquide
++承认	Admettre
++承诺	Accepter de faire quelque chose
++技巧	Compétences
++技术	Technique
++技术支持	Assistance technique
++技能	Compétence
++把	Tenir
++把他	Prends-le
++把你	T'emmener
++把我	Prends-moi
++把自己	Faites-vous
++抑制	Inhiber
++抓住	Attrape-le
++抓好	Tenez-le bien.
++投入	Mettre dans
++投放	Ajouter
++投标	Faire une offre
++投票	Voter
++投诉	Se plaindre
++投资	Investir
++投资者	Investisseur
++折扣	Remise
++护理	Infirmier
++报价	Citation
++报刊	Journaux et périodiques
++报名	Inscrivez-vous
++报告	Rapport
++报纸	Journal
++报考	Inscrivez-vous pour un examen
++报警	Appelez la police
++报送	Rapport
++报道	Rapport
++披露	Annoncer
++抱着	Tenir
++抵触	Conflit
++担任	Prendre en charge
++担保	Garantie
++担心	Inquiéter
++拆迁	Abattre de vieilles maisons et déplacer les résidents
++拍卖	Enchère
++拍摄	Prendre
++拒绝	Refuser
++拓展	Développer
++招商	Solliciter des affaires
++招标	Inviter les appels d'offres
++招生	Recruter des étudiants
++招聘	Inviter des candidatures pour un emploi
++拥有	Posséder
++拨打	Cadran
++拾取	Collectionner
++拿出	Sortez-le
++拿到	Compris
++拿着	Tenez ceci
++持有	Tenir
++持续	Dernier
++指令	Commande
++指出	Souligner
++指南	Guide
++指定	Nommer
++指定的	Désigné
++指导	Guide
++指挥	Direct
++指数	Index
++指标	Cible
++指的	Fait référence à
++指的是	Il fait référence à
++指示	Instructions
++按	Pousser vers le bas
++按摩	Massage
++按照	Selon
++按钮	Bouton
++挑战	Jetez le gant
++挖掘	Creuser
++损伤	Dommages et intérêts
++损坏	Mal
++损失	Perdre
++损害	Mal
++据了解	Il est entendu que
++据悉	Il est signalé
++据说	Il est dit
++授予	Prix
++授权	Autoriser
++授权方式	Méthode d'autorisation
++授课	Donner une conférence
++掌握	Saisir
++排列	Organiser
++排名	Rang
++排序	Séquence
++排行	Ancienneté parmi les frères et sœurs
++排除	Débarrassez-vous de
++探索	Explorer
++探讨	Se renseigner sur
++接	Entrez en contact avec
++接下来	Prochain
++接入	Accès
++接到	Reçu
++接受	Accepter
++接待	Recevoir
++接收了	Reçu
++接着	Continuez
++接触	Entrez en contact avec
++接近	S'approcher
++控制	Contrôle
++推出	Libération
++推出了	Lancé
++推动	Conduire
++推广	Vulgariser
++推荐	Recommander
++推荐使用	Utilisation recommandée
++推行	Pousser
++推进	Donnez de l'élan à
++推迟	Retard
++措施	Mesure
++描述	Décrire
++提交	Soumettre
++提供	Fournir
++提供了	À condition que
++提倡	Avocat
++提出	Mettre en avant
++提出了	Mettre en avant
++提到	Mentionner
++提前	Faire quelque chose à l'avance
++提升	Promouvoir
++提取	Dessiner
++提起	Mentionner
++提醒	Rappeler
++提问	Poser une question
++提高	Augmentation
++提高了	Surélevé
++插件	Unité enfichable
++插入	Insérer
++搜索	Chercher
++搜索引擎	Moteur de recherche
++搜集	Collectionner
++搞好	Faites du bon travail
++搬完	Déplacez-vous après
++搭理	Prends soin de
++搭配	Combiner proportionnellement
++携带	Emporter avec vous
++摄影	Photographie
++摘要	Résumer
++摩托车	Moto
++撤销	Révoquer
++播放	Jouer
++播放器	Lecteur audio
++擅自	Agir sans autorisation
++操作	Opérer
++操作系统	Système d'exploitation
++支付	Payer
++支出	Dépenser
++支持	Attends
++支撑	Soutien
++收入	Prendre
++收到	Recevoir
++收到后	Après avoir reçu
++收取	Charge
++收录	Recruter
++收益	Profit
++收获	Récolte
++收藏	Collectionner
++收藏本页	Ajouter cette page à vos favoris
++收购	Achat
++收费	Charge
++收费标准	Frais standard
++收集	Collectionner
++改为	Changer pour
++改变	Changement
++改善	Améliorer
++改正	Correct
++改进	Améliorer
++改造	Transformer
++改革	Réforme
++改革开放	Réforme et ouverture au monde extérieur
++攻击	Attaque
++放	Mettre
++放入	Mettre dans
++放到	Mettez-le dedans
++放在	Mettez-le dedans
++放大	Agrandir
++放弃	Abandonner
++放心	Se sentir à l'aise
++放松	Se détendre
++政府	Gouvernement
++政治	Politique
++政策	Politique
++故事	Une histoire
++故意	Délibérément
++故障	Ventilation
++效应	Effet
++效果	Résultat
++效率	Efficacité
++效益	Avantage
++敌人	Ennemi
++救助	Sauvetage
++救援	Sauvetage
++教学	Enseignement
++教室	Salle de classe
++教师	Professeur
++教授	Professeur
++教材	Matériel pédagogique
++教程	Cours d'études
++教练	Entraîneur
++教育	Éducation
++教育部	Ministère de l'Éducation
++敬请	S'il-vous-plaît
++数字	Chiffre
++数学	Mathématiques
++数据	Données
++数据库	Base de données
++数据查询	Requête de données
++数码	Chiffre
++数码相机	Appareil photo numérique
++数组	Tableau
++数量	Quantité
++数额	Numéro
++整个	Entier
++整体	Entier
++整合	Réorganiser et consolider
++整改	Rectifier et réformer
++整治	Réparation
++整理	Arrangement
++文	Caractère
++文件	Document
++文件大小	Taille du fichier
++文件夹	Dossier de fichiers
++文件的	Dossiers
++文化	Civilisation
++文字	Script
++文学	Littérature
++文明	Civilisation
++文本	Texte
++文档	Document
++文物	Artefact culturel
++文献	Littérature
++文章	Article
++文章来源	Source de l'article
++斑竹	Bambou tacheté
++斗争	Lutte
++新	Nouveau
++新产品	Nouveaux produits
++新人	Les gens d'un nouveau type
++新加坡	Singapour
++新型	Nouveau type
++新增	Ajouter
++新年	La nouvelle année
++新建	Nouvellement construit
++新手	Main verte
++新手上路	Novice sur la route
++新技术	Nouvelle technologie
++新生	Nouveau-né
++新疆	Xinjiang
++新的	Nouveau
++新股	Nouvelles actions
++新车	Nouvelle voiture
++新闻	Nouvelles
++新鲜	Frais
++方便	Pratique
++方向	Directions
++方式	Chemin
++方案	Plan
++方法	Chemin
++方针	Principe directeur
++方面	Respect
++施工	Réaliser un projet de construction
++施行	Mis en vigueur
++旁边	Côté
++旅客	Voyageur
++旅游	Visite
++旅行	Voyager
++旅行社	Agence de voyage
++旋转	Tourner
++无	Ne pas avoir
++无人	Personne
++无关	Hors de propos
++无奈	Je n'ai pas d'alternative
++无效	Être invalide
++无数	Innombrable
++无权	Pas de droit
++无比	Être incomparable
++无法	N'a aucun moyen
++无疑	Indubitable
++无线	Sans fil
++无论	Quoi que
++无论是	Que ce soit
++无锡	Wuxi
++无门无派	Pas de secte et pas de faction
++无限	Illimité
++无须	Je n'ai pas besoin de
++既是	Comme
++既有	J'ai déjà
++既然	Depuis
++日	Soleil
++日内	Quelques jours
++日前	Il y a quelques jours
++日子	Jour
++日常	Quotidien
++日志	Record quotidien
++日期	Date
++日电	Japon électrique
++日益	De plus en plus
++日至	À
++日记	Journal intime
++早上	Matin
++早上好	Bonjour
++早在	Dès
++早就	Depuis longtemps
++早已	Il y a longtemps
++早期	Stade précoce
++早餐	Petit déjeuner
++时	Saison
++时代	Époque
++时候	Temps
++时刻	Moment
++时区	Fuseau horaire
++时尚	Mode
++时期	Période
++时间	Temps
++时间为	Le temps est
++时间内	Dans le temps
++时间的	Du temps
++时间里	Dans le temps
++昆明	Kunming
++明	Lumineux
++明天	Demain
++明年	L'année prochaine
++明星	Étoile
++明显	Évident
++明显的	Évident
++明白	Clair
++明确	Clair
++明确的	Clair
++星光	Lumière des étoiles
++星座	Constellation
++星级	Étoile
++春天	Printemps
++春节	Fête du printemps
++昨天	Hier
++昨日	Hier
++是	Oui
++是一个	C'est un
++是一家	C'est une famille
++是一种	C'est une sorte de
++是不是	N'est-ce pas ?
++是个	C'est un
++是中国	C'est la Chine.
++是从	C'est de
++是他	C'est lui
++是他们	C'est eux
++是位	C'est
++是你	C'est toi
++是去	Oui, allez-y.
++是否	Si
++是因为	C'est parce que
++是在	C'est dans
++是她	C'est elle
++是对	C'est vrai
++是将	C'est le général
++是很	C'est très
++是我	C'est moi
++是我国	C'est notre pays.
++是指	Il fait référence à
++是有	Oui, il y a
++是没	C'est ça ?
++是由	C'est par
++是的	Oui
++是被	C'est en train d'être
++是要	C'est pour
++是谁	Qui est-ce ?
++是非常	C'est très
++昵称	Terme d'aimouissement
++显卡	Carte graphique
++显得	Apparaître
++显然	Manifestement
++显示	Spectacle
++显示器	Affichage
++显著	Remarquable
++晒	Brillez
++晚上	Soirée
++晚上好	Bonsoir
++晚安	Bonne nuit
++普及	Soyez populaire parmi
++普通	Ordinaire
++普遍	Généralisé
++景区	Endroit pittoresque
++景点	Endroit pittoresque
++景观	Paysage
++智力	Intelligence
++智慧	Sagesse
++暂停	Suspendre
++暂无	Aucun pour le moment
++暂时	Temporairement
++曲线	Courbe
++更	Changement
++更为	Plus
++更加	Encore plus
++更多	Encore plus
++更大	Plus grand
++更好	Mieux
++更好地	Mieux
++更好的	Mieux
++更换	Renouveler
++更改	Changement
++更新	Renouveler
++更新时间	Heure de mise à jour
++更是	Quoi de plus
++更有	Plus que ça
++更高	Certificat de fin d'études en Écosse
++曾经	Une fois
++替代	Remplacer par
++最	La plupart
++最为	La plupart
++最低	Le plus bas
++最佳	Excellent
++最初	Premier
++最后	Le dernier
++最后发表	Annonce finale
++最多	La plupart
++最大	Le plus grand
++最好	Meilleur
++最小	Le plus petit
++最快	Le plus rapide
++最新	Dernier
++最早	Le plus tôt
++最终	Final
++最近	Temps récent
++最重要的	Le plus important
++最高	Le plus haut
++月份	Mois
++月底	Fin d'un mois
++月的	Mois
++有	Avoir
++有一	Il y en a un
++有一个	Il y en a un
++有一天	Un jour
++有一定	Il y a un certain
++有一种	Il y a une sorte de
++有下列	Il y a les éléments suivants
++有不	Y a-t-il ?
++有个	Il y en a un
++有了	Ayez-le
++有些	Certains
++有人	Quelqu'un
++有什么	Qu'y a-t-il ?
++有关	Avoir quelque chose à voir avec
++有关法律	Lois pertinentes
++有关规定	Réglementation pertinente
++有关部门	Départements concernés
++有利于	C'est bénéfique pour
++有力	Puissant
++有助于	Contribuer à
++有可能	C'est possible
++有序	Ordonné
++有很多	Il y en a beaucoup
++有意	Avoir l'esprit de
++有所	Avoir dans une certaine mesure
++有效	Efficace
++有效期	Période de validité
++有效的	Efficace
++有新	Il y a de nouveaux
++有无	Y a-t-il
++有时	Parfois
++有时候	Parfois
++有机	Biologique
++有权	Avoir le droit
++有没有	Oui ou non
++有点	Avoir un peu
++有用	Utile
++有的	Certains
++有着	Avoir
++有车	Il y a une voiture
++有过	Ont eu
++有限	Limité
++有限公司	Société à responsabilité limitée
++有限责任公司	Société à responsabilité limitée
++朋友	Ami
++朋友们	Amis
++服务	Servir
++服务业	Industrie de services
++服务中心	Centre de service
++服务器	Serveur
++服用	Prendre
++服装	Robe
++服饰	Robe
++望	Regardez au loin
++望着	En regardant
++朝阳区	District de Chaoyang
++期内	Pendant la période
++期刊	Périodique
++期待	J'attends avec impatience
++期望	S'attendre à
++期货	Futures
++期间	Temps
++期限	Date limite
++木马	Cheval de Troie
++未婚	Être célibataire
++未成年人	Mineur
++未来	Avenir
++未来的	De l'avenir
++未知	Inconnu
++未经	Sans
++未能	Échec à
++本	Racine
++本书	Ce livre
++本人	I
++本公司	L'entreprise
++本周	Cette semaine
++本地	Cette localité
++本帖	Ce message
++本报	Ce journal
++本文	Ce texte
++本月	Ce mois-ci
++本条例	Ces règlements
++本次	Cette fois
++本法	Cette loi
++本科	Cours de premier cycle
++本站	Ce site
++本网站	Ce site web
++本规定	Ce règlement
++本论坛	Ce forum
++本质	Nature
++本身	Lui-même
++机	Mécanisme de déclenchement
++机会	Possibilité
++机关	Mécanisme
++机制	Fait à la machine
++机动车	Véhicule motorisé
++机器	Machine
++机场	Aéroport
++机型	Type
++机构	Mécanisme
++机械	Machines
++机票	Billet d'avion
++机身	Fuselage
++机遇	Possibilité
++杂志	Magazine
++权利	À droite
++权力	Puissance
++权威	Autorité
++权益	Droits
++权限	Juridiction
++李	Prunier
++材料	Matériel
++材质	Texture du bois
++村民	Villageois
++条件	État
++条件下	Sous la condition
++条例	Réglementation
++条款	Mise à disposition
++条码	Code-barres
++来	Venir
++来到	Arriver
++来源	Source
++来源于	Originaire de
++来电	Appel téléphonique entrant
++来看	Viens jeter un coup d'œil
++来自	Vient de
++来讲	En parlant de
++来说	Dire
++杭州	Hangzhou
++杭州市	Ville de Hangzhou
++板块	Assiette
++极为	Extrêmement
++极其	Extrêmement
++构建	Construire
++构成	Constituer
++构成犯罪	Constituer un crime
++林	Forêt
++林业	Sylviculture
++果	Fruit
++果然	Comme prévu
++架构	Construire
++某一	Un certain
++某个	Un certain
++某些	Certains
++某种	Une sorte de
++查处	Enquêter et poursuivre
++查找	Chercher
++查看	Inspecter
++查询	Faire des demandes de renseignements
++标准	Norme
++标准化	Normaliser
++标志	Symbole
++标注	Marque
++标签	Étiquette
++标记	Marque
++标题	En-tête
++栏目	Titre d'une colonne
++树立	Établir
++校园	Terrain de l'école
++校长	Directeur
++样品	Exemple de produit
++样子	Apparence
++核准	Examiner et approuver
++核实	Vérifier
++核心	Noyau
++根据	Selon
++根本	Base
++格局	Mise en page
++格式	Format
++框架	Cadre
++案例	Cas
++桌面	Dessus de table
++档案	Fichiers
++桥梁	Pont
++梦想	Rêve
++检查	Examiner
++检测	Examiner
++检索	Récupérer
++检验	Test
++森林	Forêt
++植物	Plante
++楼上	En haut
++楼主	Affiche originale
++楼层	Étage
++楼盘	Bâtiment commercial en cours de construction ou de vente
++概念	Concept
++模仿	Copie
++模具	Moisissure
++模块	Module
++模型	Modèle
++模式	Modèle
++模拟	Imiter
++模板	Cassade
++次	Venez ensuite dans l'ordre
++次数	Fréquence
++欢迎	Bienvenu
++欢迎您	Bienvenu
++欣赏	Apprécier
++欧洲	Europe
++欧盟	UE
++欧美	L'Europe et l'Amérique
++欲望	Désir
++欺诈	Tricher
++款式	Style
++歌手	Chanteur
++歌曲	Chanson
++歌词	Paroles
++正	Premier mois de l'année lunaire
++正在	Dans le processus de
++正好	Tout à droit
++正如	Tout comme
++正常	Normal
++正式	Formel
++正文	Corps principal
++正是	Exactement
++正确	Correct
++正确的	Correct
++正规	Régulier
++正面	Avant
++此	Ça
++此主题	Ce sujet
++此前	Avant cela
++此后	À partir de maintenant
++此外	D'ailleurs
++此时	Ce moment
++此次	Cette fois
++此类	Ce genre de
++步骤	Étape
++武器	Arme
++武汉	Wuhan
++武汉市	Ville de Wuhan
++死	Mourir
++死亡	Mourir
++残疾人	Handicapé
++母亲	Mère
++每一	Chacun
++每一个	Chaque
++每个	Chaque
++每个人	Tout le monde
++每周	Chaque semaine
++每天	De tous les jours
++每年	Tous les ans
++每日	Tous les jours
++每月	Chaque mois
++每次	Chaque fois
++每页	Chaque page
++比	Tenez-vous proches les uns des autres
++比上年	Par rapport à l'année précédente
++比例	Proportion
++比如	Prenons l'exemple
++比赛	Avoir un concours
++比较	Comparer
++比重	Densité relative
++毕业	Remise des diplômes
++毕业生	Diplômé
++毕竟	Après tout
++毛泽东	Mao Zedong
++毫无	Je n'en ai pas du tout
++毫米	Millimètre
++民主	Démocratie
++民众	Les masses
++民族	Nation
++民生	Les moyens de subsistance des gens
++民营企业	Entreprises privées
++民警	Policier
++民间	Populaire
++气	Gaz
++气体	Gaz
++气候	Climat
++气息	Respiration
++气氛	Atmosphère
++气质	Tempérament
++水	Eau
++水分	Contenu de l'humidité
++水平	Niveau
++水晶	Cristal
++水果	Fruit
++水泥	Ciment
++水的	Eau's
++水资源	Ressources en eau
++永久	Éternel
++永恒	Éternel
++永远	Pour toujours
++求租	À la recherche d'un loyer
++求职	Chercher un emploi
++求购	Chercher à acheter
++汇报	Rapport
++汇款	Faire un versement
++江南	Zones au sud du cours inférieur du fleuve Yangtze
++江泽民	Jiang Zemin
++江泽民同志	Camarade Jiang Zemin
++江湖	Rivières et lacs
++江苏	Province du Jiangsu
++江苏省	Province du Jiangsu
++江西	Province du Jiangxi
++江西省	Province du Jiangxi
++污染	Polluer
++汽车	Voiture
++沈阳	Shenyang
++沟通	Relier
++没	Non
++没事	Ce n'est rien
++没人	Personne
++没什么	Peu importe
++没关系	Ce n'est rien
++没想到	Je ne m'attendais pas à
++没收	Confisquer
++没有	Non
++没有了	Pas plus
++没有人	Personne
++没有什么	Ce n'est rien.
++没问题	Pas de problème
++河北	Province du Hebei
++河北省	Province du Hebei
++河南	Province du Henan
++河南省	Province du Henan
++治理	Administrer
++治疗	Traiter
++法	Droit
++法人	Personne morale
++法国	France
++法官	Juge
++法定代表人	Représentant légal
++法律	Droit
++法律法规	Lois et règlements
++法律责任	Responsabilité légale
++法规	Lois et règlements
++法语	Français
++法院	Cour de justice
++波动	Fluctuer
++注册	S'inscrire
++注册会员	Membre enregistré
++注册时间	Heure d'inscription
++注册用户	Utilisateurs enregistrés
++注册码	Code d'enregistrement
++注册表	Formulaire d'inscription
++注意	Prendre note de
++注意事项	Notes
++注明	Donner une indication claire
++注重	Attacher de l'importance à
++洗	Laver
++活	Vivre
++活力	Vigueur
++活动	Exercice
++活动中	Dans l'activité
++活跃	Dynamique
++洽谈	Tenir des discussions
++流动	Flux
++流程	Processus
++流行	Soyez populaire
++流通	Flux
++流量	Volume de flux
++测定	Déterminer
++测试	Test
++测量	Mesure
++浏览	Survoler
++浏览器	Navigateur
++浏览次数	Nombre de vues
++浙江	Zhejiang
++浙江省	Province du Zhejiang
++浪漫	Romantique
++浪费	Déchets
++海	Mer
++海关	Douane
++海南	Province de Hainan
++海外	À l'étranger
++海洋	Océan
++海淀区	District de Haidian
++海鲜	Fruits de mer
++涂料	Revêtement
++消失	Disparition
++消息	Nouvelles
++消毒	Désinfecter
++消耗	Consommer
++消费	Consommer
++消费者	Consommateur
++消防	La lutte contre l'incendie
++消除	Éliminer
++涉及	Impliquer
++液体	Liquide
++淘宝	Taobao
++深	Profond
++深入	Allez profondément dans
++深刻	Profond
++深圳	Shenzhen
++深圳市	Ville de Shenzhen
++深度	Profondeur
++混乱	Désordonné
++混合	Mélanger
++添加	Ajouter
++清	Clair
++清单	Liste détaillée
++清晰	Distinct
++清楚	Clair
++清洁	Propre
++清洗	Nettoyer
++清理	Clair
++清除	Débarrassez-vous de
++渠道	Canal
++温州	Wenzhou
++温度	Température
++温暖	Chaud
++温柔	Tendre
++温泉	Source chaude
++温馨	Agréable et doux
++港口	Port
++渴望	Longue pour
++游客	Touriste
++游戏	Jeu
++游览	Allez faire du tourisme
++湖北	Province du Hubei
++湖北省	Province du Hubei
++湖南	Province du Hunan
++湖南省	Province du Hunan
++满	Plein
++满意	Être satisfait
++满意地	Satisfait
++满意的	Satisfait
++满足	Satisfait
++漂亮	Beau
++演出	Exécuter
++演员	Acteur
++演唱	Interpréter une chanson
++演示	Démontrer
++演讲	Donne une conférence
++漫画	Dessin animé
++潜力	Potentiel
++潜在	Potentiel
++潮流	Marée
++澳大利亚	Australie
++澳门	Macao
++激光	Laser
++激动	Excité
++激励	Encourager
++激发	Inciter
++激情	Passion
++激烈	Violent
++灌水	Verser de l'eau
++火	Feu
++火车	Train
++火车站	Gare
++火锅	Ragoût
++灯光	Lumière (de la lampe)
++灵活	Rapide
++灵魂	Âme
++点	Spot
++点击	Cliquer
++点击数	Clics
++点券	Coupon de points
++点心	Dessert
++点的	Pointu
++点评	Commentaire
++烦恼	Agacé
++热情	Enthousiasme
++热点	Hot spot
++热爱	Avoir un amour profond pour
++热线	Hotline
++热门	Tendance
++焦点	Mise au point
++然	Si
++然后	Alors
++然而	Mais
++煤炭	Charbon
++煤矿	Mine de charbon
++照明	Éclairer
++照片	Photographier
++照顾	Montrer de la considération pour
++熊猫	Panda
++熟悉	Être familier avec
++燃烧	Brûlant
++爱	Amour
++爱你	Je t'aime
++爱好	Passe-temps
++爱好者	Passionné
++爱心	Compassion
++爱情	Amour
++爱的	Affectueux
++父亲	Père
++父母	Parents
++爸爸	Papa
++版主	Webmestre
++版本	Édition
++版权	Droit d'auteur
++版权归	Le droit d'auteur appartient à
++版权所有	Tous droits réservés
++版面	Espace de page
++牛奶	Lait
++物	Chose
++物业	Propriété
++物业管理	Gestion immobilière
++物体	Substance
++物品	Article
++物流	Logistique
++物理	Physique
++物质	Substance
++牵引	Faire glisser
++特	Spécial
++特价	Offre spéciale
++特别	Spécial
++特别是	En particulier
++特定	Spécialement désigné
++特征	Caractéristique
++特性	Caractéristique
++特殊	Spécial
++特点	Caractéristique distinctive
++特色	Caractéristique
++犯罪	Commettre un crime
++状况	État des choses
++状态	État
++独特	Unique
++独立	Se tenir seul
++猥琐	Grossier
++率先	Prendre les devants
++玉米	Maïs
++王	Roi
++王子	Prince
++玩具	Jouet
++玩家	Joueur
++玫瑰	Rose
++环保	Qui ne nuit pas à l'environnement
++环境	Environnement
++环境保护	Protection de l'environnement
++环节	Lien
++现	Apparaître
++现代	Les temps modernes
++现代化	Moderniser
++现在	Maintenant
++现场	Scène
++现实	Réalité
++现有	Existant
++现状	Situation actuelle
++现象	Phénomène
++现金	Argent
++玻璃	Verre
++珠海	Zhuhai
++班主任	Professeur responsable d'une classe
++班级	Classes
++球员	Joueur de balle
++球队	Équipe
++理	Gérer
++理念	Concept
++理性	Rationnel
++理想	Idéal
++理想的	Idéal
++理由	Raison
++理解	Comprendre
++理论	Théorie
++理财	Gérer les questions financières
++甚至	Même dans la mesure où...
++生	Grandir
++生产	Produire
++生产企业	Entreprises manufacturières
++生产力	Forces productives
++生产线	Chaîne de fabrication
++生产经营	Production et exploitation
++生动	Vif
++生命	Vie
++生存	Survivre
++生态	Écologie
++生态环境	Éco-environnement
++生意	Affaires
++生成	Apporter à l'être
++生效	Prendre effet
++生日	Anniversaire
++生活	Vie
++生活中	Dans la vie
++生物	Être vivant
++生理	Physiologie
++生的	Cru
++生长	Grandir
++用	Utiliser
++用了	Utilisé
++用于	Utilisé pour
++用人单位	Employeur
++用品	Articles à utiliser
++用地	Droit de passage
++用户	Consommateur
++用户名	Nom d'utilisateur
++用户组	Groupe d'utilisateurs
++用来	Utilisé pour
++用的	Utilisé
++用药	Administrer un médicament
++用车	Utiliser la voiture
++用途	Utiliser
++由	Passer à travers
++由于	À cause de
++由此	De ce
++甲方	Partie A
++申报	Rapport à un organisme supérieur
++申请	Postuler pour
++申请人	Demandeur
++电	Foudre
++电信	Télécommunications
++电力	Puissance électrique
++电压	Tension
++电器	Appareil électrique
++电子	Électron
++电子商务	Commerce électronique
++电子邮件	E-mail
++电影	Film
++电梯	Ascenseur
++电池	Batterie
++电流	Courant électrique
++电源	Alimentation électrique
++电站	Station d'alimentation électrique
++电缆	Câble électrique
++电脑	Ordinateur
++电视	Télé
++电视剧	Drame télévisé
++电视台	Station de télévision
++电话	Téléphone
++电路	Circuit électrique
++男	Homme
++男人	Homme
++男女	Hommes et femmes
++男子	Homme
++男孩	Garçon
++男性	Le sexe masculin
++男生	Garçon
++画面	Tableau
++界面	Interface
++留下	Rester
++留在	Rester dans
++留学	Étudier à l'étranger
++留言	Laisser un message
++疑问	Question
++疯狂	Fou
++疼痛	Douleur
++疾病	Maladie
++病人	Personne malade
++病毒	Virus
++症状	Symptôme
++痛苦	Douloureux
++登录	Entrer
++登记	S'inscrire
++白	Blanc
++白天	Journée
++白色	Blanc
++百分点	Point
++百姓	Les gens ordinaires
++百度	Baidu
++的	Taxi
++的事	La question de
++的人	Les gens de
++的是	Est
++的确	En effet
++的话	Mots
++皇帝	Empereur
++皮肤	Peau
++监控	Surveiller et contrôler
++监测	Moniteur
++监督	Superviser
++监督检查	Supervision et inspection
++监督管理	Supervision et gestion
++监管	Gardez un oeil sur
++目	Œil
++目光	Voir
++目前	À l'heure actuelle
++目录	Catalogue
++目标	Cible
++目的	But
++目的是	Le but est
++直	Droit
++直到	Être jusqu'à
++直径	Diamètre
++直接	Direct
++直至	Jusqu'à
++直辖市	Municipalité directement sous le contrôle du gouvernement central
++直销	Vente directe
++相	Mutuellement
++相互	L'un l'autre
++相似	Similaire
++相信	Croire
++相关	Être lié
++相关信息	Informations pertinentes
++相关图片	Images connexes
++相反	En face
++相同	Même
++相对	Face à l'autre
++相应	Être approprié
++相当	Match
++相当于	Correspondre à
++相机	Appareil photo
++相比	Comparer les uns avec les autres
++相结合	Combiné avec
++相继	En succession
++省市	Provinces et villes
++省政府	Gouvernement provincial
++看	S'occuper de
++看了	Regarde-le
++看出	Faire
++看到	Avis
++看到了	Je l'ai vu.
++看来	Il semble
++看法	Voir
++看的	Regarder
++看看	Jetez un coup d'œil
++看着	À la recherche
++看见	Voir
++看起来	Ça a l'air
++看过	Ont vu
++真	Vrai
++真实性	Vérité
++真实的	Réel
++真是	Vraiment
++真正	Authentique
++真的	C'est vrai
++真诚	Sincère
++眼	Œil
++眼中	Dans les yeux
++眼前	Devant ses yeux
++眼泪	Larmes
++眼睛	Œil
++眼神	Expression dans ses yeux
++着	Mouvement d'échecs
++睡觉	Dormir
++瞬间	Instantané
++矛盾	Lance et bouclier
++知	Connaissance
++知名	Connu
++知识	Connaissance
++知识产权	Droit de propriété intellectuelle
++知识的	Bien informé
++知道	Savoir
++短信	Message text
++短期	Chômage partiel
++石头	Pierre
++石家庄	Shijiazhuang
++石油	Pétrole
++研制	Se développer
++研发	Rechercher et développer
++研究	Recherche
++研究所	Institut de recherche
++研究生	Étudiant de troisième cycle
++研究院	Institut de recherche
++破坏	Détruire
++破解	Libérer
++硕士	Maître
++硬件	Matériel informatique
++硬盘	Disque dur
++确保	Garantir
++确定	Certain
++确实	Réel
++确立	Établir
++确认	Confirmer
++碰到	Rencontre
++示范	Démontrer
++礼品	Présent
++礼物	Présent
++社会主义	Socialisme
++社会发展	Développement social
++社区	Communauté
++祖国	Natif
++祝福	Bénir
++神	Dieu
++神奇	Magique
++神秘	Mystérieux
++神经	Nerf
++禁止	Interdire
++福州	Fuzhou
++福建	Province du Fujian
++福建省	Province du Fujian
++离	Partir
++离婚	Divorce
++离开	Partir
++离线	Hors connexion
++私人	Privé
++种	Chong
++种子	Graine
++种植	Grandir
++种种	Toutes sortes de
++种类	Gentil
++科学	Science
++科学发展观	Concept de développement scientifique
++科学家	Scientifique
++科学技术	Science et technologie
++科技	Science et technologie
++科技有限公司	Technology Co., Ltd.
++科目	Sujet
++科研	Recherche scientifique
++秘书	Secrétaire
++秘密	Secret
++租房	Louer une maison
++租赁	Loyer
++租金	Loyer
++秩序	Commande
++积分	Score cumulé
++积极	Positif
++积极地	Activement
++积极性	Enthousiasme
++积极的	Positif
++积累	Amasser
++称为	Être connu sous le nom de
++称号	Titre
++移动	Bouger
++移民	Migrer
++程序	Programme
++程度	Diplôme universitaire
++税务机关	Autorités fiscales
++税收	Revenus
++稳定	Stable
++稳定性	Stabilité
++稳定的	Stable
++究竟	Résultat
++空	Vide
++空中	Air
++空气	Air
++空调	Climatiseur
++空间	Chambre
++穿着	Robe
++突出	Percée
++突然	Soudain
++突破	Percée
++窗口	Fenêtre
++立	Tenir debout
++立刻	À la fois
++立即	Immédiatement
++立场	Point de vue
++立法	Légiférer
++站内	À l'intérieur de la station
++站在	Tenez-vous debout
++站点	Site
++站的	Sans élan
++站长	Chef d'une station
++竞争	Rivaliser
++竞争力	Compétitivité
++竞争的	Compétitif
++竞赛	Rivaliser
++竟	Finir
++竟然	À l'improviste
++章程	Règles
++端口	Port
++笑	Rire
++笑到	Rire au
++笑容	Sourire
++笑道	Rire
++笔者	L'auteur
++笔记本	Carnet
++符号	Symbole
++第	Séquence
++第一	Premier
++第一个	Premier
++第一条	Le premier article
++第一次	Première fois
++第一章	Chapitre 1
++第一节	La première section
++第七条	Article 7
++第三	Troisième
++第三条	Article 3
++第三章	Chapitre 3
++第九条	Article 9
++第二个	Le deuxième
++第二天	Le deuxième jour
++第二条	Article 2
++第二次	Deuxième fois
++第二章	Chapitre II
++第二节	Section II
++第五条	Article 5
++第五章	Chapitre 5
++第八条	Article 8
++第六条	Article 6
++第十条	Article 10
++第四条	Article 4
++第四章	Chapitre 4
++等	Égal
++等于	Être égal à
++等人	Attendre les gens
++等到	Au moment
++等地	Et d'autres endroits
++等待	L'attente
++等方面	Et ainsi de suite
++等的	Attendre
++等等	Attendre
++等级	Rang
++答复	Réponse
++答案	Réponse
++策划	Plan
++策略	Tactiques
++签名	Signe
++签字	Signe
++签约	Signer un accord
++签署	Signe
++签订	Conclure et signer
++签证	Accorder un visa
++简介	Présenter brièvement
++简体中文	Chinois simplifié
++简单	Simple
++简历	Curriculum vitae
++简直	Simplement
++简称	Abréviation
++算	Calculer
++算是	En s'il s'ensuit
++管理	Gérer
++管理人员	Gestionnaires
++管理制度	Système de gestion
++管理办法	Méthodes de gestion
++管理员	En charge
++管理局	Administration
++管理工作	Travail de gestion
++管理系统	Système de gestion
++管理者	Directeur
++管理部门	Département de gestion
++管辖	Avoir compétence sur
++管道	Pipeline
++类似	Similaire
++类别	Classification
++类型	Type
++粮食	Grain
++精力	Énergie
++精华	Essence
++精品	De beaux travaux
++精彩	Merveilleux
++精心	Méticuleux
++精灵	Esprit
++精神	Esprit
++精美	Exquis
++精英	Quintessence
++系列	Série
++系统	Système
++系统中	Dans le système
++素质	Nature
++索尼	Sony
++紧张	Nerveux
++紧急	Urgent
++累计	Ajouter jusqu'à
++繁荣	Florissant
++纠正	Correct
++纠纷	Conflit
++红	Rouge
++红色	Rouge
++纤维	Fibre
++约定	Organiser
++约束	Retenir
++级	Niveau
++级别	Rang
++纪念	Souvenir
++纳入	Apporter dans
++纳税	Payer des impôts
++纳税人	Contribuable
++纷纷	Nombreux et confus
++纽约	New York
++练习	Pratique
++组件	Composants
++组合	Maquillage
++组建	Installer
++组成	Maquillage
++组织	Organiser
++细胞	Cellule
++细致	Méticuleux
++细节	Détail
++终于	Enfin
++终止	Mettre fin à
++终端	Terminal
++经	Déformation
++经典	Classique
++经历	Expérience
++经历了	Expérimenté
++经常	Souvent
++经济	Économie
++经济发展	Développement économique
++经济效益	Rendements économiques
++经理	Gérer
++经营	S'engager dans
++经营的	Exploité
++经营者	Opérateur
++经营许可证	Licence commerciale
++经费	Dépenses
++经过	Passer
++经销商	Concessionnaire
++经验	Expérience
++经验值	Valeur de l'expérience
++结合	Unir
++结合起来	Combiner
++结婚	Se marier
++结束	Fin
++结束后	Après la fin
++结构	Organisation
++结果	Fruit de l'ours
++结算	Régler un compte
++结论	Conclusion
++给	Donner
++给了	A donné
++给予	Donner
++给人	Donne-le aux gens
++给他	Donne-le-lui.
++给你	Le voici
++给出	Donner
++给她	Donne-le-lui
++给您	Vous y êtes.
++给我	Donne-moi
++给我们	Donne-le-nous
++绝大多数	La grande majorité
++绝对	Absolu
++统一的	Unifié
++统计	Compter
++继承	Hériter de
++继续	Continuer
++绩效	Réalisation
++维修	Maintenir
++维护	Garantie
++维持	Maintenir
++维权	Protéger les droits et intérêts légaux
++维生素	Vitamine
++综合	Synthétiser
++综合性	Complet
++绿化	Boiser
++绿色	Vert
++缓解	Soulager
++编写	Compiler
++编制	Tissage
++编号	Numéro
++编码	Code
++编程	Programme
++编辑	Éditer
++缘由	Cause et raison
++缴纳	Payer
++缺乏	Manque
++缺少	Manque
++缺点	Défauts
++缺陷	Défaut
++网上	Sur Internet
++网友	Ami Web
++网友评论	Commentaires de l'internaute
++网吧	Cybercafé
++网址	Site web
++网民	Internaute
++网站	Site web
++网络	Réseau
++网页	Page web
++罚款	D'accord
++羊肉	Mouton
++美	Beau
++美丽	Beau
++美元	Dollar américain
++美国	États-Unis
++美女	Beauté
++美好	Bien
++美容	Avoir un traitement de beauté
++美术	Beaux-arts
++群众	Les masses
++群众的	Des masses
++群体	Colonie
++翻	Inverser
++翻译	Traduire
++老	Vieux
++老人	Personnes âgées
++老公	Mari
++老大	Vieux
++老婆	Femme
++老师	Professeur
++老板	Patron
++老百姓	Les gens ordinaires
++老虎机	Machine à sous
++考核	Évaluer
++考生	Candidat
++考虑	Considérer
++考虑到	Prendre en compte
++考试	Passer un examen
++考验	Test
++者	Personne
++而	Et
++而不	Et pas
++而不是	Au lieu de
++而且	Et
++而又	Et
++而在	Et dans
++而已	C'est tout
++而成	Devenir
++而我	Et moi
++而是	Mais
++而来	Viens à
++而言	En parlant de
++而这	Et ceci
++耐心	Patient
++耳机	Écouteurs
++聊天	Chat
++职业	Profession
++职业教育	Enseignement professionnel
++职务	Courrier
++职工	Travailleurs et personnel
++职称	Titre professionnel
++职责	Devoir
++联合	Unir
++联想	Associer avec
++联盟	Alliance
++联系	Contact
++联系人	Personne de contact
++联系地址	Adresse de contact
++联系我们	Contactez-nous
++联系方式	Coordonnées
++联系电话	Numéro de contact
++聪明	Intelligent
++肌肉	Muscle
++肌肤	Peau et muscle
++股东	Actionnaire
++股份	Actions
++股份有限公司	Société anonyme
++股权	Propriété d'actions
++股票	Actions
++肯定	Confirmer
++肿瘤	Tumeur
++背后	Derrière
++背景	Toile de fond
++胜利	Soyez victorieux
++能力	Capacité
++能否	Peux-tu
++能在	Peut être dans
++能够	Être capable de faire
++能源	Sources d'énergie
++能量	Énergie
++脂肪	Graisse
++脑袋	Tête
++脚本	Script
++脸	Visage
++脸上	Sur le visage
++自	Moi
++自主	Soyez votre propre maître
++自从	Depuis
++自信	Soyez confiant
++自动	Volontaire
++自动化	Automatiser
++自己	Soi
++自愿	Bénévole
++自我	Soi
++自治区	Région autonome
++自然	Nature
++自由	Liberté
++自行	Par lui-même
++自觉	Soyez conscient de
++自身	Soi
++自身的	Propre
++至	Atteindre
++至于	Allez jusqu'à
++至今	Jusqu'à présent
++至少	Au moins
++致使	Résultat en
++致力于	Engagé à
++舒适	Confortable
++舞台	Scène
++舞蹈	Danse
++航空	Aviation
++船舶	Transport maritime
++良好	D'accord
++良好的	Bien
++色	Couleur
++色彩	Couleur
++艺术	Art
++艺术家	Artiste
++艾滋病	Syndrome d'immunodéficience acquise
++节奏	Rythme
++节日	Vacances
++节目	Programme
++节省	Économiser
++节约	Économiser
++节能	Conserver l'énergie
++芯片	Jeton
++花	Fleur
++花园	Jardin
++苏州	Suzhou
++若干	Plusieurs
++若是	Si
++英国	Royaume-Uni
++英寸	Pouce
++英文	Anglais
++英语	Anglais
++英雄	Héros
++苹果	Pomme
++范围	Portée
++范围内	Dans le cadre
++茶	Thé
++茶叶	Feuilles de thé
++草原	Prairie
++荣获	Avoir l'honneur de gagner
++荣誉	Honneur
++药品	Produits pharmaceutiques
++药物	Médicaments
++获取	Obtenir
++获奖	Gagner un prix
++获得了	Obtenu
++获悉	Entendre parler de
++菜单	Menu
++菩萨	Bodhisattva
++萝卜	Radis
++营业	Faire des affaires
++营业执照	Licence commerciale
++营养	Nutrition
++营造	Construire
++营销	Marketing
++落后	Retarder
++落实	Réparer à l'avance
++著名	Célèbre
++著名的	Célèbre
++葡萄酒	Vin
++董事会	Conseil d'administration
++董事长	Président du conseil d'administration
++蓝色	Bleu
++蔬菜	Légumes
++薪酬	Émolument
++虚假	Faux
++虚拟	Hypothétique
++虽	Bien que
++虽然	Bien que
++蛋白质	Protéine
++蛋糕	Gâteau
++融入	Intégrer dans
++融合	Mélanger ensemble
++融资	Collecter des fonds
++血液	Sang
++行	Queue
++行业	Industrie
++行为	Comportement
++行使	Exercice
++行动	Déplacez-vous
++行情	Conditions du marché
++行政	Faire du travail administratif
++行政主管	Directeur exécutif
++行政处罚	Punition administrative
++行政机关	Organes administratifs
++行政法规	Règlements administratifs
++行政许可	Licence administrative
++行政部门	Département administratif
++行程	Itinéraire
++行驶	Aller
++街道	Rue
++衣服	Vêtements
++补偿	Compenser
++补充	Supplément
++补贴	Subventionner
++表	Surface
++表单	Forme
++表情	Expression faciale
++表明	Faire comprendre
++表格	Forme
++表演	Exécuter
++表现	Affichage
++表现出	Spectacle
++表示	Express
++表达	Express
++表面	Surface
++被	Couette
++被人	Être
++被告	Défendeur
++装修	Rénover
++装备	Équiper
++装置	Installer
++装饰	Décorer
++西	Ouest
++西方	Ouest
++西班牙	Espagne
++西藏	Tibet
++西路	Route de l'Ouest
++西部	La partie occidentale
++要	Vouloir
++要从	Pour être de
++要以	Être
++要做	Besoin de faire
++要加强	Pour renforcer
++要去	Je veux y aller
++要在	Pour être dans
++要想	Veut
++要把	À
++要是	Si
++要有	Besoin d'être
++要求	Demande
++要注意	Faites attention
++要点	Points principaux
++要用	Besoin d'utiliser
++要的	Vouloir
++要素	Élément clé
++覆盖	Couverture
++见	Voir
++见到	Voir
++见过	Ont vu
++见过吗	L'avez-vous vu ?
++见面	Se rencontrer
++观众	Public
++观察	Observer
++观念	Concept
++观点	Point de vue
++观看	Montre
++规划	Programme
++规则	Règle
++规定	Stipuler
++规律	Droit
++规格	Spécifications
++规模	Échelle
++规章	Réglementation
++规范	Norme
++规范化	Normaliser
++视为	Considérer comme
++视觉	Vision
++视频	Vidéofréquence
++觉	Dormir
++觉得	Sentir
++角度	Angle
++角色	Rôle
++解	Disséquer
++解决	Résoudre
++解决了	Résolu
++解决方案	Solution
++解决问题	Résoudre le problème
++解压	Soulager le stress
++解放	Libérer
++解析	Analyse
++解答	Réponse
++解释	Expliquer
++解除	Débarrassez-vous de
++言论	Opinion sur les affaires publiques
++警告	Avertir
++警察	Policier
++警方	Policier
++计划	Plan
++计划生育	Planning familial
++计算	Calculer
++计算机	Ordinateur
++订单	Commande
++订购	Commande
++订阅	S'abonner
++认	Reconnaître
++认为	Penser
++认可	Approuver
++认同	Approuver
++认定	Maintenir
++认真	Pour de vrai
++认证	Certifier
++认识	Savoir
++认识到	Reconnaître
++讨论	Discuter
++让	Cédez-le-passage
++让人	Faire des gens
++让他	Laisse-le
++让他们	Laissez-les
++让你	Laissez-vous
++让她	Laisse-le
++让学生	Laissez les étudiants
++让您	Laissez-vous
++让我	Laisse-moi
++让我们	Allons
++训练	Train
++记住	Apprendre quelque chose par cœur
++记录	Prendre des notes
++记得	Se souvenir
++记忆	Se souvenir
++记性	Mémoire
++记者	Journaliste
++记载	Enregistrement
++讲座	Cours de conférences
++讲解	Expliquer
++讲话	Parler
++许	Autoriser
++许可	Permis
++许可证	Permis
++许多	Beaucoup
++论坛	Forum
++论坛版主	Modérateur du forum
++论文	Thèse
++论证	Démonstration
++设备	Équipement
++设定	Ensemble
++设施	Installations
++设有	Installer
++设立	Établir
++设置	Installer
++设计	Conception
++设计师	Concepteur
++设计的	Conçu
++访问	Visite
++证书	Certificat
++证件	Lettres de créance
++证券	Titres
++证券交易所	Bourse
++证券市场	Marché des valeurs mobilières
++证实	Supporter
++证据	Preuves
++证明	Prouver
++评价	Juge
++评估	Évaluer
++评分	Marque
++评定	Évaluer
++评审	Examiner et évaluer
++评论	Commenter sur
++评选	Choisissez par le biais de l'évaluation publique
++识别	Identifier
++诉讼	S'intenter un procès
++诊断	Diagnostiquer
++词汇	Vocabulaire
++试卷	Sujets d'examen
++试听	Audition
++试图	Essayer
++试点	Lancer un projet pilote
++试试	Essayez-le
++试题	Article d'examen
++试验	Test
++诗人	Poète
++诗歌	Poème
++诚信	Honnête
++话	Mots
++话题	Sujet d'une discussion
++诞生	Être né
++询问	Renseignez-vous sur
++该	Sera
++该公司	L'entreprise
++详情	Détails
++详细	Détaillé
++详细信息	Informations détaillées
++详细说明	Description détaillée
++语文	Langue
++语言	Langue
++语音	Phonème
++诱惑	Leurre
++说	Dire
++说了	Dit
++说到	En parlant de
++说完	Après avoir dit ça
++说我	Parle de moi
++说明	Expliquer
++说是	Oui, oui.
++说法	Exposer la doctrine bouddhiste
++说的	Dis-le
++说着	Dicton
++说话	Parler
++说过	J'ai dit
++请	Demander
++请先	S'il vous plaît d'abord
++请在	S'il vous plaît dans
++请填写	Veuillez remplir
++请您	S'il-vous-plaît
++请求	Demande
++请点击	S'il vous plaît cliquez
++请联系	Veuillez contacter
++请选择	Veuillez choisir
++请问	S'il vous plait
++诸多	Beaucoup de
++诺基亚	Nokia
++读书	Lire
++读取	Lire
++读者	Lecteur
++课件	Logiciel d'enseignement à distance
++课堂	Salle de classe
++课程	Cours
++课题	Sujet de discussion
++调动	Transfert
++调控	Réglementer et contrôler
++调整	Ajuster
++调查	Enquêter
++调用	Transférer et allouer
++调研	Recherche
++调节	Réguler
++谈判	Négocier
++谋杀	Meurtre
++谢谢	Merci
++谢谢你	Merci
++豆腐	Fromage de soja
++象征	Symboliser
++豪华	De luxe
++负担	Ours
++负责	Être responsable de
++负责人	Personne responsable
++贡献	Contribuer
++贡献值	Valeur de la contribution
++财产	Propriété
++财务	Affaires financières
++财富	Richesse
++财政	Finance
++财政部	Ministère des finances
++责令	Instruire
++责任	Responsabilité
++责任感	Sens des responsabilités
++责任编辑	Directeur de la rédaction
++账号	Numéro de compte
++账户	Compte
++货币	Monnaie
++货物	Marchandises
++质量	Masse
++质量管理	Gestion de la qualité
++贫困	Appauvri
++购买	Acheter
++购物	Faire des courses
++贯彻	Mener à bien
++贵宾	Invité distingué
++贵州	Province de Guizhou
++贷款	Accorder un prêt
++贸易	Commerce
++费用	Coût
++资产	Propriété
++资助	Donner une aide financière
++资料	Données
++资本	Capital
++资格	Qualifications
++资源	Ressources
++资讯	Informations
++资质	Dotations naturelles
++资金	Fonds
++赋予	Confier
++赔偿	Compenser
++赚钱	Gagner de l'argent
++赠送	Présent en cadeau
++赢得	Gagner
++走	Marcher
++走了	Je dois y aller
++走出	Sors
++走到	Marcher jusqu'à
++走势	Tendance
++走向	Cours
++走进	Entrez
++赶紧	Sans délai
++起	Lever
++起了	Je me suis levé
++起到	Travail
++起来	Lève-toi
++超市	Supermarché
++超级	Super-
++超级版主	Super modérateur
++超越	Dépasser
++超过	Surpasser
++越来越	De plus en plus
++越职	Au-dessus du travail
++趋势	Tendance
++足以	Suffisamment
++足够	Être suffisant
++足球	Football américain
++距离	Distance
++跟	Talon
++跟着	Suivre
++跟踪	Ombre
++跨越	Durée
++路	Route
++路上	Route
++路口	Point de raccordement
++路径	Chemin
++路由器	Router
++路线	Route
++身上	Sur le corps de un
++身份	Statut
++身份证	Carte d'identité
++身体	Corps
++身后	Placez derrière un
++身子	Corps
++身边	De son côté
++身高	Hauteur
++车	Véhicule
++车型	Marque et modèle
++车的	De la voiture
++车辆	Véhicule
++转	Embellir son discours avec des citations littéraires
++转到	Tournez-vous vers
++转化	Changement
++转变	Changement
++转向	Changer de direction
++转换	Interrupteur
++转移	Transfert
++转让	Transférer la propriété de
++转身	Faites demi-tour
++转载	Réimpression
++轮胎	Pneu
++软件	Logiciel
++软件大小	Taille du logiciel
++软件类别	Catégorie de logiciels
++轻	Lumière
++轻易	Facile
++轻松	Détendu
++轻轻	Doux
++载入	Charge
++轿车	Voiture
++较为	Comparativement
++较低	Inférieur
++较多	Plus
++较大	Plus grand
++较大的	Plus grand
++较好	Mieux
++较好的	Mieux
++较强	Plus fort
++较高	Certificat de fin d'études en Écosse
++较高的	Certificat de fin d'études en Écosse
++辅助	Aider
++辅导	Donner des cours
++辉煌	Brillant
++辐射	Rayonner
++输入	Données d'entrée
++输入法	Méthode de saisie
++输出	Envoyer
++辛苦	Laborieux
++辩护	Défendre
++边	Bord
++边缘	Bord
++辽宁	Province du Liaoning
++达到	Atteindre
++达到了	Atteint
++达成	Atteindre
++迅速	Rapide
++过	Guo
++过了	Après
++过于	Excessivement
++过去	Autrefois
++过多	Trop
++过来	Approche !
++过滤	Filtre
++过的	Passé
++过程	Processus
++过程中	Dans le processus
++运作	Opérer
++运动	Sport
++运动员	Athlète
++运用	Utiliser
++运营	Courir
++运营商	Opérateur
++运行	Être en mouvement
++运行平台	Plate-forme d'exploitation
++运行环境	Environnement opérationnel
++运输	Transport
++近年来	Ces dernières années
++近期	Futur proche
++返回	Retour
++还	Encore
++还不	Pas encore
++还买	Toujours acheter
++还会	Peut aussi
++还可	Ça va
++还可以	Ce n'est pas mal
++还在	Toujours ici
++还将	Sera également
++还应	Devrait aussi
++还是	Néanmoins
++还有	Aussi
++还没	Pas encore
++还没有	Pas encore
++还能	Peut encore
++还要	Aussi besoin de
++这	Ça
++这一	Ça
++这一点	Ce point
++这两个	Ces deux
++这个	Ça
++这个问题	Cette question
++这么	Tel
++这也	C'est aussi
++这也是	C'est aussi
++这些	Ceux-ci
++这份	Celui-ci
++这位	Celui-ci
++这句话	Cette phrase
++这只	Celui-ci
++这对	Cette paire de
++这就	C'est
++这就去	J'y vais maintenant.
++这就是	C'est
++这时	En ce moment
++这时候	En ce moment
++这是	C'est
++这是一个	C'est un
++这条	Celui-ci
++这样	Tel
++这样一个	Un tel
++这样做	Fais ça
++这次	Cette fois
++这款	Celui-ci
++这种	Ce genre de
++这种情况	Cette situation
++这类	Ce genre de
++这里	Ici
++这项	Celui-ci
++进	Avance
++进一步	Plus loin
++进了	Entré
++进入	Entrer
++进入了	Entré
++进出口	Importation et exportation
++进去	Entrer
++进口	Entrée
++进展	Faire des progrès
++进攻	Attaque
++进来	Entrer
++进步	Progrès
++进程	Cours
++进而	Et puis
++进行	Procéder
++进行了	Effectué
++远	Loin
++远离	Restez à l'écart
++远程	Longue
++违反	Violer
++违法	Enfreindre la loi
++违法行为	Actes illégaux
++违约	Rompre un contrat
++连	Assurer la correspondance
++连接	Rejoindre
++连续	Allez-y sans interruption
++连锁	Liés ensemble
++追求	Chercher
++退出	Partir
++送到	Envoyer à
++送给	Donnez-le à
++送达	Livrer
++适合	Costume
++适宜	Approprié
++适应	Être adapté à
++适当	Approprié
++适当的	Approprié
++适用于	Applicable à
++选举	Élire
++选手	Candidat
++选择	Choisir
++选择了	Choisi
++选用	Sélectionnez pour l'emploi
++选购	Choisissez et achetez
++选项	Être une option
++透明	Transparent
++透过	À travers
++透露	Révéler
++逐步	Progressivement
++逐渐	Progressivement
++途径	Chemin
++通	Mener à
++通信	Correspondre
++通常	Habituel
++通报	Faire circuler un avis
++通用	Être couramment utilisé
++通知	Notifier
++通讯	Envoi de nouvelles
++通过	Passe
++通道	Passage
++速度	Vitesse
++造型	Style
++造成	Cause
++逻辑	Logique
++逾期	Dépasser la limite de temps
++遇到	Se heurter à
++道德	Moralité
++道理	Principe
++道路	Route
++遗产	Hérité du passé
++遥控	Gardez le contrôle à distance
++遥控器	Télécommande
++遭遇	Rencontre avec
++遵守	Se conformer à
++遵循	Suivre
++避免	Éviter
++邀请	Inviter
++邓小平理论	Théorie de Deng Xiaoping
++那	À
++那个	Cette
++那么	Alors…
++那些	Ceux-là
++那位	Celui-là
++那你	Alors, toi…
++那天	Ce jour-là
++那就	Alors
++那就是	C'est-à-dire
++那时	Alors
++那是	C'est-à-dire
++那样	Comme ça
++那种	Ce genre de
++那里	Là
++邦迪	Bondi
++邮件	Courrier
++邮寄	Courrier
++邮政编码	Code postal
++邮箱	Boîte à lettres
++郑州	Zhengzhou
++部	Partie
++部件	Pièces
++部位	Partie
++部分	Partie
++部委办	Bureau du ministère
++部署	Déploiement
++部落	Clan
++部长	Ministre
++部门	Département
++部队	Armée
++都不	Aucun
++都会	Grande ville
++都可以	Tous sont disponibles.
++都在	Tous sont dedans
++都将	Tous seront
++都市	Grande ville
++都很	Ils sont tous
++都是	Tous
++都有	Il y a tous
++都没	Aucun d'entre eux
++都没有	Aucun d'entre eux
++都能	Tout le monde peut
++都被	Tous
++都要	Tous veulent
++配件	Pièce accessoire
++配偶	Époux
++配合	Coopérer
++配备	Équiper
++配套	Coordonner
++配方	Formule
++配置	Déployer
++配送	Distribution
++酒店	Pub
++采取	Adopter
++采用	Utiliser
++采用了	Adopté
++采访	Entretien
++采集	Collectionner
++释放	Libération
++里	Quartier
++里面	À l'intérieur
++重	Répéter
++重复	Réapparaître
++重大	Génial
++重庆	Chongqing
++重庆市	Ville de Chongqing
++重新	Encore
++重点	Accent
++重要	Important
++重要思想	Idées importantes
++重要性	Importance
++重要的	Important
++重视	Attacher de l'importance à
++重量	Poids
++金	Métaux
++金属	Métal
++金币	Pièce d'or
++金牌	Médaille d'or
++金融	Finance
++金融机构	Organisme financier
++金钱	Argent
++金额	Somme d'argent
++鉴定	Déterminer
++鉴权	Identification
++针对	Être visé à
++钻石	Diamant
++铁树	Sago cycas
++铁路	Chemin de fer
++铃声	Sonnerie
++银行	Banque
++链接	Lien
++销售	Vente
++销量	Volume des ventes
++锁定	Verrouillage
++错误	Mal
++键盘	Clavier
++锻炼	Exercice physique
++镜头	Objectif de l'appareil photo
++长	Long
++长城	Grande muraille
++长度	Étendue
++长春	Changchun
++长期	Longue période de temps
++长江	Rivière Yangtsé
++长沙	Changsha
++长的	Long
++门口	Entrée
++门户网站	Portail
++门派	Secte
++门票	Billet d'entrée
++问	Demander
++问题	Question
++问题是	Le problème est
++间	Espace entre
++间接	Indirect
++阅读	Lire
++阅读权限	Autorisation de lecture
++阅读者	Lecteurs
++队	File
++队伍	Troupes
++队员	Équipier
++防御	Garde contre
++防护	Protéger
++防止	Prévenir
++防火墙	Pare-feu
++防范	Soyez sur mes gardes
++阳光	Soleil
++阴谋	Conspirer
++阶段	Scène
++阶段的	De la scène
++阻止	Prévenir
++附件	Pièce jointe
++附加	Attacher
++附近	Voisin
++陆续	En succession
++降低	Réduire
++限制	Imposer des restrictions sur
++限期	Prescrire une limite de temps
++陕西	Province du Shaanxi
++院校	Universités et collèges
++院长	Directeur
++除外	Exclure
++除非	Seulement si
++陶瓷	Céramiques
++随便	Faites ce que l'on souhaite
++随后	Peu de temps après
++随意	Faites ce que l'on souhaite
++随时	À tout moment
++随机	Se produire au hasard
++随着	Avec
++隐藏	Cacher
++障碍	Entraver
++难	Difficile
++难以	Être difficile à
++难度	Degré de difficulté
++难道	Serait-ce
++难题	Problème épineux
++集	Collectionner
++集中	Se concentrer
++集中在	Concentrez-vous sur
++集体	Collectif
++集团	Clique
++集团公司	Conglomérat
++集成	Collectionner
++零售	Vente au détail
++零部件	Pièces
++需求	Besoin
++需要	Besoin
++露出	Exposer
++霸道	Voie de la puissance
++青少年	Adolescents
++青年	Jeunesse
++青春	Jeunesse
++非	Exécuter le compteur à
++非常	Extraordinaire
++非法	Illégal
++面	Visage
++面临	Être confronté à
++面前	Présence
++面包	Pain
++面向	Visage
++面对	Visage
++面料	Tissu pour la confection de vêtements
++面板	Panneau
++面积	La mesure de la superficie
++面议	Négocier en face à face
++面试	Entretien
++革命	Commencer une révolution
++韩国	Corée
++音乐	Musique
++音频	Audiofréquence
++页次	Page
++页面	Page
++项目	Projet
++顺利	Lisse
++顺序	Commande
++须要	Moût
++顾客	Client
++顾问	Consultant
++顿时	Tout à coup
++颁发	Proclamer
++颁布	Proclamer
++预期	S'attendre à
++预测	Prédire
++预算	Budget
++预览	Avant-première
++预计	Anticiper
++预防	Garde contre
++领先	Être en tête
++领取	Recevoir
++领域	Territoire
++领导	Plomb
++领导小组	Groupe de tête
++领导干部	Cadre principal
++频率	Fréquence
++频繁	Fréquent
++频道	Canal
++题材	Contenu
++题目	Sujet
++颜色	Couleur
++风	Vent
++风光	Paysages
++风情	Style
++风景	Paysages
++风格	Style
++风险	Risque
++飞	Voler
++飞机	Avion
++飞行	Voler
++食品	Denrées alimentaires
++食材	Ingrédients
++食物	Nourriture
++餐厅	Restaurant
++餐饮	Nourriture et boissons
++饭	Céréales cuites
++饭店	Restaurant
++饮料	Boissons
++饮食	Nourriture et boisson
++饰品	Ornements
++饲料	Fourrage
++馒头	Mantou
++首先	Premier
++首届	Première occasion
++首次	Première fois
++首页	Page d'accueil
++香港	Hongkong
++马	Cheval
++马上	Immédiatement
++马克思主义	Marxisme
++马自达	Mazda
++驱动	Conduire
++驾驶	Conduire
++验收	Vérifier à la livraison
++验证	Tester et vérifier
++骑士	Chevalier
++高	Grand
++高中	Lycée
++高于	Plus élevé que
++高兴	Heureux
++高层	Dans une tour
++高度	Hauteur
++高度重视	Attachez une grande importance à
++高手	Maître
++高档	De qualité supérieure
++高温	Haute température
++高潮	Marée haute
++高的	Grand
++高科技	Haute technologie
++高端	Haut de gamme
++高等学校	Établissement d'enseignement supérieur
++高等教育	Enseignement supérieur
++高级	De haut niveau
++高考	Examen d'entrée à l'université
++高速	À grande vitesse
++高速公路	Autoroute
++魅力	Charme
++魔	Démon
++魔法	Sorcellerie
++鲜花	Fleur fraîche
++鸡蛋	Œuf
++麻烦	Gênant
++黄河	Fleuve Jaune
++黄色	Jaune
++黄金	Or
++黑	Noir
++黑暗	Sombre
++黑色	Noir
++黑龙江	Province du Heilongjiang
++默认	Approuver tacitement
++鼓励	Encourager
++鼠标	Souris
++齐全	Complet
++龙	Dragon
+diff --git a/resources/glossary-fr.provenance.json b/resources/glossary-fr.provenance.json
+new file mode 100644
+index 0000000..22afee0
+--- /dev/null
++++ b/resources/glossary-fr.provenance.json
+@@ -0,0 +1,53 @@
++{
++  "asset": "glossary-fr.tsv",
++  "format": "UTF-8; simplified Chinese TAB French; one term per line; unique sorted keys",
++  "entry_count": 5000,
++  "sha256": "27da5a13c1841eea403fdc0aab15d0e1ee6c5cbffd3302cfbcd9d9ad2d30f45f",
++  "created_at": "2026-10-24",
++  "license": "GPL-3.0-or-later for project additions; upstream Rime Ice and Qingjian sources under GPLv3; see LICENSE.txt",
++  "sources": [
++    {
++      "name": "Rime Ice base Chinese dictionary",
++      "url": "https://github.com/iDvel/rime-ice/blob/main/cn_dicts/base.dict.yaml",
++      "upstream_version": "2026-09-20",
++      "sha256": "0418d5103d8e40c8fff4b686a873ad03e9836cd0419ecae0b7e1e2526312dba0"
++    },
++    {
++      "name": "Rime Ice 8105 Chinese character dictionary",
++      "url": "https://github.com/iDvel/rime-ice/blob/main/cn_dicts/8105.dict.yaml",
++      "upstream_version": "2026-08-16",
++      "sha256": "1f9a42b91dea6982baee2551981780271aeffd78876662b9c9f324e56b37b120"
++    },
++    {
++      "name": "Qingjian English glossary; Chinese-key membership only, no English definitions translated",
++      "url": "https://github.com/qingjian-team/qingjian/blob/10e86493d8f1e59a7483c8afdf910d84bd0908a0/assets/glossary/glossary-en.tsv",
++      "sha256": "7b9676979aa227bde7a2d541354a59b73a04f33acd36ef5d6c433ce789b81625"
++    }
++  ],
++  "selection": "Static preferred everyday terms that already occur in a source; top 300 single Han characters by weight; then 2-6 Han-character Rime Ice base terms by descending weight, lexical ties. Deduplicate and keep first 5000.",
++  "selection_input_sha256": "934122445d6e4f706a35d58400c0b1204135b91e007b579592fc68f5f7912d74",
++  "selection_counts": {
++    "preferred": 89,
++    "single_character_limit": 300,
++    "requested": 5000,
++    "accepted": 5000,
++    "rejected": 0
++  },
++  "translation": {
++    "engine": "Apple public Translation framework; installed on-device zh-Hans to fr model",
++    "model_version": "Not exposed by public API",
++    "macOS": "15.6.1",
++    "batch_size": 16,
++    "sample_64_seconds": 0.25,
++    "remaining_4936_seconds": 40.35,
++    "external_network": false,
++    "human_review": "Common-word spot checks only; machine translation may be ambiguous without context"
++  },
++  "privacy": "Built exclusively from the listed static source dictionaries. No learned vocabulary, input history, user database, or user sentence was read to create the asset.",
++  "generation_sources": {
++    "select_words.py": "67f27e59ca41670b9a0bd81a424f6aeaab0b780d5820dead09d9cfe2c0fbc86a",
++    "GeneratingTranslator.swift": "13902e0a9f132afa1a39920067fb852ba9787cc98741b1c8e69fa02bb306c749",
++    "README.md": "e77351c992cb4baf22a93279cc9cf2db7f62ac96dd0e756366b34be3b7b9522c",
++    "GenerateFrenchGlossary.swift": "52158aa1335a557ac8389f88b639acb3933fff0552f854e2ac3d051ebc5598a1"
++  }
++}
+diff --git a/resources/glossary-fr.README.md b/resources/glossary-fr.README.md
+new file mode 100644
+index 0000000..6f64f80
+--- /dev/null
++++ b/resources/glossary-fr.README.md
+@@ -0,0 +1,15 @@
++# Static French vocabulary
++
++This resource contains 5,000 precomputed Chinese–French translations. It allows common candidates to display French immediately without waiting for the translation model. Unlisted words and sentences still use the installed Apple on-device model.
++
++Chinese keys were selected from the existing static Rime Ice base dictionary (version 2026-09-20), its 8105-character dictionary (version 2026-08-16), and Chinese-key membership checks against the pinned Qingjian English glossary. The selection prioritizes existing everyday terms, the 300 highest-weight single characters, then 2–6-character base entries in descending dictionary weight. Dictionary weights include upstream manual adjustments and are not a statistically uniform frequency corpus.
++
++French text was generated on this Mac using Apple's public Translation framework and its already installed Chinese–French language model. The complete asset received structural checks and common-word spot checks. These are machine translations, and isolated words may be ambiguous without context. No user input history, learned vocabulary, user database, or user sentence contributed to this asset. The model itself is not redistributed.
++
++Sources and attribution:
++
++- Rime Ice and contributors: https://github.com/iDvel/rime-ice ; GPLv3: https://github.com/iDvel/rime-ice/blob/main/LICENSE . Its base dictionary credits the Huayu Yefeng system dictionary, THUOCL (https://github.com/thunlp/THUOCL), the Modern Chinese Common Words list (https://gist.github.com/indiejoseph/eae09c673460aa0b56db), and Tencent word vectors (https://ai.tencent.com/ailab/nlp/zh/download.html), with extensive upstream editorial work.
++- Rime Ice's character dictionary credits the Wiktionary General Standard Chinese Characters pinyin index and the BLCU 2.5-billion-character frequency corpus. Original source headers remain in the upstream dictionary files.
++- Qingjian and contributors: https://github.com/qingjian-team/qingjian/tree/10e86493d8f1e59a7483c8afdf910d84bd0908a0 ; GPLv3. Only Chinese keys were checked for membership; no English definitions were reused as French translations.
++
++Project generation scripts and additions: Copyright (c) 2026 rime-english-gloss contributors, GPL-3.0-or-later. See the bundled LICENSE.txt. Exact input and output SHA-256 values, rule, counts, and timing are recorded in glossary-fr.provenance.json. Reproduction tools are shipped under tools/french-glossary/ in the source distribution.

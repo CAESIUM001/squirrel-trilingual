@@ -1,0 +1,283 @@
+{
+  "source": "https://github.com/iDvel/rime-ice",
+  "commit": "da1fbe602e38f26db846fa10120ee64c2b0324c0",
+  "files": [
+    {
+      "path": "LICENSE",
+      "sha256": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986"
+    },
+    {
+      "path": "cn_dicts/41448.dict.yaml",
+      "sha256": "39102601365554433396fa64947010f5a15e7a2c27d22f6cce4d80775919e7bc"
+    },
+    {
+      "path": "cn_dicts/8105.dict.yaml",
+      "sha256": "1f9a42b91dea6982baee2551981780271aeffd78876662b9c9f324e56b37b120"
+    },
+    {
+      "path": "cn_dicts/base.dict.yaml",
+      "sha256": "0418d5103d8e40c8fff4b686a873ad03e9836cd0419ecae0b7e1e2526312dba0"
+    },
+    {
+      "path": "cn_dicts/ext.dict.yaml",
+      "sha256": "8e49a0294c0139e63c815cc33a2d438cc144eb7889297d30cec899a368697c06"
+    },
+    {
+      "path": "cn_dicts/others.dict.yaml",
+      "sha256": "c7475d773e619f61b88d47fa8ec789aba02aa0d1c98edaed309e53487b048b32"
+    },
+    {
+      "path": "cn_dicts/tencent.dict.yaml",
+      "sha256": "352239dc875343cd49a04d7e79a9b73c5c95ad54e7fe1f8608b30c855a942904"
+    },
+    {
+      "path": "custom_phrase.txt",
+      "sha256": "dd344d785f7244c79fee1a1601cd7f928fb3cce8dad66d3e1dfa4962ba59b0d7"
+    },
+    {
+      "path": "default.yaml",
+      "sha256": "0dacfbaca4774c07a0adb2ca2380dc290ada5dfb97e027d54063790ebaca37cd"
+    },
+    {
+      "path": "double_pinyin.schema.yaml",
+      "sha256": "46393c3fb4d19349e89b14e7177d1e92fa09218a7964f0f8c891022aa1bfeb0c"
+    },
+    {
+      "path": "double_pinyin_abc.schema.yaml",
+      "sha256": "fc37dd64b683208a0ea6e96e77a59c39c1b68c6176f276bc2dc22e091f55ef58"
+    },
+    {
+      "path": "double_pinyin_flypy.schema.yaml",
+      "sha256": "73c4f66483b7ff19c3bd64308df37de2d22693511711f75da657d1b179b88e32"
+    },
+    {
+      "path": "double_pinyin_jiajia.schema.yaml",
+      "sha256": "4cf23dcc9cc640990fb62764cd1af60ec5cda839acf81add45e80c333ede7fda"
+    },
+    {
+      "path": "double_pinyin_mspy.schema.yaml",
+      "sha256": "4ac404a2264858b4136b1003ca4b8b61960f654b196d0d979e2dae782ff7b1db"
+    },
+    {
+      "path": "double_pinyin_sogou.schema.yaml",
+      "sha256": "5fbef7d040cbb6ae5db4b18b94c9968171ac8c646c72aa7b26a7c5d03c32b0d8"
+    },
+    {
+      "path": "double_pinyin_ziguang.schema.yaml",
+      "sha256": "72218f6d1f1c022e017b523ae191677d36e907c6dde1c2fd577baa0bf9d205a5"
+    },
+    {
+      "path": "en_dicts/cn_en.txt",
+      "sha256": "e52ffc88598eb3d4db476a10064df3e8bbb6c23bc4c3969723f3dfab45ad4089"
+    },
+    {
+      "path": "en_dicts/cn_en_abc.txt",
+      "sha256": "3f53416ff5acebeb564ab894c10b33cd2b212bd6520012f62b6b9db324c1e9e8"
+    },
+    {
+      "path": "en_dicts/cn_en_double_pinyin.txt",
+      "sha256": "eb91037140fefa1a9f62141f2e64e50da54a7aaabd58d40d0c03e06a8ec45943"
+    },
+    {
+      "path": "en_dicts/cn_en_flypy.txt",
+      "sha256": "edeee1d7a84b378a248a3ea1384f22dcfde64694caee87fe05901a09a90cfc6f"
+    },
+    {
+      "path": "en_dicts/cn_en_jiajia.txt",
+      "sha256": "d79db38e8202b0ec0bcce60310d3a50df6ea03a8dcbc69c128f073485dd659a5"
+    },
+    {
+      "path": "en_dicts/cn_en_mspy.txt",
+      "sha256": "c21e2ea1c50e6fc718075876dec3efbaccd920767864240a814a1213825da5d0"
+    },
+    {
+      "path": "en_dicts/cn_en_sogou.txt",
+      "sha256": "3aaf228f9a9816dd1685cbeecb8ec47b25bd8db44d71adc99987d13f56e9eaea"
+    },
+    {
+      "path": "en_dicts/cn_en_ziguang.txt",
+      "sha256": "401670289d24c6e02bdc197cf9d597636b340f84c49dac42596cbe94a64a995d"
+    },
+    {
+      "path": "en_dicts/en.dict.yaml",
+      "sha256": "d08db21af6c686bfafa4d62926e33ea685319927a374acd99dde84a351b5aa35"
+    },
+    {
+      "path": "en_dicts/en_ext.dict.yaml",
+      "sha256": "675bd699cbdcd05409cd9c9fbc8de3f925b3d08a5175806d45d3789ea27c36eb"
+    },
+    {
+      "path": "lua/autocap_filter.lua",
+      "sha256": "8b1cb8d836d0e544cc63278f31ab0c6e32a877083972535aa88049b4a6b37663"
+    },
+    {
+      "path": "lua/calc_translator.lua",
+      "sha256": "590aab2de4527e9c0832f872d676b8951871104b29b95f258392269cc9e1e4ee"
+    },
+    {
+      "path": "lua/cn_en_spacer.lua",
+      "sha256": "5e90e53872c749c7ab212dce8a741a09db4c9fe3c96e7746e7c847723e79cf62"
+    },
+    {
+      "path": "lua/cold_word_drop/drop_words.lua",
+      "sha256": "c54cc787cf23a28321b42e256a094c4aadbf27a836f9852ea7b8a48e433ee591"
+    },
+    {
+      "path": "lua/cold_word_drop/filter.lua",
+      "sha256": "cb862d048c0b670a22b329992efe436d5e9107bf24d83f6d5f00213139ad5e82"
+    },
+    {
+      "path": "lua/cold_word_drop/hide_words.lua",
+      "sha256": "26df6ed82bbc646e29aa647be35df9076f6195e520489ccd9022dc081a02cb30"
+    },
+    {
+      "path": "lua/cold_word_drop/logger.lua",
+      "sha256": "f4be75968364390d7d48bb83b789e4834f9b3f8cd577fb0caac7a00ea1eca312"
+    },
+    {
+      "path": "lua/cold_word_drop/metatable.lua",
+      "sha256": "66d88f4d9dc0bf7c37e8f5ca9ab3c237ca995a28468c53f57cc3aa3937b798cb"
+    },
+    {
+      "path": "lua/cold_word_drop/processor.lua",
+      "sha256": "3af3de687ad7feba4e9f49e7b2768e9137d1447bbeede7f81f8c10206c0747f0"
+    },
+    {
+      "path": "lua/cold_word_drop/reduce_freq_words.lua",
+      "sha256": "2124f57446510ceae3ed5f8383237fdcaec68e54cfd0d66218b14f4f011872ca"
+    },
+    {
+      "path": "lua/cold_word_drop/string.lua",
+      "sha256": "a84155b7fe1e6f3f1eed6cfa89efa3b72536d37d37f8b47674cdc4472a44ab16"
+    },
+    {
+      "path": "lua/convert_ar_num_to_zh.lua",
+      "sha256": "858f0fad1b9d2fbe1f065f1015e32699ec32e174bb14d80ba88c45614ad616f0"
+    },
+    {
+      "path": "lua/corrector.lua",
+      "sha256": "e9d7a25a1f71473d5e0b7195a1b190ff96d0ad12f4f7bcddcf1df41fa835e051"
+    },
+    {
+      "path": "lua/date_translator.lua",
+      "sha256": "025de762f549b2b1a922f695a0f6b196824092455090a6e143c3d4c15ba56712"
+    },
+    {
+      "path": "lua/debuger.lua",
+      "sha256": "833af467f40a6c84332788ae0e8ab18b761da5d81972b6f35492f5ec6ce15a65"
+    },
+    {
+      "path": "lua/en_spacer.lua",
+      "sha256": "8bcda9df7bff13a69d429fc4119db3532a7aeb2360dbc0a401937f2c3c6231d4"
+    },
+    {
+      "path": "lua/force_gc.lua",
+      "sha256": "bdffdf8342eb2167343de3a3cc5529ccfdde13afc0ea0dac3f917419eba0f382"
+    },
+    {
+      "path": "lua/is_in_user_dict.lua",
+      "sha256": "78c0c16daa3fdfba6de0d358487e4377277d2245f536807c363610d8a954c7f7"
+    },
+    {
+      "path": "lua/long_word_filter.lua",
+      "sha256": "f024cec6fe1a0e3396eac7450dc41f8e6df13c6735ba64615778e3416dcfcd81"
+    },
+    {
+      "path": "lua/lunar.db",
+      "sha256": "30e66ebc3c7223397f2d98368e159ae6d636571056bbe6885f1fcafad56ad1c9"
+    },
+    {
+      "path": "lua/lunar.lua",
+      "sha256": "27e7c5bfa1e872e4e03a7218a3f7e8c02aab41eafe043e96a6f376b6cddc134c"
+    },
+    {
+      "path": "lua/number_translator.lua",
+      "sha256": "2855c8fe23631d5951ece17759dbf24563d21a3156cbd2a579395daa354eb207"
+    },
+    {
+      "path": "lua/pin_cand_filter.lua",
+      "sha256": "91e3f824a84fd4c54cfa275442f57817824d9ad764544103e468a1d3507285bf"
+    },
+    {
+      "path": "lua/reduce_english_filter.lua",
+      "sha256": "cf7fc268192c70fb1411942c067773e0cabcde6a9c2282a252baa148253970f3"
+    },
+    {
+      "path": "lua/search.lua",
+      "sha256": "30d4619ab5c636185d5ea28d8ed5f3a7b56292112905096bcd76e717b757bf82"
+    },
+    {
+      "path": "lua/select_character.lua",
+      "sha256": "51e9975cf23ef42845c763957532b0ca1c8241713204457bb0497db98dbc610e"
+    },
+    {
+      "path": "lua/t9_preedit.lua",
+      "sha256": "9b69b73950ce23fb2e225263bcf19792cf2faa28a42162fcb6c2c11416123a53"
+    },
+    {
+      "path": "lua/unicode.lua",
+      "sha256": "ce41d6f27703c78f3fcb814a08af6307a2b9b0c97e63e9fc3cafb1c65befaa7d"
+    },
+    {
+      "path": "lua/uuid.lua",
+      "sha256": "85a950bc871096f4f70bc1f935540f01944536a7e818d30c5eb3d0a71a7900e2"
+    },
+    {
+      "path": "lua/v_filter.lua",
+      "sha256": "3d1f9a1cda532e0c0eab9b774d727ab37c2a9e468e1219407c5c8fadb964b2e5"
+    },
+    {
+      "path": "melt_eng.dict.yaml",
+      "sha256": "e23bd4ea294d5e04e7b50fbd160fb253e489f44f28c2b8911af276d96db04973"
+    },
+    {
+      "path": "melt_eng.schema.yaml",
+      "sha256": "81d01938e2c06c6b8c1cef15fee21955e3d6878cfa78e46545fffc3f51769829"
+    },
+    {
+      "path": "opencc/emoji.json",
+      "sha256": "79fe3b878625d8f96d70aeb6c4d1929ab2a582f8b935d309125b6ccffd799602"
+    },
+    {
+      "path": "opencc/emoji.txt",
+      "sha256": "09e29b83ad367ea273e9ab438e572a7621649d93b36924ead28852762d2898b1"
+    },
+    {
+      "path": "opencc/others.txt",
+      "sha256": "9595273a49139e1184bca0f1923660793b3873d7b4996d0a5dd665e777d4e55c"
+    },
+    {
+      "path": "radical_pinyin.dict.yaml",
+      "sha256": "298bb907aff1d17fdc34e097f35dcfd3547e8a28d2640fa2c87340ce7e2ce058"
+    },
+    {
+      "path": "radical_pinyin.schema.yaml",
+      "sha256": "e5e0c5740a0114fb560870d95ff1efffd0a3951496268b98c9e8a43fdc52b240"
+    },
+    {
+      "path": "rime_ice.dict.yaml",
+      "sha256": "30fa643eec7af585cffacdd9bb6556ce4d17a0e848b83ea1fca3fdcfc5891595"
+    },
+    {
+      "path": "rime_ice.schema.yaml",
+      "sha256": "ec4b0dd02ac287f53fe401f315cde648913eb60bb8cf8d9a8a613d1eb4f9698b"
+    },
+    {
+      "path": "squirrel.yaml",
+      "sha256": "d3a3aa4b59733dd5fdd9219a52a8369584578dd42f03718942dcd1e8e4b76bad"
+    },
+    {
+      "path": "symbols_caps_v.yaml",
+      "sha256": "1423988324bd447535810f0dbcbc71b228eef821be2c122511707c0c7d4e684a"
+    },
+    {
+      "path": "symbols_v.yaml",
+      "sha256": "00aa27e61b8cb886b048561cbe353997cbd183a8c0b37fcc9f0439b89e80c4be"
+    },
+    {
+      "path": "t9.schema.yaml",
+      "sha256": "56bc593d2c846666361b3394bdc0bdb0c6f1a663f1fd810dceab2d222b5bf8f6"
+    }
+  ],
+  "scope": "Static tracked upstream files only; no build output, custom configuration, user database or input history."
+}

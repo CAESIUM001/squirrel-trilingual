@@ -1,0 +1,23 @@
+{
+  "version": "0.4.0",
+  "frontend_base": "Squirrel 1.1.2",
+  "source_sha256": {
+    "BridgingFunctions.swift": "83688c17c105d884d2f8fa8032bcf2ab99818deaf0551c5eeb5a9850be6c088b",
+    "InputSource.swift": "353eefd18b4cbfd415a644d0528f10f38c2dbd27c468aecc08bacf9fc9ed6ae3",
+    "MacOSKeyCodes.swift": "6d8d5c76e2e52d6b79d8c4670e38a1029c268e27a3bf15f0b58a424e2c2aaaff",
+    "Main.swift": "67a68ba691472c372ade3301a7ff393e7af585eadd70956adc49f6c3175428bd",
+    "SquirrelApplicationDelegate.swift": "bee7c1f086081cc6e44ddf807e1d6db866a2424e7832c523031a89f64bed289c",
+    "SquirrelConfig.swift": "96f47438f1195eee516d662f7cd231e204e753ee9d7030bbf371ae3ed4dbc516",
+    "SquirrelInputController.swift": "76fdee46da75309619083875caa771f90a548abe356500cbe628e104ecb86676",
+    "SquirrelPanel.swift": "bc257bcdee7c128af84e9022a1100efbfa3dcae69f8e7606535ab9fa9fca5695",
+    "SquirrelSentenceSelection.swift": "4b97c144778814a0115eee3d3b10bd84c9916a19ab45b409451ab43d0b5df76c",
+    "SquirrelSentenceTranslator.swift": "10b4e2ba91c4662b7d312828e1c86c6465f273092330c7b69994c6a1a2fc4a88",
+    "SquirrelTheme.swift": "ccab8a8b8bfe3bf221f38dda8e490e33e3feb9def1ade4f2f9841d0fe53696ea",
+    "SquirrelView.swift": "4a11e00bf7e3e65518060427cae0727d0e74bf4660cc7daae8490aaf923f8855"
+  },
+  "project_sha256": "78ba9a3b913daa8b75166ed90cf5a380c1c036b1332e952185e26475cb7788e2",
+  "patch_sha256": "2f6a8fd0255ea9f75b729e49eb0a470b1e124f191a82f5b029bdb7bc9ecdc569",
+  "executable_sha256": "525a063ac2827544fb69e05b48fd7941b0d1567baff393a484761a1aae483a39",
+  "lua_sha256": "6712d3bbd378803f81380edf89be90efd663ce47bac6152fbb2a55636dbfbca6",
+  "glossary_fr_sha256": "27da5a13c1841eea403fdc0aab15d0e1ee6c5cbffd3302cfbcd9d9ad2d30f45f"
+}

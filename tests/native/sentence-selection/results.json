@@ -1,0 +1,27 @@
+{
+  "status": "passed",
+  "state": {
+    "status": "passed",
+    "assertions": 83,
+    "fixture": "real Rime + real Apple translation"
+  },
+  "controller": {
+    "assertions": 85,
+    "existing_body_preserved": true,
+    "french_cached_immediate_and_streamed_updates": true,
+    "french_control_digits_1_to_9": true,
+    "french_partial_prefix_suffix_preserved": true,
+    "lua_first_and_second_meanings_preserved": true,
+    "pending_and_stale_rejected": true,
+    "source": "今天下午我們一起去圖書館",
+    "status": "passed",
+    "translation": "Let's go to the library together this afternoon.",
+    "unicode_option_digit_handled": true,
+    "validation_kind": "Real controller source, NSEvents and librime-lua; host IMK/client/panel/translation completion are test doubles; isolated synthetic input only."
+  },
+  "lua_sha256": "6712d3bbd378803f81380edf89be90efd663ce47bac6152fbb2a55636dbfbca6",
+  "source_sha256": {
+    "SquirrelInputController.swift": "76fdee46da75309619083875caa771f90a548abe356500cbe628e104ecb86676",
+    "SquirrelSentenceSelection.swift": "4b97c144778814a0115eee3d3b10bd84c9916a19ab45b409451ab43d0b5df76c"
+  }
+}

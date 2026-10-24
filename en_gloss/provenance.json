@@ -1,0 +1,31 @@
+{
+  "project": "Qingjian",
+  "repository": "https://github.com/qingjian-team/qingjian",
+  "commit": "10e86493d8f1e59a7483c8afdf910d84bd0908a0",
+  "license": "GPL-3.0-or-later",
+  "data_language": "English",
+  "entries": 232213,
+  "single_sense_entries": 222341,
+  "two_sense_entries": 9872,
+  "source_note": "Official source states English glossary was generated offline with DeepSeek, with no third-party dictionary content.",
+  "files": {
+    "glossary-en.tsv": {
+      "upstream_path": "assets/glossary/glossary-en.tsv",
+      "url": "https://raw.githubusercontent.com/qingjian-team/qingjian/10e86493d8f1e59a7483c8afdf910d84bd0908a0/assets/glossary/glossary-en.tsv",
+      "sha256": "7b9676979aa227bde7a2d541354a59b73a04f33acd36ef5d6c433ce789b81625",
+      "bytes": 6556053
+    },
+    "assets_glossary_README.md": {
+      "upstream_path": "assets/glossary/README.md",
+      "url": "https://raw.githubusercontent.com/qingjian-team/qingjian/10e86493d8f1e59a7483c8afdf910d84bd0908a0/assets/glossary/README.md",
+      "sha256": "1a7c4460facc2df065b4c9d9bb84a45be53936fca09e94f7bdee10859eb89101",
+      "bytes": 7270
+    },
+    "LICENSE": {
+      "upstream_path": "LICENSE",
+      "url": "https://raw.githubusercontent.com/qingjian-team/qingjian/10e86493d8f1e59a7483c8afdf910d84bd0908a0/LICENSE",
+      "sha256": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986",
+      "bytes": 35149
+    }
+  }
+}

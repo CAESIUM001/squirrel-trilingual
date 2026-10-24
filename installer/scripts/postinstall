@@ -1,0 +1,18 @@
+#!/bin/sh
+# SPDX-License-Identifier: GPL-3.0-or-later
+set -eu
+payload='/Library/Application Support/Squirrel Trilingual/Current'
+console_user=$(/usr/bin/stat -f '%Su' /dev/console)
+case "$console_user" in ''|root|loginwindow|_mbsetupuser)
+  echo '请登录到要使用鼠须管的 macOS 用户后，重新运行安装包。' >&2
+  exit 1
+  ;;
+esac
+console_uid=$(/usr/bin/id -u "$console_user")
+if [ "$console_uid" -lt 501 ]; then
+  echo '需要普通已登录用户，不能安装到系统账户。' >&2
+  exit 1
+fi
+/bin/launchctl asuser "$console_uid" /usr/bin/sudo -H -u "$console_user" \
+  "$payload/SquirrelInstaller" --install --payload "$payload"
+exit 0
